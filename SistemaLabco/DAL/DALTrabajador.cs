@@ -23,7 +23,7 @@ namespace DAL
             try
             {
                 SQLCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_tra", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Trabajador", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -50,7 +50,7 @@ namespace DAL
             {
                 try
                 {
-                    SqlCommand comando = new SqlCommand("USP_Guardar_Tra", SqlCon)
+                    SqlCommand comando = new SqlCommand("USP_Guardar_Trabajador", SqlCon)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
@@ -112,7 +112,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_tra", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Trabajador", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SqlCon.Open();
