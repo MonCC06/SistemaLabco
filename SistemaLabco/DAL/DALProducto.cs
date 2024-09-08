@@ -20,7 +20,7 @@ namespace DAL
             try
             {
                 SQLCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_Pr", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Producto", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -90,7 +90,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand comando = new SqlCommand("USP_Eliminar_Pr", SqlCon);
+                SqlCommand comando = new SqlCommand("USP_Eliminar_Producto", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@IDProducto", SqlDbType.Int).Value = IDProducto;
 
@@ -119,7 +119,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_Pr", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Producto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SqlCon.Open();
