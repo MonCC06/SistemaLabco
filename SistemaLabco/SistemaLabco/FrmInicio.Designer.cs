@@ -151,6 +151,8 @@
             this.chkplacavehiculo = new System.Windows.Forms.CheckBox();
             this.chkceduvehi = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.chkM = new System.Windows.Forms.CheckBox();
             this.chkK = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -1536,6 +1538,8 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox6.Controls.Add(this.label37);
+            this.groupBox6.Controls.Add(this.textBox1);
             this.groupBox6.Controls.Add(this.chkM);
             this.groupBox6.Controls.Add(this.chkK);
             this.groupBox6.Controls.Add(this.label21);
@@ -1556,6 +1560,25 @@
             this.groupBox6.TabIndex = 28;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Nuevo";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(518, 22);
+            this.label37.Name = "label37";
+            this.label37.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label37.Size = new System.Drawing.Size(26, 13);
+            this.label37.TabIndex = 29;
+            this.label37.Text = "Año";
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(550, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 20);
+            this.textBox1.TabIndex = 28;
             // 
             // chkM
             // 
@@ -1610,16 +1633,16 @@
             // TxTVINVehiculo
             // 
             this.TxTVINVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTVINVehiculo.Location = new System.Drawing.Point(599, 27);
+            this.TxTVINVehiculo.Location = new System.Drawing.Point(390, 19);
             this.TxTVINVehiculo.Name = "TxTVINVehiculo";
-            this.TxTVINVehiculo.Size = new System.Drawing.Size(131, 20);
+            this.TxTVINVehiculo.Size = new System.Drawing.Size(109, 20);
             this.TxTVINVehiculo.TabIndex = 18;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(535, 30);
+            this.label18.Location = new System.Drawing.Point(359, 24);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label18.Size = new System.Drawing.Size(25, 13);
@@ -1629,9 +1652,9 @@
             // TxTPlacaVehiculo
             // 
             this.TxTPlacaVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTPlacaVehiculo.Location = new System.Drawing.Point(368, 27);
+            this.TxTPlacaVehiculo.Location = new System.Drawing.Point(249, 19);
             this.TxTPlacaVehiculo.Name = "TxTPlacaVehiculo";
-            this.TxTPlacaVehiculo.Size = new System.Drawing.Size(131, 20);
+            this.TxTPlacaVehiculo.Size = new System.Drawing.Size(104, 20);
             this.TxTPlacaVehiculo.TabIndex = 17;
             // 
             // label19
@@ -1639,7 +1662,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(269, 27);
+            this.label19.Location = new System.Drawing.Point(209, 22);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(34, 13);
             this.label19.TabIndex = 19;
@@ -1669,7 +1692,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(39, 27);
+            this.label12.Location = new System.Drawing.Point(39, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 13);
             this.label12.TabIndex = 16;
@@ -1678,9 +1701,9 @@
             // TxTModeloVehiculo
             // 
             this.TxTModeloVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTModeloVehiculo.Location = new System.Drawing.Point(102, 24);
+            this.TxTModeloVehiculo.Location = new System.Drawing.Point(87, 19);
             this.TxTModeloVehiculo.Name = "TxTModeloVehiculo";
-            this.TxTModeloVehiculo.Size = new System.Drawing.Size(131, 20);
+            this.TxTModeloVehiculo.Size = new System.Drawing.Size(95, 20);
             this.TxTModeloVehiculo.TabIndex = 12;
             // 
             // tabPage2
@@ -2462,5 +2485,7 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox TBPrecioProducto;
         private System.Windows.Forms.TextBox TBDescripcionProducto;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

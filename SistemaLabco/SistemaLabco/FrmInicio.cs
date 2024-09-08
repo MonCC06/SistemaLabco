@@ -17,9 +17,5 @@ namespace SistemaLabco
             InitializeComponent();
         }
 
-        private void tabFactura_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
