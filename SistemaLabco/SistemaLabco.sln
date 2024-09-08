@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaLabco", "SistemaLabco\SistemaLabco.csproj", "{54C5F3C2-A895-4530-9638-61E2E39CFF7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "SistemaLabco\GUI.csproj", "{54C5F3C2-A895-4530-9638-61E2E39CFF7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{45481A69-4865-4E8E-B406-EDA61C0E10C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{9F6F41F5-9AD6-4F0F-A87B-68F1C7821F28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET", "ET\ET.csproj", "{2B5D6A0C-4EA3-4129-A8AF-0579146010C6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{30632AF3-E15E-4260-835B-3D131018A273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{2B5D6A0C-4EA3-4129-A8AF-0579146010C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B5D6A0C-4EA3-4129-A8AF-0579146010C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B5D6A0C-4EA3-4129-A8AF-0579146010C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30632AF3-E15E-4260-835B-3D131018A273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30632AF3-E15E-4260-835B-3D131018A273}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30632AF3-E15E-4260-835B-3D131018A273}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30632AF3-E15E-4260-835B-3D131018A273}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
