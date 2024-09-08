@@ -151,6 +151,7 @@
             this.chkplacavehiculo = new System.Windows.Forms.CheckBox();
             this.chkceduvehi = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.chkM = new System.Windows.Forms.CheckBox();
@@ -214,6 +215,11 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -302,6 +308,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox12);
@@ -313,14 +320,13 @@
             this.tabPage3.Size = new System.Drawing.Size(1040, 669);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Agregar";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(7, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(333, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -449,6 +455,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.textBox5);
+            this.groupBox10.Controls.Add(this.label46);
             this.groupBox10.Controls.Add(this.TxtTotal);
             this.groupBox10.Controls.Add(this.TxtIVA);
             this.groupBox10.Controls.Add(this.TxtSubtotal);
@@ -465,14 +473,14 @@
             // 
             // TxtTotal
             // 
-            this.TxtTotal.Location = new System.Drawing.Point(96, 87);
+            this.TxtTotal.Location = new System.Drawing.Point(96, 106);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.Size = new System.Drawing.Size(205, 20);
             this.TxtTotal.TabIndex = 30;
             // 
             // TxtIVA
             // 
-            this.TxtIVA.Location = new System.Drawing.Point(96, 56);
+            this.TxtIVA.Location = new System.Drawing.Point(96, 53);
             this.TxtIVA.Name = "TxtIVA";
             this.TxtIVA.Size = new System.Drawing.Size(205, 20);
             this.TxtIVA.TabIndex = 29;
@@ -488,7 +496,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(31, 87);
+            this.label24.Location = new System.Drawing.Point(31, 112);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(31, 13);
             this.label24.TabIndex = 28;
@@ -498,7 +506,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(31, 56);
+            this.label23.Location = new System.Drawing.Point(31, 53);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(24, 13);
             this.label23.TabIndex = 27;
@@ -508,7 +516,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(31, 22);
+            this.label22.Location = new System.Drawing.Point(31, 25);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 26;
@@ -807,7 +815,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(41, 45);
+            this.label34.Location = new System.Drawing.Point(38, 45);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(44, 13);
             this.label34.TabIndex = 2;
@@ -1538,6 +1546,10 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox6.Controls.Add(this.label45);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Controls.Add(this.label37);
             this.groupBox6.Controls.Add(this.textBox1);
             this.groupBox6.Controls.Add(this.chkM);
@@ -1561,11 +1573,21 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Nuevo";
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(6, 22);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(39, 13);
+            this.label40.TabIndex = 30;
+            this.label40.Text = "Cliente";
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(518, 22);
+            this.label37.Location = new System.Drawing.Point(595, 22);
             this.label37.Name = "label37";
             this.label37.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label37.Size = new System.Drawing.Size(26, 13);
@@ -1575,7 +1597,7 @@
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(550, 19);
+            this.textBox1.Location = new System.Drawing.Point(621, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(114, 20);
             this.textBox1.TabIndex = 28;
@@ -1584,7 +1606,7 @@
             // 
             this.chkM.AutoSize = true;
             this.chkM.ForeColor = System.Drawing.Color.Black;
-            this.chkM.Location = new System.Drawing.Point(111, 59);
+            this.chkM.Location = new System.Drawing.Point(221, 61);
             this.chkM.Name = "chkM";
             this.chkM.Size = new System.Drawing.Size(52, 17);
             this.chkM.TabIndex = 10;
@@ -1595,7 +1617,7 @@
             // 
             this.chkK.AutoSize = true;
             this.chkK.ForeColor = System.Drawing.Color.Black;
-            this.chkK.Location = new System.Drawing.Point(169, 59);
+            this.chkK.Location = new System.Drawing.Point(279, 61);
             this.chkK.Name = "chkK";
             this.chkK.Size = new System.Drawing.Size(74, 17);
             this.chkK.TabIndex = 9;
@@ -1606,7 +1628,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(39, 60);
+            this.label21.Location = new System.Drawing.Point(149, 62);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(66, 13);
             this.label21.TabIndex = 27;
@@ -1616,7 +1638,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(269, 56);
+            this.label20.Location = new System.Drawing.Point(359, 62);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(110, 13);
             this.label20.TabIndex = 22;
@@ -1625,7 +1647,7 @@
             // DistanciaTxTVehiculo
             // 
             this.DistanciaTxTVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.DistanciaTxTVehiculo.Location = new System.Drawing.Point(385, 53);
+            this.DistanciaTxTVehiculo.Location = new System.Drawing.Point(475, 55);
             this.DistanciaTxTVehiculo.Name = "DistanciaTxTVehiculo";
             this.DistanciaTxTVehiculo.Size = new System.Drawing.Size(114, 20);
             this.DistanciaTxTVehiculo.TabIndex = 21;
@@ -1633,7 +1655,7 @@
             // TxTVINVehiculo
             // 
             this.TxTVINVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTVINVehiculo.Location = new System.Drawing.Point(390, 19);
+            this.TxTVINVehiculo.Location = new System.Drawing.Point(483, 19);
             this.TxTVINVehiculo.Name = "TxTVINVehiculo";
             this.TxTVINVehiculo.Size = new System.Drawing.Size(109, 20);
             this.TxTVINVehiculo.TabIndex = 18;
@@ -1642,7 +1664,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(359, 24);
+            this.label18.Location = new System.Drawing.Point(9, 61);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label18.Size = new System.Drawing.Size(25, 13);
@@ -1652,7 +1674,7 @@
             // TxTPlacaVehiculo
             // 
             this.TxTPlacaVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTPlacaVehiculo.Location = new System.Drawing.Point(249, 19);
+            this.TxTPlacaVehiculo.Location = new System.Drawing.Point(334, 19);
             this.TxTPlacaVehiculo.Name = "TxTPlacaVehiculo";
             this.TxTPlacaVehiculo.Size = new System.Drawing.Size(104, 20);
             this.TxTPlacaVehiculo.TabIndex = 17;
@@ -1662,7 +1684,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(209, 22);
+            this.label19.Location = new System.Drawing.Point(294, 22);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(34, 13);
             this.label19.TabIndex = 19;
@@ -1671,7 +1693,7 @@
             // buttonCancelarVehiculo
             // 
             this.buttonCancelarVehiculo.ForeColor = System.Drawing.Color.Red;
-            this.buttonCancelarVehiculo.Location = new System.Drawing.Point(637, 55);
+            this.buttonCancelarVehiculo.Location = new System.Drawing.Point(668, 53);
             this.buttonCancelarVehiculo.Name = "buttonCancelarVehiculo";
             this.buttonCancelarVehiculo.Size = new System.Drawing.Size(67, 23);
             this.buttonCancelarVehiculo.TabIndex = 18;
@@ -1681,7 +1703,7 @@
             // buttonGuardarVehiculo
             // 
             this.buttonGuardarVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.buttonGuardarVehiculo.Location = new System.Drawing.Point(535, 53);
+            this.buttonGuardarVehiculo.Location = new System.Drawing.Point(595, 53);
             this.buttonGuardarVehiculo.Name = "buttonGuardarVehiculo";
             this.buttonGuardarVehiculo.Size = new System.Drawing.Size(67, 23);
             this.buttonGuardarVehiculo.TabIndex = 17;
@@ -1692,7 +1714,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(39, 24);
+            this.label12.Location = new System.Drawing.Point(149, 22);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 13);
             this.label12.TabIndex = 16;
@@ -1701,7 +1723,7 @@
             // TxTModeloVehiculo
             // 
             this.TxTModeloVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTModeloVehiculo.Location = new System.Drawing.Point(87, 19);
+            this.TxTModeloVehiculo.Location = new System.Drawing.Point(193, 19);
             this.TxTModeloVehiculo.Name = "TxTModeloVehiculo";
             this.TxTModeloVehiculo.Size = new System.Drawing.Size(95, 20);
             this.TxTModeloVehiculo.TabIndex = 12;
@@ -2221,6 +2243,50 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
+            // textBox3
+            // 
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(42, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.TabIndex = 31;
+            // 
+            // textBox4
+            // 
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
+            this.textBox4.Location = new System.Drawing.Point(37, 58);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(109, 20);
+            this.textBox4.TabIndex = 32;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(444, 22);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(37, 13);
+            this.label45.TabIndex = 33;
+            this.label45.Text = "Marca";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(31, 82);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(59, 13);
+            this.label46.TabIndex = 31;
+            this.label46.Text = "Descuento";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(96, 79);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(205, 20);
+            this.textBox5.TabIndex = 32;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2487,5 +2553,11 @@
         private System.Windows.Forms.TextBox TBDescripcionProducto;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label46;
     }
 }
