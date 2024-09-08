@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaLabco
+namespace ET
 {
-    internal class ET
+    public class Class1
     {
     }
 }
