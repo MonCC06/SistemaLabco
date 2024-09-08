@@ -1,0 +1,17 @@
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.exe.config
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.exe
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.pdb
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\BL.dll
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\DAL.dll
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\ET.dll
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\BL.pdb
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\DAL.pdb
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\ET.pdb
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.FrmInicio.resources
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.Properties.Resources.resources
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.Up2Date
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.exe
+D:\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.pdb
