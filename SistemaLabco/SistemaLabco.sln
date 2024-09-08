@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaLabco", "SistemaLabco\SistemaLabco.csproj", "{54C5F3C2-A895-4530-9638-61E2E39CFF7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "SistemaLabco\GUI.csproj", "{54C5F3C2-A895-4530-9638-61E2E39CFF7E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{69EAFDA8-8993-4848-ABD8-34A9475DAE27} = {69EAFDA8-8993-4848-ABD8-34A9475DAE27}
+		{9C91D48C-792A-479F-A8A4-384FE25D7F95} = {9C91D48C-792A-479F-A8A4-384FE25D7F95}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{69EAFDA8-8993-4848-ABD8-34A9475DAE27}"
 EndProject

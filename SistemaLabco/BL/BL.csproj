@@ -50,7 +50,6 @@
     <Compile Include="BLMarca.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLServicio.cs" />
-    <Compile Include="BLStockDetalle.cs" />
     <Compile Include="BLTrabajador.cs" />
     <Compile Include="BLVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

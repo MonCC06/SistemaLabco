@@ -47,6 +47,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.BtnImprimirFA = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.TxtIVA = new System.Windows.Forms.TextBox();
             this.TxtSubtotal = new System.Windows.Forms.TextBox();
@@ -151,6 +153,9 @@
             this.chkplacavehiculo = new System.Windows.Forms.CheckBox();
             this.chkceduvehi = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -215,11 +220,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -357,7 +357,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(340, 0);
+            this.PnlListaCL.Location = new System.Drawing.Point(330, 64);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -470,6 +470,23 @@
             this.groupBox10.TabIndex = 23;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Total";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(96, 79);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(205, 20);
+            this.textBox5.TabIndex = 32;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(31, 82);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(59, 13);
+            this.label46.TabIndex = 31;
+            this.label46.Text = "Descuento";
             // 
             // TxtTotal
             // 
@@ -1573,6 +1590,33 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Nuevo";
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(444, 22);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(37, 13);
+            this.label45.TabIndex = 33;
+            this.label45.Text = "Marca";
+            // 
+            // textBox4
+            // 
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
+            this.textBox4.Location = new System.Drawing.Point(37, 58);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(109, 20);
+            this.textBox4.TabIndex = 32;
+            // 
+            // textBox3
+            // 
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(42, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.TabIndex = 31;
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -2242,50 +2286,6 @@
             this.TBDescripcionProducto.Name = "TBDescripcionProducto";
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(42, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 20);
-            this.textBox3.TabIndex = 31;
-            // 
-            // textBox4
-            // 
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(37, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 20);
-            this.textBox4.TabIndex = 32;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(444, 22);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(37, 13);
-            this.label45.TabIndex = 33;
-            this.label45.Text = "Marca";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(31, 82);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(59, 13);
-            this.label46.TabIndex = 31;
-            this.label46.Text = "Descuento";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(96, 79);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(205, 20);
-            this.textBox5.TabIndex = 32;
             // 
             // FrmInicio
             // 
