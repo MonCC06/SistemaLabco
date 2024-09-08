@@ -24,7 +24,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion(); // Obtiene la instancia de conexión a la base de datos
-                SqlCommand Comando = new SqlCommand("USP_Listado_cli", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Cliente", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto; // Agrega el parámetro de búsqueda
                 SqlCon.Open(); // Abre la conexión a la base de datos
@@ -54,7 +54,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion(); // Obtiene la instancia de conexión a la base de datos
-                SqlCommand comando = new SqlCommand("USP_Guardar_Cli", SqlCon);
+                SqlCommand comando = new SqlCommand("USP_Guardar_Cliente", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion; // Parámetro para especificar la operación (insertar o actualizar)
                 comando.Parameters.Add("@IDCliente", SqlDbType.Int).Value = cl.IDCliente;
@@ -120,7 +120,7 @@ namespace DAL
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion(); // Obtiene la instancia de conexión a la base de datos
-                SqlCommand Comando = new SqlCommand("USP_Listado_cli", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Cliente", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto; // Parámetro con el texto de búsqueda
                 SqlCon.Open(); // Abre la conexión a la base de datos

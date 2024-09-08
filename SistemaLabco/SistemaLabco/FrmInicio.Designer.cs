@@ -985,6 +985,7 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // DgvCliente
             // 
@@ -1005,6 +1006,7 @@
             this.btnEliminarCliente.TabIndex = 7;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnModficarCliente
             // 
@@ -1015,6 +1017,7 @@
             this.btnModficarCliente.TabIndex = 6;
             this.btnModficarCliente.Text = "Modificar";
             this.btnModficarCliente.UseVisualStyleBackColor = true;
+            this.btnModficarCliente.Click += new System.EventHandler(this.btnModficarCliente_Click);
             // 
             // TxtBuscarCliente
             // 
@@ -1043,6 +1046,7 @@
             this.btnBuscarCliente.TabIndex = 3;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // ckbCedulaCliente
             // 
@@ -1054,6 +1058,7 @@
             this.ckbCedulaCliente.TabIndex = 2;
             this.ckbCedulaCliente.Text = "Cedula";
             this.ckbCedulaCliente.UseVisualStyleBackColor = true;
+            this.ckbCedulaCliente.CheckedChanged += new System.EventHandler(this.ckbCedulaCliente_CheckedChanged);
             // 
             // ckbNombreCliente
             // 
@@ -1065,6 +1070,7 @@
             this.ckbNombreCliente.TabIndex = 1;
             this.ckbNombreCliente.Text = "Nombre";
             this.ckbNombreCliente.UseVisualStyleBackColor = true;
+            this.ckbNombreCliente.CheckedChanged += new System.EventHandler(this.ckbNombreCliente_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -1106,6 +1112,7 @@
             this.btnCancelarNuevoCliente.TabIndex = 18;
             this.btnCancelarNuevoCliente.Text = "Cancelar";
             this.btnCancelarNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnCancelarNuevoCliente.Click += new System.EventHandler(this.btnCancelarNuevoCliente_Click);
             // 
             // btnGuardarNuevoCliente
             // 
@@ -1116,6 +1123,7 @@
             this.btnGuardarNuevoCliente.TabIndex = 17;
             this.btnGuardarNuevoCliente.Text = "Guardar";
             this.btnGuardarNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarNuevoCliente.Click += new System.EventHandler(this.btnGuardarNuevoCliente_Click);
             // 
             // label5
             // 
