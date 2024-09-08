@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\ET\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ET\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\monse\\onedrive\\documentos\\github\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D1E9402-2FE5-41B4-B718-AE5D03494580}|GUI\\GUI.csproj|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\gui\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D1E9402-2FE5-41B4-B718-AE5D03494580}|GUI\\GUI.csproj|solutionrelative:gui\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\ET\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ET\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\SistemaLabco.csproj|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -21,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\gui\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gui\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +43,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FrmInicio.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs [Design]",
+              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T05:20:16.105Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\ET\\Class1.cs",
               "RelativeDocumentMoniker": "ET\\Class1.cs",
@@ -51,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\GUI\\Class1.cs",
               "RelativeDocumentMoniker": "GUI\\Class1.cs",
@@ -59,7 +75,8 @@
               "RelativeToolTip": "GUI\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T03:45:41.266Z"
+              "WhenOpened": "2024-09-08T03:45:41.266Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -71,7 +88,8 @@
               "RelativeToolTip": "DAL\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T03:45:06.866Z"
+              "WhenOpened": "2024-09-08T03:45:06.866Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,7 +101,8 @@
               "RelativeToolTip": "BL\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T03:44:33.514Z"
+              "WhenOpened": "2024-09-08T03:44:33.514Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
