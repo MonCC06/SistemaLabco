@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaLabco
+namespace GUI
 {
-    internal class DAL
+    public class Class1
     {
     }
 }
