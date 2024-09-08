@@ -1,0 +1,6 @@
+D:\SistemaLabcoUV\SistemaLabco\ET\bin\Debug\ET.dll
+D:\SistemaLabcoUV\SistemaLabco\ET\bin\Debug\ET.pdb
+D:\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.csproj.AssemblyReference.cache
+D:\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
+D:\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.dll
+D:\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.pdb

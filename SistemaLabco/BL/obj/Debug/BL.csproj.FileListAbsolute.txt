@@ -1,0 +1,11 @@
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.dll
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.pdb
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.dll
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.dll
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.pdb
+D:\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.pdb
+D:\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+D:\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.Up2Date
+D:\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.dll
+D:\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.pdb

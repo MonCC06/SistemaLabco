@@ -1,13 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\",
+  "WorkspaceRootPath": "D:\\SistemaLabcoUV\\SistemaLabco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\monse\\onedrive\\documentos\\github\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|D:\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|d:\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\SistemaLabco.csproj|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|d:\\sistemalabcouv\\sistemalabco\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|d:\\sistemalabcouv\\sistemalabco\\dal\\dalservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\dalservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|d:\\sistemalabcouv\\sistemalabco\\dal\\dalproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\dalproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\SistemaLabco.csproj|D:\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\SistemaLabco.csproj|solutionrelative:sistemalabco\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,19 +34,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
+              "RelativeDocumentMoniker": "DAL\\Conexion.cs",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
+              "RelativeToolTip": "DAL\\Conexion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:36:55.959Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "DALServicio.cs",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALServicio.cs",
+              "RelativeDocumentMoniker": "DAL\\DALServicio.cs",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALServicio.cs",
+              "RelativeToolTip": "DAL\\DALServicio.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwDwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:30:02.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DALProducto.cs",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALProducto.cs",
+              "RelativeDocumentMoniker": "DAL\\DALProducto.cs",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALProducto.cs",
+              "RelativeToolTip": "DAL\\DALProducto.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwDsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:29:44.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmInicio.cs",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T23:10:24.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FrmInicio.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
               "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.Designer.cs",
-              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
               "RelativeToolTip": "SistemaLabco\\FrmInicio.Designer.cs",
               "ViewState": "AQIAALYIAAAAAAAAAAAAwPEIAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -38,15 +102,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmInicio.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "DocumentIndex": 1,
+              "Title": "FrmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
               "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
-              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs [Design]",
-              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs [Design]",
+              "ToolTip": "D:\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T04:13:53.858Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
