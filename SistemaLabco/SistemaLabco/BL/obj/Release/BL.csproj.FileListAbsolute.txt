@@ -1,0 +1,11 @@
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\BL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\BL.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\DAL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\ET.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\DAL.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\bin\Release\ET.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\obj\Release\BL.csproj.AssemblyReference.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\obj\Release\BL.csproj.CoreCompileInputs.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\obj\Release\BL.csproj.Up2Date
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\obj\Release\BL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\BL\obj\Release\BL.pdb

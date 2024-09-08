@@ -1,0 +1,6 @@
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Prueba\DAL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Prueba\ET.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Prueba\DAL.csproj.AssemblyReference.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Prueba\DAL.csproj.CoreCompileInputs.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Prueba\DAL.csproj.Up2Date
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Prueba\DAL.dll

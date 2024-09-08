@@ -1,0 +1,6 @@
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\bin\Debug\ET.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\bin\Debug\ET.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\obj\Debug\ET.csproj.AssemblyReference.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\obj\Debug\ET.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\ET\obj\Debug\ET.pdb

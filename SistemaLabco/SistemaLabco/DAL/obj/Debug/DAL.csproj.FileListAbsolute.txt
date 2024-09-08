@@ -1,0 +1,9 @@
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Debug\DAL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Debug\DAL.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Debug\ET.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\bin\Debug\ET.pdb
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Debug\DAL.dll
+C:\Users\monse\OneDrive\Documentos\COVAO\Proyecto LABCO\Sistema LABCO\DAL\obj\Debug\DAL.pdb
