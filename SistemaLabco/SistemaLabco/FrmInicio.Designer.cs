@@ -985,7 +985,6 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // DgvCliente
             // 

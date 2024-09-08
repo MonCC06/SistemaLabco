@@ -93,6 +93,7 @@ namespace SistemaLabco
             // Aquí puedes utilizar el método GuardarCliente o crear un método específico para actualización.
             // Asumiendo que `GuardarCliente` se usa para ambos casos:
             GuardarCliente();
+            this.ListadoCL("%");
         }
 
         private void ModificarCliente()
