@@ -1878,6 +1878,7 @@
             this.buttonEliminarMarca.TabIndex = 7;
             this.buttonEliminarMarca.Text = "Eliminar";
             this.buttonEliminarMarca.UseVisualStyleBackColor = true;
+            this.buttonEliminarMarca.Click += new System.EventHandler(this.buttonEliminarMarca_Click);
             // 
             // buttonModificarMarca
             // 
@@ -1888,6 +1889,7 @@
             this.buttonModificarMarca.TabIndex = 6;
             this.buttonModificarMarca.Text = "Modificar";
             this.buttonModificarMarca.UseVisualStyleBackColor = true;
+            this.buttonModificarMarca.Click += new System.EventHandler(this.buttonModificarMarca_Click);
             // 
             // TxTBuscarMarca
             // 
@@ -1916,6 +1918,7 @@
             this.buttonBuscarMarca.TabIndex = 3;
             this.buttonBuscarMarca.Text = "Buscar";
             this.buttonBuscarMarca.UseVisualStyleBackColor = true;
+            this.buttonBuscarMarca.Click += new System.EventHandler(this.buttonBuscarMarca_Click);
             // 
             // groupBox8
             // 
@@ -1951,6 +1954,7 @@
             this.buttonCancelarMarca.TabIndex = 18;
             this.buttonCancelarMarca.Text = "Cancelar";
             this.buttonCancelarMarca.UseVisualStyleBackColor = true;
+            this.buttonCancelarMarca.Click += new System.EventHandler(this.buttonCancelarMarca_Click);
             // 
             // buttonGuardarMarca
             // 
@@ -1961,6 +1965,7 @@
             this.buttonGuardarMarca.TabIndex = 17;
             this.buttonGuardarMarca.Text = "Guardar";
             this.buttonGuardarMarca.UseVisualStyleBackColor = true;
+            this.buttonGuardarMarca.Click += new System.EventHandler(this.buttonGuardarMarca_Click);
             // 
             // TxTNombreMarca
             // 
