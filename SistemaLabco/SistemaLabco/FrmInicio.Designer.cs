@@ -1306,6 +1306,7 @@
             this.btnEliminarTrabajador.TabIndex = 7;
             this.btnEliminarTrabajador.Text = "Eliminar";
             this.btnEliminarTrabajador.UseVisualStyleBackColor = true;
+            this.btnEliminarTrabajador.Click += new System.EventHandler(this.btnEliminarTrabajador_Click);
             // 
             // btnModficarTrabajador
             // 
@@ -1316,6 +1317,7 @@
             this.btnModficarTrabajador.TabIndex = 6;
             this.btnModficarTrabajador.Text = "Modificar";
             this.btnModficarTrabajador.UseVisualStyleBackColor = true;
+            this.btnModficarTrabajador.Click += new System.EventHandler(this.btnModficarTrabajador_Click);
             // 
             // txtBuscarTrabajador
             // 
@@ -1344,6 +1346,7 @@
             this.btnBuscarTrabajador.TabIndex = 3;
             this.btnBuscarTrabajador.Text = "Buscar";
             this.btnBuscarTrabajador.UseVisualStyleBackColor = true;
+            this.btnBuscarTrabajador.Click += new System.EventHandler(this.btnBuscarTrabajador_Click);
             // 
             // ckbCedulaTrabajador
             // 
@@ -1355,6 +1358,7 @@
             this.ckbCedulaTrabajador.TabIndex = 2;
             this.ckbCedulaTrabajador.Text = "Cedula";
             this.ckbCedulaTrabajador.UseVisualStyleBackColor = true;
+            this.ckbCedulaTrabajador.CheckedChanged += new System.EventHandler(this.ckbCedulaTrabajador_CheckedChanged);
             // 
             // ckbNombreTrabajador
             // 
@@ -1366,6 +1370,7 @@
             this.ckbNombreTrabajador.TabIndex = 1;
             this.ckbNombreTrabajador.Text = "Nombre";
             this.ckbNombreTrabajador.UseVisualStyleBackColor = true;
+            this.ckbNombreTrabajador.CheckedChanged += new System.EventHandler(this.ckbNombreTrabajador_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -1397,6 +1402,7 @@
             this.btnGuardarNuevoTrabajador.TabIndex = 9;
             this.btnGuardarNuevoTrabajador.Text = "Guardar";
             this.btnGuardarNuevoTrabajador.UseVisualStyleBackColor = true;
+            this.btnGuardarNuevoTrabajador.Click += new System.EventHandler(this.btnGuardarNuevoTrabajador_Click);
             // 
             // btnCancelarNuevoTrabajador
             // 
@@ -1407,6 +1413,7 @@
             this.btnCancelarNuevoTrabajador.TabIndex = 8;
             this.btnCancelarNuevoTrabajador.Text = "Cancelar";
             this.btnCancelarNuevoTrabajador.UseVisualStyleBackColor = true;
+            this.btnCancelarNuevoTrabajador.Click += new System.EventHandler(this.btnCancelarNuevoTrabajador_Click);
             // 
             // txtNuevoTelefonoTrabajador
             // 
@@ -2022,6 +2029,7 @@
             this.BTEliminarServicio.TabIndex = 7;
             this.BTEliminarServicio.Text = "Eliminar";
             this.BTEliminarServicio.UseVisualStyleBackColor = true;
+            this.BTEliminarServicio.Click += new System.EventHandler(this.BTEliminarServicio_Click);
             // 
             // BTModificarServicio
             // 
@@ -2032,6 +2040,7 @@
             this.BTModificarServicio.TabIndex = 6;
             this.BTModificarServicio.Text = "Modificar";
             this.BTModificarServicio.UseVisualStyleBackColor = true;
+            this.BTModificarServicio.Click += new System.EventHandler(this.BTModificarServicio_Click);
             // 
             // TBBuscarServicio
             // 
@@ -2060,6 +2069,7 @@
             this.BTBuscarServicio.TabIndex = 3;
             this.BTBuscarServicio.Text = "Buscar";
             this.BTBuscarServicio.UseVisualStyleBackColor = true;
+            this.BTBuscarServicio.Click += new System.EventHandler(this.BTBuscarServicio_Click);
             // 
             // groupBox16
             // 
@@ -2097,6 +2107,7 @@
             this.BTCancelarServicio.TabIndex = 18;
             this.BTCancelarServicio.Text = "Cancelar";
             this.BTCancelarServicio.UseVisualStyleBackColor = true;
+            this.BTCancelarServicio.Click += new System.EventHandler(this.BTCancelarServicio_Click);
             // 
             // BTGuardarServicio
             // 
@@ -2107,6 +2118,7 @@
             this.BTGuardarServicio.TabIndex = 17;
             this.BTGuardarServicio.Text = "Guardar";
             this.BTGuardarServicio.UseVisualStyleBackColor = true;
+            this.BTGuardarServicio.Click += new System.EventHandler(this.BTGuardarServicio_Click);
             // 
             // label39
             // 
