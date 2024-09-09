@@ -1,0 +1,9 @@
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\bin\Debug\DAL.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\bin\Debug\DAL.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\bin\Debug\ET.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\bin\Debug\ET.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\obj\Debug\DAL.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\DAL\obj\Debug\DAL.pdb

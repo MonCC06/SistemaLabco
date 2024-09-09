@@ -1,0 +1,6 @@
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\bin\Debug\ET.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\bin\Debug\ET.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\ET\obj\Debug\ET.pdb

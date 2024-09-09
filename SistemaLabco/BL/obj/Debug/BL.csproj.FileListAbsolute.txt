@@ -1,0 +1,11 @@
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.pdb
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.Up2Date
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.dll
+C:\Users\Usuario\Documents\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.pdb
