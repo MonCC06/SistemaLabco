@@ -223,6 +223,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -337,6 +338,7 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox9.Controls.Add(this.button6);
             this.groupBox9.Controls.Add(this.button4);
             this.groupBox9.Controls.Add(this.label47);
             this.groupBox9.Controls.Add(this.textBox6);
@@ -391,7 +393,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(330, 64);
+            this.PnlListaCL.Location = new System.Drawing.Point(15, 115);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -2211,6 +2213,7 @@
             this.BTEliminararProducto.TabIndex = 7;
             this.BTEliminararProducto.Text = "Eliminar";
             this.BTEliminararProducto.UseVisualStyleBackColor = true;
+            this.BTEliminararProducto.Click += new System.EventHandler(this.BTEliminararProducto_Click);
             // 
             // BTModificarProducto
             // 
@@ -2221,6 +2224,7 @@
             this.BTModificarProducto.TabIndex = 6;
             this.BTModificarProducto.Text = "Modificar";
             this.BTModificarProducto.UseVisualStyleBackColor = true;
+            this.BTModificarProducto.Click += new System.EventHandler(this.BTModificarProducto_Click);
             // 
             // TBBuscarProducto
             // 
@@ -2249,6 +2253,7 @@
             this.BTBusarProducto.TabIndex = 3;
             this.BTBusarProducto.Text = "Buscar";
             this.BTBusarProducto.UseVisualStyleBackColor = true;
+            this.BTBusarProducto.Click += new System.EventHandler(this.BTBusarProducto_Click);
             // 
             // groupBox18
             // 
@@ -2307,6 +2312,7 @@
             this.BTCancelarProducto.TabIndex = 18;
             this.BTCancelarProducto.Text = "Cancelar";
             this.BTCancelarProducto.UseVisualStyleBackColor = true;
+            this.BTCancelarProducto.Click += new System.EventHandler(this.BTCancelarProducto_Click);
             // 
             // BTGuardarProducto
             // 
@@ -2317,6 +2323,7 @@
             this.BTGuardarProducto.TabIndex = 17;
             this.BTGuardarProducto.Text = "Guardar";
             this.BTGuardarProducto.UseVisualStyleBackColor = true;
+            this.BTGuardarProducto.Click += new System.EventHandler(this.BTGuardarProducto_Click);
             // 
             // label42
             // 
@@ -2344,6 +2351,16 @@
             this.TBDescripcionProducto.Name = "TBDescripcionProducto";
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(632, 25);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(67, 23);
+            this.button6.TabIndex = 28;
+            this.button6.Text = "Añadir";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // FrmInicio
             // 
@@ -2620,5 +2637,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button6;
     }
 }
