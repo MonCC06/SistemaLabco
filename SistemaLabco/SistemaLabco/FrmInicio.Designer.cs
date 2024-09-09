@@ -223,6 +223,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -2599,5 +2600,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

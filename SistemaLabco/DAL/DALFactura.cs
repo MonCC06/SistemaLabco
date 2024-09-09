@@ -57,15 +57,15 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion; // Parámetro para especificar la operación (insertar o actualizar)
                 comando.Parameters.Add("@IDFactura", SqlDbType.Int).Value = fa.IDFactura;
-                comando.Parameters.Add("@IDTrabajador", SqlDbType.VarChar).Value = fa.IDTrabajador;
-                comando.Parameters.Add("@IDCliente", SqlDbType.VarChar).Value = fa.IDCliente;
+                comando.Parameters.Add("@IDTrabajador", SqlDbType.Int).Value = fa.IDTrabajador;
+                comando.Parameters.Add("@IDDetalle", SqlDbType.Int).Value = fa.IDDetalle;
+                comando.Parameters.Add("@IDCliente", SqlDbType.Int).Value = fa.IDCliente;
                 comando.Parameters.Add("@Estado", SqlDbType.Bit).Value = fa.Estado;
                 comando.Parameters.Add("@Total", SqlDbType.VarChar).Value = fa.Total;
                 comando.Parameters.Add("@SubTotal", SqlDbType.VarChar).Value = fa.Subtotal;
                 comando.Parameters.Add("@Iva", SqlDbType.VarChar).Value = fa.Iva;
                 comando.Parameters.Add("@Descuento", SqlDbType.VarChar).Value = fa.Descuento;
                 comando.Parameters.Add("@Fecha", SqlDbType.VarChar).Value = fa.Fecha;
-
                 SqlCon.Open(); // Abre la conexión a la base de datos
                 Rpta = comando.ExecuteNonQuery() >= 1 ? "OK" : "No se logró registrar el dato"; // Ejecuta el procedimiento y verifica el resultado
 

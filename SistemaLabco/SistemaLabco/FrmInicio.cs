@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ET;
 using BL;
+using System.Drawing.Printing;
 
 namespace SistemaLabco
 {
@@ -23,6 +24,16 @@ namespace SistemaLabco
         int IDFactura = 0;
         int IDCliente = 0;
         int IDDetalle = 0;
+        int IDTrabajador = 0;
+
+        public void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font("Arial", 12, FontStyle.Regular, GraphicsUnit.Point);
+            int width = 200;
+            int y = 20;
+            e.Graphics.DrawString("Factura Labco", font, Brushes.Black, new RectangleF(0,y+20,width,20));
+        }
+
         private void BtnAnularFA_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -58,6 +69,7 @@ namespace SistemaLabco
                     eTFactura.IDFactura = this.IDFactura;
                     eTFactura.IDCliente = this.IDCliente;
                     eTFactura.IDDetalle = this.IDDetalle;
+                    eTFactura.IDTrabajador = this.IDTrabajador;
                     etCliente.Nombre = TxtNombreCliente.Text.Trim();
                     etCliente.Cedula = TxtNombreCliente.Text.Trim();
                     etCliente.Telefono = TxtNombreCliente.Text.Trim();
@@ -71,6 +83,7 @@ namespace SistemaLabco
                     eTFactura.Subtotal = float.Parse(TxtSubtotal.Text.Trim());
                     eTFactura.Iva = float.Parse(TxtIVA.Text.Trim());
                     eTFactura.Total = float.Parse(TxtTotal.Text.Trim());
+                    eTFactura.Descuento = float.Parse(textBox5.Text.Trim());
                     eTFactura.Estado = Convert.ToBoolean(TxtEstadoFactura.Text.Trim());
                     etTrabajador.Nombre = TxtTrabajador.Text.Trim();
 
@@ -119,6 +132,11 @@ namespace SistemaLabco
             TxtDistanciaVehiculoFactura.ReadOnly = true;
 
             TxtEstadoFactura.Text = "Cancelada";
+
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrintPage = Imprimir;
+            printDocument1.Print();
         }
     }
 }
