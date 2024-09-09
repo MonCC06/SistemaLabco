@@ -820,7 +820,7 @@ namespace SistemaLabco
                     this.ListadoMarca("%");
                     MessageBox.Show("Los datos se han registrado", "Aviso del sistema", MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
-                    EstadoGuarda = 0; // si no guardo nada
+                    EstadoGuarda = 1; // si no guardo nada
                     TxTNombreMarca.Text = "";
                     TxTNombreMarca.ReadOnly = false;
                     this.IdMarca = 0;
@@ -861,12 +861,7 @@ namespace SistemaLabco
 
         private void buttonCancelarMarca_Click(object sender, EventArgs e)
         {
-            EstadoGuarda = 0;//Sin ninguna accion
-            this.IdMarca = 0;
             TxTNombreMarca.Text = "";
-            TxTNombreMarca.ReadOnly = true;
-
-
         }
 
         private void buttonBuscarMarca_Click(object sender, EventArgs e)
