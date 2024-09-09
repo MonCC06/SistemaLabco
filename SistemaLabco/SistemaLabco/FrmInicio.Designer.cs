@@ -35,9 +35,14 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.PnlListaPR = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.BtnRetornarPrListado = new System.Windows.Forms.Button();
+            this.BtnBuscarPrlistado = new System.Windows.Forms.Button();
+            this.DGVProductos = new System.Windows.Forms.DataGridView();
+            this.label48 = new System.Windows.Forms.Label();
+            this.TxtProductos = new System.Windows.Forms.TextBox();
+            this.BtnLupaPR = new System.Windows.Forms.Button();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnRetornar2 = new System.Windows.Forms.Button();
@@ -223,13 +228,14 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnlListaPR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.PnlListaCL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -338,10 +344,8 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox9.Controls.Add(this.button6);
-            this.groupBox9.Controls.Add(this.button4);
-            this.groupBox9.Controls.Add(this.label47);
-            this.groupBox9.Controls.Add(this.textBox6);
+            this.groupBox9.Controls.Add(this.PnlListaPR);
+            this.groupBox9.Controls.Add(this.BtnLupaPR);
             this.groupBox9.Controls.Add(this.PnlListaCL);
             this.groupBox9.Controls.Add(this.label25);
             this.groupBox9.Controls.Add(this.BtnAnularFA);
@@ -356,33 +360,86 @@
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             // 
-            // button4
+            // PnlListaPR
             // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(559, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.PnlListaPR.BackColor = System.Drawing.Color.Gainsboro;
+            this.PnlListaPR.Controls.Add(this.label47);
+            this.PnlListaPR.Controls.Add(this.BtnRetornarPrListado);
+            this.PnlListaPR.Controls.Add(this.BtnBuscarPrlistado);
+            this.PnlListaPR.Controls.Add(this.DGVProductos);
+            this.PnlListaPR.Controls.Add(this.label48);
+            this.PnlListaPR.Controls.Add(this.TxtProductos);
+            this.PnlListaPR.Location = new System.Drawing.Point(459, 59);
+            this.PnlListaPR.Name = "PnlListaPR";
+            this.PnlListaPR.Size = new System.Drawing.Size(371, 225);
+            this.PnlListaPR.TabIndex = 11;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label47.Location = new System.Drawing.Point(295, 30);
+            this.label47.ForeColor = System.Drawing.Color.Green;
+            this.label47.Location = new System.Drawing.Point(125, 9);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(91, 13);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "Buscar Productos";
+            this.label47.Size = new System.Drawing.Size(95, 13);
+            this.label47.TabIndex = 5;
+            this.label47.Text = "Lista de Productos\r\n";
             // 
-            // textBox6
+            // BtnRetornarPrListado
             // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(402, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 20);
-            this.textBox6.TabIndex = 15;
+            this.BtnRetornarPrListado.Location = new System.Drawing.Point(269, 27);
+            this.BtnRetornarPrListado.Name = "BtnRetornarPrListado";
+            this.BtnRetornarPrListado.Size = new System.Drawing.Size(41, 24);
+            this.BtnRetornarPrListado.TabIndex = 4;
+            this.BtnRetornarPrListado.Text = ": : :";
+            this.BtnRetornarPrListado.UseVisualStyleBackColor = true;
+            this.BtnRetornarPrListado.Click += new System.EventHandler(this.BtnRetornarPrListado_Click);
+            // 
+            // BtnBuscarPrlistado
+            // 
+            this.BtnBuscarPrlistado.Location = new System.Drawing.Point(226, 27);
+            this.BtnBuscarPrlistado.Name = "BtnBuscarPrlistado";
+            this.BtnBuscarPrlistado.Size = new System.Drawing.Size(36, 24);
+            this.BtnBuscarPrlistado.TabIndex = 3;
+            this.BtnBuscarPrlistado.Text = ": : :";
+            this.BtnBuscarPrlistado.UseVisualStyleBackColor = true;
+            this.BtnBuscarPrlistado.Click += new System.EventHandler(this.BtnBuscarPrlistado_Click);
+            // 
+            // DGVProductos
+            // 
+            this.DGVProductos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVProductos.Location = new System.Drawing.Point(3, 68);
+            this.DGVProductos.Name = "DGVProductos";
+            this.DGVProductos.Size = new System.Drawing.Size(365, 160);
+            this.DGVProductos.TabIndex = 0;
+            this.DGVProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProductos_CellContentClick);
+            this.DGVProductos.DoubleClick += new System.EventHandler(this.DGVProductos_DoubleClick);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(3, 31);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(43, 13);
+            this.label48.TabIndex = 2;
+            this.label48.Text = "Buscar:";
+            // 
+            // TxtProductos
+            // 
+            this.TxtProductos.Location = new System.Drawing.Point(49, 28);
+            this.TxtProductos.Name = "TxtProductos";
+            this.TxtProductos.Size = new System.Drawing.Size(171, 20);
+            this.TxtProductos.TabIndex = 1;
+            // 
+            // BtnLupaPR
+            // 
+            this.BtnLupaPR.Location = new System.Drawing.Point(91, 24);
+            this.BtnLupaPR.Name = "BtnLupaPR";
+            this.BtnLupaPR.Size = new System.Drawing.Size(96, 29);
+            this.BtnLupaPR.TabIndex = 11;
+            this.BtnLupaPR.Text = "Buscar Producto";
+            this.BtnLupaPR.UseVisualStyleBackColor = true;
+            this.BtnLupaPR.Click += new System.EventHandler(this.BtnLupaPR_Click);
             // 
             // PnlListaCL
             // 
@@ -2352,16 +2409,6 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // button6
-            // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(632, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Añadir";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2377,6 +2424,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnlListaPR.ResumeLayout(false);
+            this.PnlListaPR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
             this.PnlListaCL.ResumeLayout(false);
             this.PnlListaCL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).EndInit();
@@ -2634,9 +2684,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel PnlListaPR;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnRetornarPrListado;
+        private System.Windows.Forms.Button BtnBuscarPrlistado;
+        private System.Windows.Forms.DataGridView DGVProductos;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox TxtProductos;
+        private System.Windows.Forms.Button BtnLupaPR;
     }
 }

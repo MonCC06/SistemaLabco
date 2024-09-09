@@ -9,3 +9,14 @@ C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Deb
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.Up2Date
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.dll
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.pdb
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.dll
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\BL.pdb
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.dll
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.dll
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\DAL.pdb
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\bin\Debug\ET.pdb
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.csproj.Up2Date
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.dll
+C:\Users\pablo\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\BL\obj\Debug\BL.pdb

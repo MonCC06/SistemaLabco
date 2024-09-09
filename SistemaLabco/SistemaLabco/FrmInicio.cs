@@ -1164,6 +1164,33 @@ namespace SistemaLabco
                 }
             }
         }
+        
+        private void BtnLupaPR_Click(object sender, EventArgs e)
+        {
+            this.PnlListaPR.Visible = true;
+        }
+
+        private void DGVProductos_DoubleClick(object sender, EventArgs e)
+        {
+            this.SeleccionaProducto();
+            this.PnlListaPR.Visible=false;
+        }
+
+        private void BtnRetornarPrListado_Click(object sender, EventArgs e)
+        {
+            this.PnlListaPR.Visible = false;
+        }
+
+        private void BtnBuscarPrlistado_Click(object sender, EventArgs e)
+        {
+            this.ListadoPR(TxtProductos.Text);
+        
+        }
+
+        private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
