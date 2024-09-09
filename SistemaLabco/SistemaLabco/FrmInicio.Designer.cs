@@ -35,6 +35,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnRetornar2 = new System.Windows.Forms.Button();
@@ -220,9 +223,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -354,6 +354,34 @@
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(559, 24);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(67, 23);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Buscar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label47.Location = new System.Drawing.Point(295, 30);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(91, 13);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "Buscar Productos";
+            // 
+            // textBox6
+            // 
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox6.Location = new System.Drawing.Point(402, 27);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(138, 20);
+            this.textBox6.TabIndex = 15;
+            // 
             // PnlListaCL
             // 
             this.PnlListaCL.BackColor = System.Drawing.Color.Gainsboro;
@@ -363,7 +391,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(330, 64);
+            this.PnlListaCL.Location = new System.Drawing.Point(341, 53);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -386,6 +414,7 @@
             this.BtnRetornar2.TabIndex = 4;
             this.BtnRetornar2.Text = ": : :";
             this.BtnRetornar2.UseVisualStyleBackColor = true;
+            this.BtnRetornar2.Click += new System.EventHandler(this.BtnRetornar2_Click);
             // 
             // BtnBuscar2
             // 
@@ -395,6 +424,7 @@
             this.BtnBuscar2.TabIndex = 3;
             this.BtnBuscar2.Text = ": : :";
             this.BtnBuscar2.UseVisualStyleBackColor = true;
+            this.BtnBuscar2.Click += new System.EventHandler(this.BtnBuscar2_Click);
             // 
             // DgvListaCL
             // 
@@ -404,6 +434,7 @@
             this.DgvListaCL.Name = "DgvListaCL";
             this.DgvListaCL.Size = new System.Drawing.Size(365, 160);
             this.DgvListaCL.TabIndex = 0;
+            this.DgvListaCL.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaCL_CellContentClick);
             // 
             // label14
             // 
@@ -773,6 +804,7 @@
             this.BtnLupa1.TabIndex = 10;
             this.BtnLupa1.Text = ": : :";
             this.BtnLupa1.UseVisualStyleBackColor = true;
+            this.BtnLupa1.Click += new System.EventHandler(this.BtnLupa1_Click);
             // 
             // label11
             // 
@@ -1038,6 +1070,7 @@
             this.btnEliminarCliente.TabIndex = 7;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnModficarCliente
             // 
@@ -1048,6 +1081,7 @@
             this.btnModficarCliente.TabIndex = 6;
             this.btnModficarCliente.Text = "Modificar";
             this.btnModficarCliente.UseVisualStyleBackColor = true;
+            this.btnModficarCliente.Click += new System.EventHandler(this.btnModficarCliente_Click);
             // 
             // TxtBuscarCliente
             // 
@@ -1076,6 +1110,7 @@
             this.btnBuscarCliente.TabIndex = 3;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // ckbCedulaCliente
             // 
@@ -1149,6 +1184,7 @@
             this.btnGuardarNuevoCliente.TabIndex = 17;
             this.btnGuardarNuevoCliente.Text = "Guardar";
             this.btnGuardarNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarNuevoCliente.Click += new System.EventHandler(this.btnGuardarNuevoCliente_Click);
             // 
             // label5
             // 
@@ -2293,34 +2329,6 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // textBox6
-            // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(402, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 20);
-            this.textBox6.TabIndex = 15;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label47.Location = new System.Drawing.Point(295, 30);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(91, 13);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "Buscar Productos";
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(559, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2329,6 +2337,7 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load_1);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
