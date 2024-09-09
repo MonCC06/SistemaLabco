@@ -79,5 +79,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{69eafda8-8993-4848-abd8-34a9475dae27}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{f1f65c48-cffb-41d8-b1da-dd973c77a789}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ET\ET.csproj">
+      <Project>{9c91d48c-792a-479f-a8a4-384fe25d7f95}</Project>
+      <Name>ET</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
