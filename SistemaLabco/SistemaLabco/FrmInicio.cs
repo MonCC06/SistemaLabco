@@ -64,22 +64,59 @@ namespace SistemaLabco
 
         }
 
+
+
+        private void ActualizarMarca()
+        {
+            
+            GuardarMarca();
+            this.ListadoMarca("%");
+        }
+
+
+
         private void SeleccionaItemMarca()
         {
             //Validasmos que el DATAGEIP tenga datos para que no nos de error
 
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDMarca"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewMarca.CurrentRow.Cells["IDMarca"].Value)))
             {
                 MessageBox.Show("No hay datos que mostrar", "Aviso del sistema", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
             else
             {
-                this.IdMarca = Convert.ToInt32(dataGridViewVehiculo.CurrentRow.Cells["IDMarca"].Value);
-                TxTNombreMarca.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Nombre"].Value);
+                this.IdMarca = Convert.ToInt32(dataGridViewMarca.CurrentRow.Cells["IDMarca"].Value);
+                TxTNombreMarca.Text = Convert.ToString(dataGridViewMarca.CurrentRow.Cells["Nombre"].Value);
 
             }
 
+        }
+
+
+
+
+        private void ModificarMarca()
+        {
+            EstadoGuarda = 2; // Indica que se trata de una actualización
+
+            // Verificar si hay una fila seleccionada en el DataGridView
+            if (dataGridViewMarca.CurrentRow != null)
+            {
+                // Obtener el IDCliente de la fila seleccionada
+                this.IdMarca = Convert.ToInt32(dataGridViewMarca.CurrentRow.Cells["IDMarca"].Value);
+
+                // Poblar los campos con los datos actuales del cliente
+                TxTNombreMarca.Text = Convert.ToString(dataGridViewMarca.CurrentRow.Cells["Nombre"].Value);
+
+
+                // Establecer el enfoque en el primer campo editable
+                TxTNombreMarca.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente para modificar.", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
@@ -192,8 +229,24 @@ namespace SistemaLabco
 
         private void buttonGuardarMarca_Click_1(object sender, EventArgs e)
         {
-            EstadoGuarda = 1;
-            GuardarMarca();
+
+
+            if (EstadoGuarda == 2)
+            {
+                // Actualización del cliente
+                ActualizarMarca();
+            }
+            else if (EstadoGuarda == 1)
+            {
+                // Inserción de nuevo cliente
+                GuardarMarca();
+            }
+            else
+            {
+                MessageBox.Show("El estado de guardado no está definido.", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
 
         }
 
@@ -244,18 +297,9 @@ namespace SistemaLabco
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void buttonModificarMarca_Click(object sender, EventArgs e)
+        {
+            ModificarMarca();
+        }
     }
     }

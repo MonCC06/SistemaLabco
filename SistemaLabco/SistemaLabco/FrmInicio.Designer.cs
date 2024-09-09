@@ -1875,6 +1875,7 @@
             this.buttonModificarMarca.TabIndex = 6;
             this.buttonModificarMarca.Text = "Modificar";
             this.buttonModificarMarca.UseVisualStyleBackColor = true;
+            this.buttonModificarMarca.Click += new System.EventHandler(this.buttonModificarMarca_Click);
             // 
             // TxTBuscarMarca
             // 

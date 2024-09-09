@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\jose david\\documents\\github\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|C:\\Users\\Jose David\\Documents\\GitHub\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|c:\\users\\jose david\\documents\\github\\sistemalabcouv\\sistemalabco\\dal\\dalmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|C:\\Users\\Jose David\\Documents\\GitHub\\SistemaLabcoUV\\SistemaLabco\\dal\\dalmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\dalmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|c:\\users\\jose david\\documents\\github\\sistemalabcouv\\sistemalabco\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|C:\\Users\\Jose David\\Documents\\GitHub\\SistemaLabcoUV\\SistemaLabco\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,8 +66,7 @@
               "RelativeToolTip": "DAL\\DALMarca.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAA1wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T01:01:54.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T01:01:54.858Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "DAL\\Conexion.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAgwBkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T00:58:13.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T00:58:13.032Z"
             },
             {
               "$type": "Document",
@@ -90,7 +88,7 @@
               "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
               "ToolTip": "C:\\Users\\Jose David\\Documents\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
               "RelativeToolTip": "SistemaLabco\\FrmInicio.cs",
-              "ViewState": "AQIAAM4AAAAAAAAAAIA2wNsAAAAQAAAA",
+              "ViewState": "AQIAABgBAAAAAAAAAAAIwC4BAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T00:53:39.821Z",
               "EditorCaption": ""
