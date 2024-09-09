@@ -35,6 +35,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnRetornar2 = new System.Windows.Forms.Button();
@@ -220,9 +223,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -353,6 +353,34 @@
             this.groupBox9.Size = new System.Drawing.Size(985, 437);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(559, 24);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(67, 23);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Buscar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label47.Location = new System.Drawing.Point(295, 30);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(91, 13);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "Buscar Productos";
+            // 
+            // textBox6
+            // 
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox6.Location = new System.Drawing.Point(402, 27);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(138, 20);
+            this.textBox6.TabIndex = 15;
             // 
             // PnlListaCL
             // 
@@ -1038,6 +1066,7 @@
             this.btnEliminarCliente.TabIndex = 7;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnModficarCliente
             // 
@@ -1048,6 +1077,7 @@
             this.btnModficarCliente.TabIndex = 6;
             this.btnModficarCliente.Text = "Modificar";
             this.btnModficarCliente.UseVisualStyleBackColor = true;
+            this.btnModficarCliente.Click += new System.EventHandler(this.btnModficarCliente_Click);
             // 
             // TxtBuscarCliente
             // 
@@ -1076,6 +1106,7 @@
             this.btnBuscarCliente.TabIndex = 3;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // ckbCedulaCliente
             // 
@@ -1087,6 +1118,7 @@
             this.ckbCedulaCliente.TabIndex = 2;
             this.ckbCedulaCliente.Text = "Cedula";
             this.ckbCedulaCliente.UseVisualStyleBackColor = true;
+            this.ckbCedulaCliente.CheckedChanged += new System.EventHandler(this.ckbCedulaCliente_CheckedChanged);
             // 
             // ckbNombreCliente
             // 
@@ -1098,6 +1130,7 @@
             this.ckbNombreCliente.TabIndex = 1;
             this.ckbNombreCliente.Text = "Nombre";
             this.ckbNombreCliente.UseVisualStyleBackColor = true;
+            this.ckbNombreCliente.CheckedChanged += new System.EventHandler(this.ckbNombreCliente_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -1139,6 +1172,7 @@
             this.btnCancelarNuevoCliente.TabIndex = 18;
             this.btnCancelarNuevoCliente.Text = "Cancelar";
             this.btnCancelarNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnCancelarNuevoCliente.Click += new System.EventHandler(this.btnCancelarNuevoCliente_Click);
             // 
             // btnGuardarNuevoCliente
             // 
@@ -1149,6 +1183,7 @@
             this.btnGuardarNuevoCliente.TabIndex = 17;
             this.btnGuardarNuevoCliente.Text = "Guardar";
             this.btnGuardarNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarNuevoCliente.Click += new System.EventHandler(this.btnGuardarNuevoCliente_Click);
             // 
             // label5
             // 
@@ -2292,34 +2327,6 @@
             this.TBDescripcionProducto.Name = "TBDescripcionProducto";
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(402, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 20);
-            this.textBox6.TabIndex = 15;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label47.Location = new System.Drawing.Point(295, 30);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(91, 13);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "Buscar Productos";
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(559, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // FrmInicio
             // 
