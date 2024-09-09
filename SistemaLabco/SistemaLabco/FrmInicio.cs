@@ -1183,13 +1183,34 @@ namespace SistemaLabco
 
         private void BtnBuscarPrlistado_Click(object sender, EventArgs e)
         {
-            this.ListadoPR(TxtProductos.Text);
-        
+            try
+            {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DGVProductos.DataSource = BLProducto.ListadoPR(TxtProductos.Text);
+
+                // Verificar si se han cargado los datos
+                if (DGVProductos.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
         }
 
         private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            PnlListaPR.Visible = false;
         }
     }
 }
