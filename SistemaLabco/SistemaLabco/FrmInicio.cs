@@ -19,7 +19,7 @@ namespace SistemaLabco
             InitializeComponent();
         }
 
-        int EstadoGuarda = 0;
+        int EstadoGuarda = 1;
         int IDFactura = 0;
         int IDCliente = 0;
         int IDDetalle = 0;
@@ -48,7 +48,6 @@ namespace SistemaLabco
             {
                 if (CkbMillas.Checked || CkbKilometros.Checked)
                 {
-                    EstadoGuarda = 0;
                     string Rpta = "";
                     ETFactura eTFactura = new ETFactura();
                     ETCliente etCliente = new ETCliente();
@@ -75,19 +74,28 @@ namespace SistemaLabco
                     eTFactura.Estado = Convert.ToBoolean(TxtEstadoFactura.Text.Trim());
                     etTrabajador.Nombre = TxtTrabajador.Text.Trim();
 
-                    Rpta = BLFactura.GuardarFA(EstadoGuarda, eTFactura);
-
-                    if (Rpta == "OK")
+                    try
                     {
-                        MessageBox.Show("Los datos se han registrado", "Aviso del sistema", MessageBoxButtons.OK,
-                       MessageBoxIcon.Information);
+                        Rpta = BLFactura.GuardarFA(EstadoGuarda, eTFactura);
+
+                        if (Rpta == "OK")
+                        {
+                            MessageBox.Show("Los datos se han registrado", "Aviso del sistema", MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Datos sin guardar", "Aviso del Sistema", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex) 
+                    {
+                        MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    else
-                    {
-                        MessageBox.Show("Datos sin guardar", "Aviso del Sistema", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                    }
+                    
                 }
                 else
                 {
