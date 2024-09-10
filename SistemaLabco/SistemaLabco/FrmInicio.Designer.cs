@@ -50,6 +50,7 @@
             this.DGVEncargado = new System.Windows.Forms.DataGridView();
             this.label49 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnRetornar2 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.DgvListaCL = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.TxtListaCL = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.BtnAnularFA = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.BtnImprimirFA = new System.Windows.Forms.Button();
@@ -332,7 +332,6 @@
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox12);
-            this.tabPage3.Controls.Add(this.PnlListaCL);
             this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.groupBox14);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -357,7 +356,9 @@
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox9.Controls.Add(this.BtnLupaPR);
             this.groupBox9.Controls.Add(this.PnlListaPR);
+            this.groupBox9.Controls.Add(this.PnEncargado);
             this.groupBox9.Controls.Add(this.label25);
+            this.groupBox9.Controls.Add(this.PnlListaCL);
             this.groupBox9.Controls.Add(this.BtnAnularFA);
             this.groupBox9.Controls.Add(this.button5);
             this.groupBox9.Controls.Add(this.BtnImprimirFA);
@@ -459,9 +460,9 @@
             this.PnEncargado.Controls.Add(this.DGVEncargado);
             this.PnEncargado.Controls.Add(this.label49);
             this.PnEncargado.Controls.Add(this.textBox7);
-            this.PnEncargado.Location = new System.Drawing.Point(458, 68);
+            this.PnEncargado.Location = new System.Drawing.Point(26, 50);
             this.PnEncargado.Name = "PnEncargado";
-            this.PnEncargado.Size = new System.Drawing.Size(371, 225);
+            this.PnEncargado.Size = new System.Drawing.Size(380, 202);
             this.PnEncargado.TabIndex = 30;
             // 
             // label48
@@ -520,6 +521,16 @@
             this.textBox7.Size = new System.Drawing.Size(171, 20);
             this.textBox7.TabIndex = 1;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Green;
+            this.label25.Location = new System.Drawing.Point(45, 27);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(40, 13);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "Detalle";
+            // 
             // PnlListaCL
             // 
             this.PnlListaCL.BackColor = System.Drawing.Color.Gainsboro;
@@ -529,9 +540,9 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(7, 102);
+            this.PnlListaCL.Location = new System.Drawing.Point(685, 19);
             this.PnlListaCL.Name = "PnlListaCL";
-            this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
+            this.PnlListaCL.Size = new System.Drawing.Size(342, 228);
             this.PnlListaCL.TabIndex = 10;
             // 
             // label26
@@ -589,16 +600,6 @@
             this.TxtListaCL.Name = "TxtListaCL";
             this.TxtListaCL.Size = new System.Drawing.Size(171, 20);
             this.TxtListaCL.TabIndex = 1;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Green;
-            this.label25.Location = new System.Drawing.Point(45, 27);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(40, 13);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "Detalle";
             // 
             // BtnAnularFA
             // 
@@ -932,7 +933,6 @@
             this.groupBox14.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox14.Controls.Add(this.BtnLupa1);
             this.groupBox14.Controls.Add(this.label11);
-            this.groupBox14.Controls.Add(this.PnEncargado);
             this.groupBox14.Controls.Add(this.TxtCedulaCliente);
             this.groupBox14.Controls.Add(this.TxtEmailCliente);
             this.groupBox14.Controls.Add(this.TxtTelefonoCliente);

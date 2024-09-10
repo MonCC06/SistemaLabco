@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ET;
 using BL;
+using System.Security.Cryptography;
 namespace SistemaLabco
 {
     public partial class FrmInicio : Form
@@ -959,28 +960,6 @@ namespace SistemaLabco
         }
 
 
-        private void SeleccionaProducto()
-        {
-            if (string.IsNullOrEmpty(Convert.ToString(DGVProducto.CurrentRow.Cells["IDProducto"].Value)))
-            {
-
-                MessageBox.Show("No hay datos que mostrar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-            else
-            {
-                //Convertir id de producto de celda de string a entero
-                this.IDProducto = Convert.ToInt32(DGVProducto.CurrentRow.Cells["IDProducto"].Value);
-                TBDescripcionServicio.Text = Convert.ToString(DGVProducto.CurrentRow.Cells["Descripcion"].Value);
-                TBPrecioProducto.Text = Convert.ToString(DGVProducto.CurrentRow.Cells["Precio"].Value);
-                TBStockProducto.Text = Convert.ToString(DGVProducto.CurrentRow.Cells["Stock_Actual"].Value);
-
-            }
-
-
-        }
-
 
         private void ActualizarProducto()
         {
@@ -1163,7 +1142,7 @@ namespace SistemaLabco
         }
 
 
-        //FACTURA//
+        ////////////////////////////////////////FACTURAAAAA/////////////////////////////////////////7/
 
         //CLIENTE//
 
@@ -1310,9 +1289,7 @@ namespace SistemaLabco
 
         private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.SeleccionaProducto();
             this.PnlListaPR.Visible = false;
-
         }
 
         private void BtnRetornarPrListado_Click(object sender, EventArgs e)
@@ -1353,7 +1330,33 @@ namespace SistemaLabco
 
         private void DgvFacturaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            if (e.RowIndex >= 0 && DGVProducto.Columns[e.ColumnIndex].Name == "IDProducto")
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DGVProducto.Rows[e.RowIndex];
 
+                if (row != null)
+                {
+                    // Muestra los valores de la fila seleccionada.
+                    MessageBox.Show("Producto seleccionado: " + row.Cells["IDProducto"].Value.ToString());
+
+                    // Asignar los valores de la fila a los TextBox correspondientes.
+                    TxtProductos.Text = row.Cells["Nombre"].Value.ToString();
+
+
+                    // Ocultar el panel de lista de clientes
+                    PnlListaPR.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en el IDTrabajador para seleccionar el trabajador.", "Aviso");
+            }
         }
     }
 }
