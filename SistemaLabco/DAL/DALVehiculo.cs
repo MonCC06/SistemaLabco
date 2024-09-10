@@ -64,7 +64,6 @@ namespace DAL
                 comando.Parameters.Add("@cPlaca", SqlDbType.VarChar).Value = ve.Placa;
                 comando.Parameters.Add("@TipodeDistancia", SqlDbType.Bit).Value = ve.TipodeDistancia;
                 comando.Parameters.Add("@DistanciaRecorrida", SqlDbType.Decimal).Value = ve.DistanciaRecorrida;
-                comando.Parameters.Add("@Estado", SqlDbType.Bit).Value = ve.Estado;
 
 
 
