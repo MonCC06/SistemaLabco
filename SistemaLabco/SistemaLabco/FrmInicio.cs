@@ -1164,6 +1164,23 @@ namespace SistemaLabco
                 }
             }
         }
+
+        //AQUI ESTA LO DE VEHICULO EN FACTURA!!!!!!!!!!!!!!!
+        private void BtnLupa2_Click(object sender, EventArgs e)
+        {
+            this.PnlListaCL.Location = TxtAnnoVehiculoFactura.Location;
+            this.PnlListaCL.Visible = true;
+        }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            PnlListaVE.Visible = false;
+        }
+
+        private void BtnBuscar3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

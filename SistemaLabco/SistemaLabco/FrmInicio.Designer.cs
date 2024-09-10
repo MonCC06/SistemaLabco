@@ -35,6 +35,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.PnlListaVE = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -62,6 +65,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.DgvFacturaProducto = new System.Windows.Forms.DataGridView();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.BtnLupa2 = new System.Windows.Forms.Button();
             this.TxtDistanciaVehiculoFactura = new System.Windows.Forms.TextBox();
             this.CkbKilometros = new System.Windows.Forms.CheckBox();
             this.TxtAnnoVehiculoFactura = new System.Windows.Forms.TextBox();
@@ -223,13 +227,18 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.label49 = new System.Windows.Forms.Label();
+            this.TxtListaVE = new System.Windows.Forms.TextBox();
+            this.BtnBuscar3 = new System.Windows.Forms.Button();
+            this.BtnRetornar3 = new System.Windows.Forms.Button();
+            this.DgvListaVE = new System.Windows.Forms.DataGridView();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnlListaVE.SuspendLayout();
             this.PnlListaCL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -272,6 +281,7 @@
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProducto)).BeginInit();
             this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).BeginInit();
             this.SuspendLayout();
             // 
             // TabServicicos
@@ -338,6 +348,7 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox9.Controls.Add(this.PnlListaVE);
             this.groupBox9.Controls.Add(this.button6);
             this.groupBox9.Controls.Add(this.button4);
             this.groupBox9.Controls.Add(this.label47);
@@ -355,6 +366,38 @@
             this.groupBox9.Size = new System.Drawing.Size(985, 437);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
+            // 
+            // PnlListaVE
+            // 
+            this.PnlListaVE.Controls.Add(this.DgvListaVE);
+            this.PnlListaVE.Controls.Add(this.BtnRetornar3);
+            this.PnlListaVE.Controls.Add(this.BtnBuscar3);
+            this.PnlListaVE.Controls.Add(this.TxtListaVE);
+            this.PnlListaVE.Controls.Add(this.label49);
+            this.PnlListaVE.Controls.Add(this.label48);
+            this.PnlListaVE.Location = new System.Drawing.Point(424, 25);
+            this.PnlListaVE.Name = "PnlListaVE";
+            this.PnlListaVE.Size = new System.Drawing.Size(334, 224);
+            this.PnlListaVE.TabIndex = 16;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(122, 10);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(105, 13);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "Listado de Vehiculos";
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(632, 25);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(67, 23);
+            this.button6.TabIndex = 28;
+            this.button6.Text = "Añadir";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -393,7 +436,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(15, 115);
+            this.PnlListaCL.Location = new System.Drawing.Point(15, 24);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -606,6 +649,7 @@
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox12.Controls.Add(this.BtnLupa2);
             this.groupBox12.Controls.Add(this.TxtDistanciaVehiculoFactura);
             this.groupBox12.Controls.Add(this.CkbKilometros);
             this.groupBox12.Controls.Add(this.TxtAnnoVehiculoFactura);
@@ -623,10 +667,20 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Vehiculo";
             // 
+            // BtnLupa2
+            // 
+            this.BtnLupa2.Location = new System.Drawing.Point(922, 26);
+            this.BtnLupa2.Name = "BtnLupa2";
+            this.BtnLupa2.Size = new System.Drawing.Size(45, 30);
+            this.BtnLupa2.TabIndex = 15;
+            this.BtnLupa2.Text = ": : :";
+            this.BtnLupa2.UseVisualStyleBackColor = true;
+            this.BtnLupa2.Click += new System.EventHandler(this.BtnLupa2_Click);
+            // 
             // TxtDistanciaVehiculoFactura
             // 
             this.TxtDistanciaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(791, 27);
+            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(735, 31);
             this.TxtDistanciaVehiculoFactura.Name = "TxtDistanciaVehiculoFactura";
             this.TxtDistanciaVehiculoFactura.Size = new System.Drawing.Size(176, 20);
             this.TxtDistanciaVehiculoFactura.TabIndex = 14;
@@ -635,7 +689,7 @@
             // 
             this.CkbKilometros.AutoSize = true;
             this.CkbKilometros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbKilometros.Location = new System.Drawing.Point(707, 29);
+            this.CkbKilometros.Location = new System.Drawing.Point(655, 34);
             this.CkbKilometros.Name = "CkbKilometros";
             this.CkbKilometros.Size = new System.Drawing.Size(74, 17);
             this.CkbKilometros.TabIndex = 12;
@@ -645,7 +699,7 @@
             // TxtAnnoVehiculoFactura
             // 
             this.TxtAnnoVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(488, 28);
+            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(431, 30);
             this.TxtAnnoVehiculoFactura.Name = "TxtAnnoVehiculoFactura";
             this.TxtAnnoVehiculoFactura.Size = new System.Drawing.Size(138, 20);
             this.TxtAnnoVehiculoFactura.TabIndex = 13;
@@ -654,7 +708,7 @@
             // 
             this.CkbMillas.AutoSize = true;
             this.CkbMillas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbMillas.Location = new System.Drawing.Point(649, 30);
+            this.CkbMillas.Location = new System.Drawing.Point(588, 34);
             this.CkbMillas.Name = "CkbMillas";
             this.CkbMillas.Size = new System.Drawing.Size(52, 17);
             this.CkbMillas.TabIndex = 13;
@@ -664,7 +718,7 @@
             // TxtMarcaVehiculoFactura
             // 
             this.TxtMarcaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(282, 27);
+            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(245, 31);
             this.TxtMarcaVehiculoFactura.Name = "TxtMarcaVehiculoFactura";
             this.TxtMarcaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
             this.TxtMarcaVehiculoFactura.TabIndex = 12;
@@ -672,7 +726,7 @@
             // TxtPlacaVehiculoFactura
             // 
             this.TxtPlacaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(76, 27);
+            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(42, 29);
             this.TxtPlacaVehiculoFactura.Name = "TxtPlacaVehiculoFactura";
             this.TxtPlacaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
             this.TxtPlacaVehiculoFactura.TabIndex = 9;
@@ -681,7 +735,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(456, 31);
+            this.label17.Location = new System.Drawing.Point(399, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(26, 13);
             this.label17.TabIndex = 11;
@@ -691,7 +745,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(239, 31);
+            this.label27.Location = new System.Drawing.Point(198, 34);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 13);
             this.label27.TabIndex = 10;
@@ -701,7 +755,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(36, 30);
+            this.label28.Location = new System.Drawing.Point(6, 31);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 13);
             this.label28.TabIndex = 9;
@@ -2352,15 +2406,49 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // button6
+            // label49
             // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(632, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Añadir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(4, 30);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(43, 13);
+            this.label49.TabIndex = 1;
+            this.label49.Text = "Buscar:";
+            // 
+            // TxtListaVE
+            // 
+            this.TxtListaVE.Location = new System.Drawing.Point(54, 29);
+            this.TxtListaVE.Name = "TxtListaVE";
+            this.TxtListaVE.Size = new System.Drawing.Size(173, 20);
+            this.TxtListaVE.TabIndex = 2;
+            // 
+            // BtnBuscar3
+            // 
+            this.BtnBuscar3.Location = new System.Drawing.Point(234, 26);
+            this.BtnBuscar3.Name = "BtnBuscar3";
+            this.BtnBuscar3.Size = new System.Drawing.Size(41, 24);
+            this.BtnBuscar3.TabIndex = 3;
+            this.BtnBuscar3.Text = ": : :";
+            this.BtnBuscar3.UseVisualStyleBackColor = true;
+            this.BtnBuscar3.Click += new System.EventHandler(this.BtnBuscar3_Click);
+            // 
+            // BtnRetornar3
+            // 
+            this.BtnRetornar3.Location = new System.Drawing.Point(279, 26);
+            this.BtnRetornar3.Name = "BtnRetornar3";
+            this.BtnRetornar3.Size = new System.Drawing.Size(36, 24);
+            this.BtnRetornar3.TabIndex = 4;
+            this.BtnRetornar3.Text = ": : :";
+            this.BtnRetornar3.UseVisualStyleBackColor = true;
+            // 
+            // DgvListaVE
+            // 
+            this.DgvListaVE.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvListaVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListaVE.Location = new System.Drawing.Point(7, 65);
+            this.DgvListaVE.Name = "DgvListaVE";
+            this.DgvListaVE.Size = new System.Drawing.Size(324, 150);
+            this.DgvListaVE.TabIndex = 5;
             // 
             // FrmInicio
             // 
@@ -2370,6 +2458,7 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -2377,6 +2466,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnlListaVE.ResumeLayout(false);
+            this.PnlListaVE.PerformLayout();
             this.PnlListaCL.ResumeLayout(false);
             this.PnlListaCL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).EndInit();
@@ -2437,6 +2528,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVProducto)).EndInit();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2638,5 +2730,13 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnLupa2;
+        private System.Windows.Forms.Panel PnlListaVE;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.DataGridView DgvListaVE;
+        private System.Windows.Forms.Button BtnRetornar3;
+        private System.Windows.Forms.Button BtnBuscar3;
+        private System.Windows.Forms.TextBox TxtListaVE;
+        private System.Windows.Forms.Label label49;
     }
 }
