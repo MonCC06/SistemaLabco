@@ -17,8 +17,21 @@ namespace SistemaLabco
         public FrmInicio()
         {
             InitializeComponent();
+            CargarEstadoComboBox();
         }
 
+
+
+        private void CargarEstadoComboBox()
+        {
+            // Añadir ítems al ComboBox
+            comboBoxEstado.Items.Add("Anulada");
+            comboBoxEstado.Items.Add("Completada");
+            comboBoxEstado.Items.Add("En Proceso");
+
+            // Establecer un valor predeterminado (opcional)
+            comboBoxEstado.SelectedIndex = 0; // Selecciona el primer ítem por defecto
+        }
         //CLIENTE//
 
         int EstadoGuarda = 1;
@@ -916,6 +929,20 @@ namespace SistemaLabco
 
         //VEHICULO//
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //PRODUCTO//
 
         private void FormatoPR()
@@ -1366,6 +1393,8 @@ namespace SistemaLabco
             PnlListaPR.Visible = false;
             PnlListaCL.Visible = false;
             PnEncargado.Visible = false;
+            PnlListaVE.Visible = false;
+
 
             //producto//
 
@@ -1385,7 +1414,184 @@ namespace SistemaLabco
             }
         }
 
-       
+        private void BtnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (DGVProductos.CurrentRow != null)
+            {
+                // Obtener el ID del producto de la fila seleccionada
+                string idProducto = DGVProductos.CurrentRow.Cells["IDProducto"].Value.ToString();
+
+                // Buscar la fila en DgvFacturaProducto por el IDProducto
+                foreach (DataGridViewRow row in DgvFacturaProducto.Rows)
+                {
+                    if (row.Cells["IDProducto"].Value.ToString() == idProducto)
+                    {
+                        // Eliminar la fila si coincide el IDProducto
+                        DgvFacturaProducto.Rows.Remove(row);
+                        MessageBox.Show("Producto eliminado de la factura.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return; // Salir del bucle una vez eliminado
+                    }
+                }
+
+                // Si no se encontró la fila, mostrar un mensaje
+                MessageBox.Show("El producto no está en la factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un producto para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void BtnBuscarVE_Click(object sender, EventArgs e)
+        {
+            this.PnlListaVE.Location = TxtAnnoVehiculoFactura.Location;
+            this.PnlListaVE.Visible = true;
+
+        }
+
+        private void btnBuscar_Ve_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DgvListaVE.DataSource = BLVehiculo.ListadoVE(TxtListaVE.Text);
+
+                if (DgvListaVE.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se logro encontrar ningun vehiculo.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+        }
+
+        private void DgvListaVE_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DgvListaVE.Columns[e.ColumnIndex].Name == "IDVehiculo")
+            {
+                DataGridViewRow row = DgvListaCL.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    MessageBox.Show("Vehiculo seleccionado: " + row.Cells["IDVehiculo"].Value.ToString());
+
+                    TxtPlacaVehiculoFactura.Text = row.Cells["Placa"].Value.ToString();
+                    TxtMarcaVehiculoFactura.Text = row.Cells["Marca"].Value.ToString();
+                    TxtAnnoVehiculoFactura.Text = row.Cells["Anno"].Value.ToString();
+                    TxtDistanciaVehiculoFactura.Text = row.Cells["Distancia"].Value.ToString();
+
+                    PnlListaCL.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en la Placa del Vehiculo para seleccionar el cliente.", "Aviso");
+            }
+        }
+
+        private void btnRetornar_VE_Click(object sender, EventArgs e)
+        {
+            PnlListaVE.Visible = false;
+
+        }
+
+        //BUSCAR FACTURA
+        private void Botonesfactura(bool LEstado)
+        {
+            this.btnBuscarFactura.Enabled = LEstado;
+
+        }
+        private void FormatoFA()
+        {
+            if (DgvBuscarFactura.Columns.Count >= 3) // Verifica si hay al menos 6 columnas
+            {
+                DgvCliente.Columns[0].Width = 100;
+                DgvCliente.Columns[0].HeaderText = "Fecha";
+                DgvCliente.Columns[1].Width = 100;
+                DgvCliente.Columns[1].HeaderText = "Nombre";
+                DgvCliente.Columns[5].Width = 100;
+                DgvCliente.Columns[5].HeaderText = "Estado";
+            }
+
+        }
+        private void ListadoFA(string tTexto)
+        {
+            try
+            {
+                DgvBuscarFactura.DataSource = BLFactura.ListadoFA(tTexto);
+                this.FormatoFA();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+            //datasource nos dice de donde vamos a consumir los datos
+        }
+
+        private void btnBuscarFactura_Click(object sender, EventArgs e)
+        {
+            this.ListadoFA(txtBuscarFactura.Text.Trim());
+        }
+
+        private void ckbBuscarNombreFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ListadoFA(txtBuscarFactura.Text.Trim());
+        }
+
+        private void ckbBuscarEstadoFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ListadoFA(txtBuscarFactura.Text.Trim());
+        }
+
+        private void ckbBuscarFechaFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ListadoFA(txtBuscarFactura.Text.Trim());
+
+        }
+
+        private void DgvBuscarFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DgvBuscarFactura.Columns[e.ColumnIndex].Name == "IDFactura")
+            {
+                DataGridViewRow row = DgvBuscarFactura.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    MessageBox.Show("Factura seleccionada: " + row.Cells["IDFactura"].Value.ToString());
+
+                    TxtCedulaCliente.Text = row.Cells["Cedula"].Value.ToString();
+                    TxtNombreCliente.Text = row.Cells["Nombre"].Value.ToString();
+                    TxtTelefonoCliente.Text = row.Cells["Telefono"].Value.ToString();
+                    TxtEmailCliente.Text = row.Cells["Email"].Value.ToString();
+
+                    comboBoxEstado.Text = row.Cells["Estado"].Value.ToString();
+                    dateTimePicker1.Text = row.Cells["Fecha"].Value.ToString();
+                    textEncargado.Text = row.Cells["Anno"].Value.ToString();
+
+                    TxtPlacaVehiculoFactura.Text = row.Cells["Placa"].Value.ToString();
+                    TxtMarcaVehiculoFactura.Text = row.Cells["Marca"].Value.ToString();
+                    TxtAnnoVehiculoFactura.Text = row.Cells["Anno"].Value.ToString();
+                    TxtDistanciaVehiculoFactura.Text = row.Cells["Distancia"].Value.ToString();
+
+                    TxtSubtotal.Text = row.Cells["Subtotal"].Value.ToString();
+                    TxtIVA.Text = row.Cells["IVA"].Value.ToString();
+                    textBox5.Text = row.Cells["Descuento"].Value.ToString();
+                    TxtTotal.Text = row.Cells["total"].Value.ToString();
+
+                    DgvFacturaProducto.CurrentRow.Cells["Nombre"].Value = DgvBuscarFactura.CurrentRow.Cells["Nombre"].Value;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+        }
     }
 }
 

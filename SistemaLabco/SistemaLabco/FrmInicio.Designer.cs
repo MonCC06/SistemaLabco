@@ -35,6 +35,14 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.PnlListaVE = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.btnRetornar_VE = new System.Windows.Forms.Button();
+            this.btnBuscar_Ve = new System.Windows.Forms.Button();
+            this.DgvListaVE = new System.Windows.Forms.DataGridView();
+            this.label52 = new System.Windows.Forms.Label();
+            this.TxtListaVE = new System.Windows.Forms.TextBox();
+            this.BtnEliminarProducto = new System.Windows.Forms.Button();
             this.BtnLupaPR = new System.Windows.Forms.Button();
             this.PnlListaPR = new System.Windows.Forms.Panel();
             this.label50 = new System.Windows.Forms.Label();
@@ -74,6 +82,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.DgvFacturaProducto = new System.Windows.Forms.DataGridView();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.BtnBuscarVE = new System.Windows.Forms.Button();
             this.TxtDistanciaVehiculoFactura = new System.Windows.Forms.TextBox();
             this.CkbKilometros = new System.Windows.Forms.CheckBox();
             this.TxtAnnoVehiculoFactura = new System.Windows.Forms.TextBox();
@@ -89,7 +98,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.TxtEstadoFactura = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.BtnLupa1 = new System.Windows.Forms.Button();
@@ -104,15 +112,15 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ckbBuscarFechaFactura = new System.Windows.Forms.CheckBox();
+            this.DgvBuscarFactura = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBuscarFactura = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.btnBuscarFactura = new System.Windows.Forms.Button();
+            this.ckbBuscarEstadoFactura = new System.Windows.Forms.CheckBox();
+            this.ckbBuscarNombreFactura = new System.Windows.Forms.CheckBox();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -236,12 +244,15 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnlListaVE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).BeginInit();
             this.PnlListaPR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.PnEncargado.SuspendLayout();
@@ -257,7 +268,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBuscarFactura)).BeginInit();
             this.tabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -354,6 +365,8 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox9.Controls.Add(this.PnlListaVE);
+            this.groupBox9.Controls.Add(this.BtnEliminarProducto);
             this.groupBox9.Controls.Add(this.BtnLupaPR);
             this.groupBox9.Controls.Add(this.PnlListaPR);
             this.groupBox9.Controls.Add(this.PnEncargado);
@@ -367,9 +380,89 @@
             this.groupBox9.Controls.Add(this.DgvFacturaProducto);
             this.groupBox9.Location = new System.Drawing.Point(7, 226);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(985, 437);
+            this.groupBox9.Size = new System.Drawing.Size(1027, 437);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
+            // 
+            // PnlListaVE
+            // 
+            this.PnlListaVE.BackColor = System.Drawing.Color.Gainsboro;
+            this.PnlListaVE.Controls.Add(this.label47);
+            this.PnlListaVE.Controls.Add(this.btnRetornar_VE);
+            this.PnlListaVE.Controls.Add(this.btnBuscar_Ve);
+            this.PnlListaVE.Controls.Add(this.DgvListaVE);
+            this.PnlListaVE.Controls.Add(this.label52);
+            this.PnlListaVE.Controls.Add(this.TxtListaVE);
+            this.PnlListaVE.Location = new System.Drawing.Point(205, 94);
+            this.PnlListaVE.Name = "PnlListaVE";
+            this.PnlListaVE.Size = new System.Drawing.Size(371, 225);
+            this.PnlListaVE.TabIndex = 13;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.Green;
+            this.label47.Location = new System.Drawing.Point(125, 9);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(93, 13);
+            this.label47.TabIndex = 5;
+            this.label47.Text = "Lista de Vehiculos\r\n";
+            // 
+            // btnRetornar_VE
+            // 
+            this.btnRetornar_VE.Location = new System.Drawing.Point(287, 27);
+            this.btnRetornar_VE.Name = "btnRetornar_VE";
+            this.btnRetornar_VE.Size = new System.Drawing.Size(74, 24);
+            this.btnRetornar_VE.TabIndex = 4;
+            this.btnRetornar_VE.Text = "Cancelar";
+            this.btnRetornar_VE.UseVisualStyleBackColor = true;
+            this.btnRetornar_VE.Click += new System.EventHandler(this.btnRetornar_VE_Click);
+            // 
+            // btnBuscar_Ve
+            // 
+            this.btnBuscar_Ve.Location = new System.Drawing.Point(226, 27);
+            this.btnBuscar_Ve.Name = "btnBuscar_Ve";
+            this.btnBuscar_Ve.Size = new System.Drawing.Size(55, 24);
+            this.btnBuscar_Ve.TabIndex = 3;
+            this.btnBuscar_Ve.Text = "Buscar";
+            this.btnBuscar_Ve.UseVisualStyleBackColor = true;
+            this.btnBuscar_Ve.Click += new System.EventHandler(this.btnBuscar_Ve_Click);
+            // 
+            // DgvListaVE
+            // 
+            this.DgvListaVE.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvListaVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListaVE.Location = new System.Drawing.Point(3, 68);
+            this.DgvListaVE.Name = "DgvListaVE";
+            this.DgvListaVE.Size = new System.Drawing.Size(365, 160);
+            this.DgvListaVE.TabIndex = 0;
+            this.DgvListaVE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaVE_CellContentClick);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(3, 31);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(43, 13);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "Buscar:";
+            // 
+            // TxtListaVE
+            // 
+            this.TxtListaVE.Location = new System.Drawing.Point(49, 28);
+            this.TxtListaVE.Name = "TxtListaVE";
+            this.TxtListaVE.Size = new System.Drawing.Size(171, 20);
+            this.TxtListaVE.TabIndex = 1;
+            // 
+            // BtnEliminarProducto
+            // 
+            this.BtnEliminarProducto.Location = new System.Drawing.Point(220, 19);
+            this.BtnEliminarProducto.Name = "BtnEliminarProducto";
+            this.BtnEliminarProducto.Size = new System.Drawing.Size(123, 29);
+            this.BtnEliminarProducto.TabIndex = 31;
+            this.BtnEliminarProducto.Text = "Eliminar Producto";
+            this.BtnEliminarProducto.UseVisualStyleBackColor = true;
+            this.BtnEliminarProducto.Click += new System.EventHandler(this.BtnEliminarProducto_Click);
             // 
             // BtnLupaPR
             // 
@@ -390,7 +483,7 @@
             this.PnlListaPR.Controls.Add(this.DGVProductos);
             this.PnlListaPR.Controls.Add(this.label51);
             this.PnlListaPR.Controls.Add(this.TxtProductos);
-            this.PnlListaPR.Location = new System.Drawing.Point(459, 10);
+            this.PnlListaPR.Location = new System.Drawing.Point(488, 142);
             this.PnlListaPR.Name = "PnlListaPR";
             this.PnlListaPR.Size = new System.Drawing.Size(371, 225);
             this.PnlListaPR.TabIndex = 12;
@@ -407,11 +500,11 @@
             // 
             // BtnRetornarPrListado
             // 
-            this.BtnRetornarPrListado.Location = new System.Drawing.Point(269, 27);
+            this.BtnRetornarPrListado.Location = new System.Drawing.Point(286, 28);
             this.BtnRetornarPrListado.Name = "BtnRetornarPrListado";
-            this.BtnRetornarPrListado.Size = new System.Drawing.Size(41, 24);
+            this.BtnRetornarPrListado.Size = new System.Drawing.Size(79, 24);
             this.BtnRetornarPrListado.TabIndex = 4;
-            this.BtnRetornarPrListado.Text = ": : :";
+            this.BtnRetornarPrListado.Text = "Cancelar";
             this.BtnRetornarPrListado.UseVisualStyleBackColor = true;
             this.BtnRetornarPrListado.Click += new System.EventHandler(this.BtnRetornarPrListado_Click);
             // 
@@ -419,9 +512,9 @@
             // 
             this.BtnBuscarPrlistado.Location = new System.Drawing.Point(226, 27);
             this.BtnBuscarPrlistado.Name = "BtnBuscarPrlistado";
-            this.BtnBuscarPrlistado.Size = new System.Drawing.Size(36, 24);
+            this.BtnBuscarPrlistado.Size = new System.Drawing.Size(54, 24);
             this.BtnBuscarPrlistado.TabIndex = 3;
-            this.BtnBuscarPrlistado.Text = ": : :";
+            this.BtnBuscarPrlistado.Text = "Buscar";
             this.BtnBuscarPrlistado.UseVisualStyleBackColor = true;
             this.BtnBuscarPrlistado.Click += new System.EventHandler(this.BtnBuscarPrlistado_Click);
             // 
@@ -460,7 +553,7 @@
             this.PnEncargado.Controls.Add(this.DGVEncargado);
             this.PnEncargado.Controls.Add(this.label49);
             this.PnEncargado.Controls.Add(this.textBox7);
-            this.PnEncargado.Location = new System.Drawing.Point(119, 191);
+            this.PnEncargado.Location = new System.Drawing.Point(58, 85);
             this.PnEncargado.Name = "PnEncargado";
             this.PnEncargado.Size = new System.Drawing.Size(380, 202);
             this.PnEncargado.TabIndex = 30;
@@ -477,11 +570,11 @@
             // 
             // btnRetornar_encargado
             // 
-            this.btnRetornar_encargado.Location = new System.Drawing.Point(269, 27);
+            this.btnRetornar_encargado.Location = new System.Drawing.Point(290, 27);
             this.btnRetornar_encargado.Name = "btnRetornar_encargado";
-            this.btnRetornar_encargado.Size = new System.Drawing.Size(41, 24);
+            this.btnRetornar_encargado.Size = new System.Drawing.Size(72, 24);
             this.btnRetornar_encargado.TabIndex = 4;
-            this.btnRetornar_encargado.Text = ": : :";
+            this.btnRetornar_encargado.Text = "Cancelar";
             this.btnRetornar_encargado.UseVisualStyleBackColor = true;
             this.btnRetornar_encargado.Click += new System.EventHandler(this.btnRetornar_encargado_Click);
             // 
@@ -489,9 +582,9 @@
             // 
             this.btnBuscar_encargado.Location = new System.Drawing.Point(226, 27);
             this.btnBuscar_encargado.Name = "btnBuscar_encargado";
-            this.btnBuscar_encargado.Size = new System.Drawing.Size(36, 24);
+            this.btnBuscar_encargado.Size = new System.Drawing.Size(56, 24);
             this.btnBuscar_encargado.TabIndex = 3;
-            this.btnBuscar_encargado.Text = ": : :";
+            this.btnBuscar_encargado.Text = "Buscar";
             this.btnBuscar_encargado.UseVisualStyleBackColor = true;
             this.btnBuscar_encargado.Click += new System.EventHandler(this.btnBuscar_encargado_Click);
             // 
@@ -540,9 +633,9 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(685, 19);
+            this.PnlListaCL.Location = new System.Drawing.Point(488, 19);
             this.PnlListaCL.Name = "PnlListaCL";
-            this.PnlListaCL.Size = new System.Drawing.Size(342, 228);
+            this.PnlListaCL.Size = new System.Drawing.Size(368, 228);
             this.PnlListaCL.TabIndex = 10;
             // 
             // label26
@@ -557,21 +650,21 @@
             // 
             // BtnRetornar2
             // 
-            this.BtnRetornar2.Location = new System.Drawing.Point(269, 27);
+            this.BtnRetornar2.Location = new System.Drawing.Point(286, 28);
             this.BtnRetornar2.Name = "BtnRetornar2";
-            this.BtnRetornar2.Size = new System.Drawing.Size(41, 24);
+            this.BtnRetornar2.Size = new System.Drawing.Size(79, 24);
             this.BtnRetornar2.TabIndex = 4;
-            this.BtnRetornar2.Text = ": : :";
+            this.BtnRetornar2.Text = "Cancelar";
             this.BtnRetornar2.UseVisualStyleBackColor = true;
             this.BtnRetornar2.Click += new System.EventHandler(this.BtnRetornar2_Click);
             // 
             // BtnBuscar2
             // 
-            this.BtnBuscar2.Location = new System.Drawing.Point(226, 27);
+            this.BtnBuscar2.Location = new System.Drawing.Point(226, 28);
             this.BtnBuscar2.Name = "BtnBuscar2";
-            this.BtnBuscar2.Size = new System.Drawing.Size(36, 24);
+            this.BtnBuscar2.Size = new System.Drawing.Size(58, 24);
             this.BtnBuscar2.TabIndex = 3;
-            this.BtnBuscar2.Text = ": : :";
+            this.BtnBuscar2.Text = "Buscar";
             this.BtnBuscar2.UseVisualStyleBackColor = true;
             this.BtnBuscar2.Click += new System.EventHandler(this.BtnBuscar2_Click);
             // 
@@ -746,6 +839,7 @@
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox12.Controls.Add(this.BtnBuscarVE);
             this.groupBox12.Controls.Add(this.TxtDistanciaVehiculoFactura);
             this.groupBox12.Controls.Add(this.CkbKilometros);
             this.groupBox12.Controls.Add(this.TxtAnnoVehiculoFactura);
@@ -758,24 +852,35 @@
             this.groupBox12.ForeColor = System.Drawing.Color.Green;
             this.groupBox12.Location = new System.Drawing.Point(7, 147);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(985, 72);
+            this.groupBox12.Size = new System.Drawing.Size(1027, 72);
             this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Vehiculo";
             // 
+            // BtnBuscarVE
+            // 
+            this.BtnBuscarVE.ForeColor = System.Drawing.Color.Black;
+            this.BtnBuscarVE.Location = new System.Drawing.Point(860, 22);
+            this.BtnBuscarVE.Name = "BtnBuscarVE";
+            this.BtnBuscarVE.Size = new System.Drawing.Size(119, 29);
+            this.BtnBuscarVE.TabIndex = 11;
+            this.BtnBuscarVE.Text = "Buscar Vehiculo";
+            this.BtnBuscarVE.UseVisualStyleBackColor = true;
+            this.BtnBuscarVE.Click += new System.EventHandler(this.BtnBuscarVE_Click);
+            // 
             // TxtDistanciaVehiculoFactura
             // 
             this.TxtDistanciaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(791, 27);
+            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(689, 27);
             this.TxtDistanciaVehiculoFactura.Name = "TxtDistanciaVehiculoFactura";
-            this.TxtDistanciaVehiculoFactura.Size = new System.Drawing.Size(176, 20);
+            this.TxtDistanciaVehiculoFactura.Size = new System.Drawing.Size(151, 20);
             this.TxtDistanciaVehiculoFactura.TabIndex = 14;
             // 
             // CkbKilometros
             // 
             this.CkbKilometros.AutoSize = true;
             this.CkbKilometros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbKilometros.Location = new System.Drawing.Point(707, 29);
+            this.CkbKilometros.Location = new System.Drawing.Point(609, 28);
             this.CkbKilometros.Name = "CkbKilometros";
             this.CkbKilometros.Size = new System.Drawing.Size(74, 17);
             this.CkbKilometros.TabIndex = 12;
@@ -785,16 +890,16 @@
             // TxtAnnoVehiculoFactura
             // 
             this.TxtAnnoVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(488, 28);
+            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(424, 27);
             this.TxtAnnoVehiculoFactura.Name = "TxtAnnoVehiculoFactura";
-            this.TxtAnnoVehiculoFactura.Size = new System.Drawing.Size(138, 20);
+            this.TxtAnnoVehiculoFactura.Size = new System.Drawing.Size(110, 20);
             this.TxtAnnoVehiculoFactura.TabIndex = 13;
             // 
             // CkbMillas
             // 
             this.CkbMillas.AutoSize = true;
             this.CkbMillas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbMillas.Location = new System.Drawing.Point(649, 30);
+            this.CkbMillas.Location = new System.Drawing.Point(551, 29);
             this.CkbMillas.Name = "CkbMillas";
             this.CkbMillas.Size = new System.Drawing.Size(52, 17);
             this.CkbMillas.TabIndex = 13;
@@ -804,24 +909,24 @@
             // TxtMarcaVehiculoFactura
             // 
             this.TxtMarcaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(282, 27);
+            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(264, 28);
             this.TxtMarcaVehiculoFactura.Name = "TxtMarcaVehiculoFactura";
-            this.TxtMarcaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
+            this.TxtMarcaVehiculoFactura.Size = new System.Drawing.Size(113, 20);
             this.TxtMarcaVehiculoFactura.TabIndex = 12;
             // 
             // TxtPlacaVehiculoFactura
             // 
             this.TxtPlacaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(76, 27);
+            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(95, 28);
             this.TxtPlacaVehiculoFactura.Name = "TxtPlacaVehiculoFactura";
-            this.TxtPlacaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
+            this.TxtPlacaVehiculoFactura.Size = new System.Drawing.Size(120, 20);
             this.TxtPlacaVehiculoFactura.TabIndex = 9;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(456, 31);
+            this.label17.Location = new System.Drawing.Point(392, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(26, 13);
             this.label17.TabIndex = 11;
@@ -831,7 +936,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(239, 31);
+            this.label27.Location = new System.Drawing.Point(221, 32);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 13);
             this.label27.TabIndex = 10;
@@ -841,7 +946,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(36, 30);
+            this.label28.Location = new System.Drawing.Point(55, 31);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 13);
             this.label28.TabIndex = 9;
@@ -850,17 +955,17 @@
             // groupBox13
             // 
             this.groupBox13.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox13.Controls.Add(this.comboBoxEstado);
             this.groupBox13.Controls.Add(this.BtnBuscarEncargado);
             this.groupBox13.Controls.Add(this.textEncargado);
             this.groupBox13.Controls.Add(this.dateTimePicker1);
             this.groupBox13.Controls.Add(this.label31);
             this.groupBox13.Controls.Add(this.label29);
-            this.groupBox13.Controls.Add(this.TxtEstadoFactura);
             this.groupBox13.Controls.Add(this.label30);
             this.groupBox13.ForeColor = System.Drawing.Color.Green;
             this.groupBox13.Location = new System.Drawing.Point(595, 7);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(397, 133);
+            this.groupBox13.Size = new System.Drawing.Size(439, 133);
             this.groupBox13.TabIndex = 2;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Otra Informacion";
@@ -909,13 +1014,6 @@
             this.label29.Size = new System.Drawing.Size(59, 13);
             this.label29.TabIndex = 9;
             this.label29.Text = "Encargado";
-            // 
-            // TxtEstadoFactura
-            // 
-            this.TxtEstadoFactura.Location = new System.Drawing.Point(115, 27);
-            this.TxtEstadoFactura.Name = "TxtEstadoFactura";
-            this.TxtEstadoFactura.Size = new System.Drawing.Size(264, 20);
-            this.TxtEstadoFactura.TabIndex = 0;
             // 
             // label30
             // 
@@ -1052,48 +1150,50 @@
             // groupBox19
             // 
             this.groupBox19.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox19.Controls.Add(this.checkBox3);
-            this.groupBox19.Controls.Add(this.dataGridView1);
+            this.groupBox19.Controls.Add(this.ckbBuscarFechaFactura);
+            this.groupBox19.Controls.Add(this.DgvBuscarFactura);
             this.groupBox19.Controls.Add(this.button1);
             this.groupBox19.Controls.Add(this.button2);
-            this.groupBox19.Controls.Add(this.textBox2);
+            this.groupBox19.Controls.Add(this.txtBuscarFactura);
             this.groupBox19.Controls.Add(this.label13);
-            this.groupBox19.Controls.Add(this.button3);
-            this.groupBox19.Controls.Add(this.checkBox1);
-            this.groupBox19.Controls.Add(this.checkBox2);
+            this.groupBox19.Controls.Add(this.btnBuscarFactura);
+            this.groupBox19.Controls.Add(this.ckbBuscarEstadoFactura);
+            this.groupBox19.Controls.Add(this.ckbBuscarNombreFactura);
             this.groupBox19.ForeColor = System.Drawing.Color.Green;
             this.groupBox19.Location = new System.Drawing.Point(6, 60);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(968, 603);
+            this.groupBox19.Size = new System.Drawing.Size(1028, 603);
             this.groupBox19.TabIndex = 24;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Buscar";
             // 
-            // checkBox3
+            // ckbBuscarFechaFactura
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.ForeColor = System.Drawing.Color.Black;
-            this.checkBox3.Location = new System.Drawing.Point(158, 23);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(56, 17);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "Fecha";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ckbBuscarFechaFactura.AutoSize = true;
+            this.ckbBuscarFechaFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarFechaFactura.Location = new System.Drawing.Point(165, 23);
+            this.ckbBuscarFechaFactura.Name = "ckbBuscarFechaFactura";
+            this.ckbBuscarFechaFactura.Size = new System.Drawing.Size(56, 17);
+            this.ckbBuscarFechaFactura.TabIndex = 9;
+            this.ckbBuscarFechaFactura.Text = "Fecha";
+            this.ckbBuscarFechaFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarFechaFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarFechaFactura_CheckedChanged);
             // 
-            // dataGridView1
+            // DgvBuscarFactura
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(919, 492);
-            this.dataGridView1.TabIndex = 8;
+            this.DgvBuscarFactura.BackgroundColor = System.Drawing.Color.White;
+            this.DgvBuscarFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvBuscarFactura.GridColor = System.Drawing.Color.LightGray;
+            this.DgvBuscarFactura.Location = new System.Drawing.Point(22, 89);
+            this.DgvBuscarFactura.Name = "DgvBuscarFactura";
+            this.DgvBuscarFactura.Size = new System.Drawing.Size(919, 492);
+            this.DgvBuscarFactura.TabIndex = 8;
+            this.DgvBuscarFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBuscarFactura_CellContentClick);
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(360, 53);
+            this.button1.Location = new System.Drawing.Point(367, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 23);
             this.button1.TabIndex = 7;
@@ -1103,62 +1203,65 @@
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(275, 53);
+            this.button2.Location = new System.Drawing.Point(282, 53);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 23);
             this.button2.TabIndex = 6;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtBuscarFactura
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(327, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtBuscarFactura.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscarFactura.Location = new System.Drawing.Point(334, 19);
+            this.txtBuscarFactura.Name = "txtBuscarFactura";
+            this.txtBuscarFactura.Size = new System.Drawing.Size(188, 20);
+            this.txtBuscarFactura.TabIndex = 5;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(272, 24);
+            this.label13.Location = new System.Drawing.Point(279, 24);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 4;
             this.label13.Text = "Buscar";
             // 
-            // button3
+            // btnBuscarFactura
             // 
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(531, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBuscarFactura.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarFactura.Location = new System.Drawing.Point(538, 19);
+            this.btnBuscarFactura.Name = "btnBuscarFactura";
+            this.btnBuscarFactura.Size = new System.Drawing.Size(67, 23);
+            this.btnBuscarFactura.TabIndex = 3;
+            this.btnBuscarFactura.Text = "Buscar";
+            this.btnBuscarFactura.UseVisualStyleBackColor = true;
+            this.btnBuscarFactura.Click += new System.EventHandler(this.btnBuscarFactura_Click);
             // 
-            // checkBox1
+            // ckbBuscarEstadoFactura
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(75, 53);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Estado";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbBuscarEstadoFactura.AutoSize = true;
+            this.ckbBuscarEstadoFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarEstadoFactura.Location = new System.Drawing.Point(82, 53);
+            this.ckbBuscarEstadoFactura.Name = "ckbBuscarEstadoFactura";
+            this.ckbBuscarEstadoFactura.Size = new System.Drawing.Size(59, 17);
+            this.ckbBuscarEstadoFactura.TabIndex = 2;
+            this.ckbBuscarEstadoFactura.Text = "Estado";
+            this.ckbBuscarEstadoFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarEstadoFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarEstadoFactura_CheckedChanged);
             // 
-            // checkBox2
+            // ckbBuscarNombreFactura
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(75, 23);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(63, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Nombre";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ckbBuscarNombreFactura.AutoSize = true;
+            this.ckbBuscarNombreFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarNombreFactura.Location = new System.Drawing.Point(82, 23);
+            this.ckbBuscarNombreFactura.Name = "ckbBuscarNombreFactura";
+            this.ckbBuscarNombreFactura.Size = new System.Drawing.Size(63, 17);
+            this.ckbBuscarNombreFactura.TabIndex = 1;
+            this.ckbBuscarNombreFactura.Text = "Nombre";
+            this.ckbBuscarNombreFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarNombreFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarNombreFactura_CheckedChanged);
             // 
             // tabClientes
             // 
@@ -1197,7 +1300,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Green;
             this.groupBox2.Location = new System.Drawing.Point(25, 123);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(968, 528);
+            this.groupBox2.Size = new System.Drawing.Size(1025, 528);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
@@ -1303,7 +1406,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Green;
             this.groupBox1.Location = new System.Drawing.Point(241, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(752, 87);
+            this.groupBox1.Size = new System.Drawing.Size(809, 87);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo";
@@ -1437,7 +1540,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.Green;
             this.groupBox4.Location = new System.Drawing.Point(26, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(968, 546);
+            this.groupBox4.Size = new System.Drawing.Size(1024, 546);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buscar";
@@ -1543,7 +1646,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Green;
             this.groupBox3.Location = new System.Drawing.Point(242, 30);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(752, 101);
+            this.groupBox3.Size = new System.Drawing.Size(808, 101);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nuevo";
@@ -1678,7 +1781,7 @@
             this.groupBox5.ForeColor = System.Drawing.Color.Green;
             this.groupBox5.Location = new System.Drawing.Point(22, 125);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(968, 513);
+            this.groupBox5.Size = new System.Drawing.Size(1028, 513);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Buscar";
@@ -1788,7 +1891,7 @@
             this.groupBox6.ForeColor = System.Drawing.Color.Green;
             this.groupBox6.Location = new System.Drawing.Point(238, 32);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(752, 87);
+            this.groupBox6.Size = new System.Drawing.Size(812, 87);
             this.groupBox6.TabIndex = 28;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Nuevo";
@@ -2009,7 +2112,7 @@
             this.groupBox7.ForeColor = System.Drawing.Color.Green;
             this.groupBox7.Location = new System.Drawing.Point(22, 121);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(968, 565);
+            this.groupBox7.Size = new System.Drawing.Size(1028, 565);
             this.groupBox7.TabIndex = 29;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Buscar";
@@ -2085,7 +2188,7 @@
             this.groupBox8.ForeColor = System.Drawing.Color.Green;
             this.groupBox8.Location = new System.Drawing.Point(238, 28);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(752, 87);
+            this.groupBox8.Size = new System.Drawing.Size(812, 87);
             this.groupBox8.TabIndex = 28;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Nueva marca";
@@ -2165,7 +2268,7 @@
             this.groupBox15.ForeColor = System.Drawing.Color.Green;
             this.groupBox15.Location = new System.Drawing.Point(21, 126);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(968, 547);
+            this.groupBox15.Size = new System.Drawing.Size(1029, 547);
             this.groupBox15.TabIndex = 25;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Buscar";
@@ -2243,7 +2346,7 @@
             this.groupBox16.ForeColor = System.Drawing.Color.Green;
             this.groupBox16.Location = new System.Drawing.Point(237, 33);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(752, 87);
+            this.groupBox16.Size = new System.Drawing.Size(813, 87);
             this.groupBox16.TabIndex = 24;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Nuevo";
@@ -2342,7 +2445,7 @@
             this.groupBox17.ForeColor = System.Drawing.Color.Green;
             this.groupBox17.Location = new System.Drawing.Point(17, 139);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(968, 541);
+            this.groupBox17.Size = new System.Drawing.Size(1033, 541);
             this.groupBox17.TabIndex = 27;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Buscar";
@@ -2422,7 +2525,7 @@
             this.groupBox18.ForeColor = System.Drawing.Color.Green;
             this.groupBox18.Location = new System.Drawing.Point(236, 35);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(749, 87);
+            this.groupBox18.Size = new System.Drawing.Size(814, 87);
             this.groupBox18.TabIndex = 26;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Nuevo";
@@ -2505,6 +2608,14 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
+            // comboBoxEstado
+            // 
+            this.comboBoxEstado.FormattingEnabled = true;
+            this.comboBoxEstado.Location = new System.Drawing.Point(115, 27);
+            this.comboBoxEstado.Name = "comboBoxEstado";
+            this.comboBoxEstado.Size = new System.Drawing.Size(264, 21);
+            this.comboBoxEstado.TabIndex = 32;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2521,6 +2632,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnlListaVE.ResumeLayout(false);
+            this.PnlListaVE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).EndInit();
             this.PnlListaPR.ResumeLayout(false);
             this.PnlListaPR.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
@@ -2544,7 +2658,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBuscarFactura)).EndInit();
             this.tabClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -2648,15 +2762,15 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.CheckBox ckbBuscarFechaFactura;
+        private System.Windows.Forms.DataGridView DgvBuscarFactura;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscarFactura;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button btnBuscarFactura;
+        private System.Windows.Forms.CheckBox ckbBuscarEstadoFactura;
+        private System.Windows.Forms.CheckBox ckbBuscarNombreFactura;
         private System.Windows.Forms.TabPage tabClientes;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2790,7 +2904,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textEncargado;
-        private System.Windows.Forms.TextBox TxtEstadoFactura;
         private System.Windows.Forms.Button BtnBuscarEncargado;
         private System.Windows.Forms.Button BtnLupaPR;
         private System.Windows.Forms.Panel PnlListaPR;
@@ -2800,5 +2913,15 @@
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox TxtProductos;
+        private System.Windows.Forms.Button BtnEliminarProducto;
+        private System.Windows.Forms.Panel PnlListaVE;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button btnRetornar_VE;
+        private System.Windows.Forms.Button btnBuscar_Ve;
+        private System.Windows.Forms.DataGridView DgvListaVE;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox TxtListaVE;
+        private System.Windows.Forms.Button BtnBuscarVE;
+        private System.Windows.Forms.ComboBox comboBoxEstado;
     }
 }
