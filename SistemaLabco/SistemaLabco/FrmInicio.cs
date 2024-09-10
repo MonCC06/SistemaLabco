@@ -921,13 +921,13 @@ namespace SistemaLabco
         private void FormatoPR()
         {
             DGVProducto.Columns[0].Width = 90;
-            DGVProducto.Columns[0].HeaderText = "ID Producto";
+            DGVProducto.Columns[0].HeaderText = "IDProducto";
             DGVProducto.Columns[1].Width = 240;
             DGVProducto.Columns[1].HeaderText = "Descripcion";
             DGVProducto.Columns[2].Width = 150;
-            DGVProducto.Columns[2].HeaderText = "Precio";
-            DGVProducto.Columns[3].Width = 80;
-            DGVProducto.Columns[3].HeaderText = "Stock_Actual";
+            DGVProducto.Columns[2].HeaderText = "Stock_Actual";
+            DGVProducto.Columns[3].Width = 120;
+            DGVProducto.Columns[3].HeaderText = "Precio";
         }
 
 
@@ -1289,7 +1289,48 @@ namespace SistemaLabco
 
         private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.PnlListaPR.Visible = false;
+               if (e.RowIndex >= 0 && DGVProductos.Columns[e.ColumnIndex].Name == "IDProducto") // Asegúrate que sea la columna correcta
+                {
+                    // Obtener la fila seleccionada.
+                    DataGridViewRow row = DGVProductos.Rows[e.RowIndex];
+
+                    if (row != null)
+                    {
+                        // Verificar que DgvFacturaProducto tenga las columnas necesarias.
+                        if (DgvFacturaProducto.Columns.Count < 4) // Cambia 4 por el número de columnas que tengas
+                        {
+                            MessageBox.Show("El DgvFacturaProducto no tiene suficientes columnas.", "Error");
+                            return;
+                        }
+
+                        // Extraer los datos de la fila seleccionada de DGVProductos.
+                        string idProducto = row.Cells["IDProducto"].Value.ToString();
+                        string descripcion = row.Cells["Descripcion"].Value.ToString();
+                        string precio = row.Cells["Precio"].Value.ToString();
+
+                        // Crear una nueva fila y asignar los valores.
+                        DataGridViewRow newRow = new DataGridViewRow();
+                        newRow.CreateCells(DgvFacturaProducto);  // Crear celdas para la nueva fila.
+                        newRow.Cells[0].Value = idProducto;      // añadir IDProducto.
+                        newRow.Cells[1].Value = descripcion;     // añadir Descripción.
+                        newRow.Cells[2].Value = precio;          // añadir Precio.
+                        newRow.Cells[3].Value = 1;
+                        // Agregar la nueva fila a DgvFacturaProducto.
+                        DgvFacturaProducto.Rows.Add(newRow);
+
+                        // Opcional: Ocultar el panel de lista de productos si es necesario.
+                        PnlListaPR.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Haga clic en el IDProducto para seleccionar el producto.", "Aviso");
+                }
+
         }
 
         private void BtnRetornarPrListado_Click(object sender, EventArgs e)
@@ -1326,38 +1367,25 @@ namespace SistemaLabco
             PnlListaCL.Visible = false;
             PnEncargado.Visible = false;
 
-        }
+            //producto//
 
-        private void DgvFacturaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            if (e.RowIndex >= 0 && DGVProducto.Columns[e.ColumnIndex].Name == "IDProducto")
+            // Crear las columnas del DgvFacturaProducto si aún no existen
+            if (DgvFacturaProducto.Columns.Count == 0)
             {
-                // Obtener la fila seleccionada.
-                DataGridViewRow row = DGVProducto.Rows[e.RowIndex];
+                // Agregar la columna para el ID del producto.
+                DgvFacturaProducto.Columns.Add("IDProducto", "ID Producto");
 
-                if (row != null)
-                {
-                    // Muestra los valores de la fila seleccionada.
-                    MessageBox.Show("Producto seleccionado: " + row.Cells["IDProducto"].Value.ToString());
+                // Agregar la columna para la descripción del producto.
+                DgvFacturaProducto.Columns.Add("Descripcion", "Descripción");
 
-                    // Asignar los valores de la fila a los TextBox correspondientes.
-                    TxtProductos.Text = row.Cells["Nombre"].Value.ToString();
+                // Agregar la columna para el precio del producto.
+                DgvFacturaProducto.Columns.Add("Precio", "Precio");
 
-
-                    // Ocultar el panel de lista de clientes
-                    PnlListaPR.Visible = false;
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Haga clic en el IDTrabajador para seleccionar el trabajador.", "Aviso");
+                DgvFacturaProducto.Columns.Add("Cantidad", "Cantidad");
             }
         }
+
+       
     }
 }
 

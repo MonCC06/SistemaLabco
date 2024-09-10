@@ -390,7 +390,7 @@
             this.PnlListaPR.Controls.Add(this.DGVProductos);
             this.PnlListaPR.Controls.Add(this.label51);
             this.PnlListaPR.Controls.Add(this.TxtProductos);
-            this.PnlListaPR.Location = new System.Drawing.Point(312, 55);
+            this.PnlListaPR.Location = new System.Drawing.Point(459, 10);
             this.PnlListaPR.Name = "PnlListaPR";
             this.PnlListaPR.Size = new System.Drawing.Size(371, 225);
             this.PnlListaPR.TabIndex = 12;
@@ -460,7 +460,7 @@
             this.PnEncargado.Controls.Add(this.DGVEncargado);
             this.PnEncargado.Controls.Add(this.label49);
             this.PnEncargado.Controls.Add(this.textBox7);
-            this.PnEncargado.Location = new System.Drawing.Point(26, 50);
+            this.PnEncargado.Location = new System.Drawing.Point(119, 191);
             this.PnEncargado.Name = "PnEncargado";
             this.PnEncargado.Size = new System.Drawing.Size(380, 202);
             this.PnEncargado.TabIndex = 30;
@@ -738,11 +738,10 @@
             // 
             this.DgvFacturaProducto.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DgvFacturaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvFacturaProducto.Location = new System.Drawing.Point(76, 59);
+            this.DgvFacturaProducto.Location = new System.Drawing.Point(88, 57);
             this.DgvFacturaProducto.Name = "DgvFacturaProducto";
             this.DgvFacturaProducto.Size = new System.Drawing.Size(891, 202);
             this.DgvFacturaProducto.TabIndex = 17;
-            this.DgvFacturaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturaProducto_CellContentClick);
             // 
             // groupBox12
             // 
