@@ -1965,7 +1965,6 @@
             this.DgvLClVh.Name = "DgvLClVh";
             this.DgvLClVh.Size = new System.Drawing.Size(929, 399);
             this.DgvLClVh.TabIndex = 8;
-            this.DgvLClVh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLClVh_CellContentClick);
             // 
             // buttonEliminarVehiculo
             // 
@@ -2171,6 +2170,7 @@
             this.chkK.TabIndex = 9;
             this.chkK.Text = "Kilometros";
             this.chkK.UseVisualStyleBackColor = true;
+            
             // 
             // label21
             // 

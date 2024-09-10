@@ -11,6 +11,7 @@ using ET;
 using BL;
 using System.Security.Cryptography;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace SistemaLabco
 {
     public partial class FrmInicio : Form
@@ -19,6 +20,10 @@ namespace SistemaLabco
         {
             InitializeComponent();
             CargarEstadoComboBox();
+            DgvFacturaProducto.CellValueChanged += DgvFacturaProducto_CellValueChanged;
+            DgvFacturaProducto.CellEndEdit += DgvFacturaProducto_CellEndEdit;
+            
+
         }
 
 
@@ -42,6 +47,9 @@ namespace SistemaLabco
         int IdMarca = 0;
         int IDProducto = 0;
         int IdVehiculo = 0;
+        int seleccionCl = 0;
+        int selecionMa = 0;
+        bool seleccion = true;
         private void FormatoCL()
         {
             if (DgvCliente.Columns.Count >= 6) // Verifica si hay al menos 6 columnas
@@ -1002,6 +1010,15 @@ namespace SistemaLabco
                     MessageBoxIcon.Error);
                 return; // Salir si falta algún dato
             }
+            if(chkK.Checked)
+            {
+                bool seleccion = true;
+
+            }
+            else
+            {
+                bool seleccion = false;
+            }
 
             ETVehiculo etvehiculo = new ETVehiculo();
 
@@ -1013,8 +1030,10 @@ namespace SistemaLabco
             etvehiculo.Modelo = TxTModeloVehiculo.Text.Trim();
             etvehiculo.Anno = DistanciaTxTVehiculo.Text.Trim();
             etvehiculo.VIN = TxTVINVehiculo.Text.Trim();
-            etvehiculo.IDCliente = Convert.ToInt32(TxTCliente.Text);
-            etvehiculo.IDMarca = Convert.ToInt32(TxTModeloVehiculo.Text);
+            etvehiculo.IDCliente = seleccionCl;
+            etvehiculo.IDMarca = selecionMa;
+            etvehiculo.TipodeDistancia = seleccion;
+            
 
             // Convertir distancia a decimal
             decimal distancia;
@@ -1329,7 +1348,6 @@ namespace SistemaLabco
 
         private void Calcular_Totales()
         {
-
             decimal nCantidad = 0;
             decimal nSubtotal = 0;
             decimal nIva = 0;
@@ -1344,22 +1362,31 @@ namespace SistemaLabco
             }
             else
             {
-                //impuestos
-                foreach (DataRow FilaTemp in DgvFacturaProducto.Rows)
+                // Recorrer todas las filas del DataGridView
+                foreach (DataGridViewRow FilaTemp in DgvFacturaProducto.Rows)
                 {
+                    if (FilaTemp.Cells["Precio"].Value != null && FilaTemp.Cells["Cantidad"].Value != null)
+                    {
+                        // Sumar precios y cantidades
+                        nPrecio = Convert.ToDecimal(FilaTemp.Cells["Precio"].Value); // Obtener el precio
+                        nCantidad = Convert.ToDecimal(FilaTemp.Cells["Cantidad"].Value); // Obtener la cantidad
 
-                    nPrecio = nPrecio + Convert.ToDecimal(FilaTemp["Precio"]); // Suma de precios
-                    nCantidad = nCantidad + Convert.ToDecimal(FilaTemp["Cantidad"]);
-
-                    nSubtotal = nPrecio * nCantidad;
-                    nIva = nIva / (1 + Convert.ToDecimal("0.13")); // Subtotal sin el IVA
-                    nIva = nSubtotal * nIva;
-                    nTotal = (nSubtotal + nIva);
-
-                    TxtSubtotal.Text = decimal.Round(nSubtotal, 2).ToString("#0.00");
-                    TxtIVA.Text = ("#13.00%");
-                    TxtTotal.Text = decimal.Round(nTotal, 2).ToString("#0.00");
+                        // Calcular el subtotal de la fila (precio * cantidad)
+                        nSubtotal += nPrecio * nCantidad;
+                    }
                 }
+
+                // Calcular el IVA (13%)
+                nIva = nSubtotal * 0.13m;
+
+                // Calcular el total (subtotal + IVA)
+                nTotal = nSubtotal + nIva;
+
+                // Actualizar los TextBox con los resultados redondeados a 2 decimales
+                TxtSubtotal.Text = decimal.Round(nSubtotal, 2).ToString("#0.00");
+                TxtIVA.Text = "13%";// Aquí mostrarás el valor de IVA
+                textBox5.Text= decimal.Round(nIva, 2).ToString("#0.00");
+                TxtTotal.Text = decimal.Round(nTotal, 2).ToString("#0.00");
             }
         }
 
@@ -1382,11 +1409,17 @@ namespace SistemaLabco
 
                 if (row != null)
                 {
-                    // Muestra los valores de la fila seleccionada.
-                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+                    string idClienteSeleccionado = row.Cells["IDCliente"].Value.ToString();
+
+                    // Verificar si el cliente ya está seleccionado (ya está en el TextBox de cédula)
+                    if (TxtCedulaCliente.Text == idClienteSeleccionado)
+                    {
+                        MessageBox.Show("Este cliente ya ha sido seleccionado.", "Aviso");
+                        return; // Salir para evitar agregarlo dos veces
+                    }
 
                     // Asignar los valores de la fila a los TextBox correspondientes.
-                    TxtCedulaCliente.Text = row.Cells["Cedula"].Value.ToString();
+                    TxtCedulaCliente.Text = idClienteSeleccionado;
                     TxtNombreCliente.Text = row.Cells["Nombre"].Value.ToString();
                     TxtTelefonoCliente.Text = row.Cells["Telefono"].Value.ToString();
                     TxtEmailCliente.Text = row.Cells["Correo"].Value.ToString();
@@ -1506,50 +1539,123 @@ namespace SistemaLabco
         {
             this.PnlListaPR.Visible = true;
         }
+        // Función que actualiza el subtotal total de todos los productos
+        private void ActualizarSubtotal()
+        {
+            decimal subtotal = 0;
 
+            // Iterar sobre todas las filas en DgvFacturaProducto para calcular el subtotal total.
+            foreach (DataGridViewRow row in DgvFacturaProducto.Rows)
+            {
+                if (row.Cells[2].Value != null && row.Cells[3].Value != null)
+                {
+                    decimal precio = Convert.ToDecimal(row.Cells[2].Value);
+                    int cantidad = Convert.ToInt32(row.Cells[3].Value);
+                    subtotal += precio * cantidad;
+                }
+            }
+
+            // Mostrar el subtotal actualizado en TxtSubtotal.
+            TxtSubtotal.Text = subtotal.ToString("N2"); // Formato con 2 decimales
+            Calcular_Totales();
+        }
+
+        // Evento cuando cambia el valor de la cantidad en DgvFacturaProducto
+        private void DgvFacturaProducto_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar si el cambio fue en la columna de cantidad (en este caso la columna 3).
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            {
+                // Actualizar el subtotal cada vez que cambie la cantidad.
+                ActualizarSubtotal();
+            }
+        }
+
+        // Evento para detectar cuando el usuario termina de editar una celda.
+        private void DgvFacturaProducto_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // Al terminar de editar, recalcular el subtotal si es necesario.
+            if (e.ColumnIndex == 3) // Verificar si fue en la columna de cantidad
+            {
+                ActualizarSubtotal();
+            }
+        }
         private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-               if (e.RowIndex >= 0 && DGVProductos.Columns[e.ColumnIndex].Name == "IDProducto") // Asegúrate que sea la columna correcta
+            if (e.RowIndex >= 0 && DGVProductos.Columns[e.ColumnIndex].Name == "IDProducto") // Asegúrate que sea la columna correcta
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DGVProductos.Rows[e.RowIndex];
+
+                if (row != null)
                 {
-                    // Obtener la fila seleccionada.
-                    DataGridViewRow row = DGVProductos.Rows[e.RowIndex];
-
-                    if (row != null)
+                    // Verificar si las celdas existen y tienen datos válidos
+                    if (row.Cells["IDProducto"].Value != null && row.Cells["Descripcion"].Value != null && row.Cells["Precio"].Value != null)
                     {
-                        // Verificar que DgvFacturaProducto tenga las columnas necesarias.
-                        if (DgvFacturaProducto.Columns.Count < 4) // Cambia 4 por el número de columnas que tengas
-                        {
-                            MessageBox.Show("El DgvFacturaProducto no tiene suficientes columnas.", "Error");
-                            return;
-                        }
-
-                        // Extraer los datos de la fila seleccionada de DGVProductos.
                         string idProducto = row.Cells["IDProducto"].Value.ToString();
                         string descripcion = row.Cells["Descripcion"].Value.ToString();
-                        string precio = row.Cells["Precio"].Value.ToString();
+                        decimal precio = Convert.ToDecimal(row.Cells["Precio"].Value);
 
-                        // Crear una nueva fila y asignar los valores.
-                        DataGridViewRow newRow = new DataGridViewRow();
-                        newRow.CreateCells(DgvFacturaProducto);  // Crear celdas para la nueva fila.
-                        newRow.Cells[0].Value = idProducto;      // añadir IDProducto.
-                        newRow.Cells[1].Value = descripcion;     // añadir Descripción.
-                        newRow.Cells[2].Value = precio;          // añadir Precio.
-                        newRow.Cells[3].Value = 1;
-                        // Agregar la nueva fila a DgvFacturaProducto.
-                        DgvFacturaProducto.Rows.Add(newRow);
+                        // Verificar si el producto ya está en DgvFacturaProducto
+                        bool productoEncontrado = false;
+                        foreach (DataGridViewRow facturaRow in DgvFacturaProducto.Rows)
+                        {
+                            if (facturaRow.Cells["IDProducto"].Value != null && facturaRow.Cells["IDProducto"].Value.ToString() == idProducto)
+                            {
+                                // Si el producto ya está, aumentar la cantidad
+                                int cantidadActual = Convert.ToInt32(facturaRow.Cells["Cantidad"].Value);
+                                facturaRow.Cells["Cantidad"].Value = cantidadActual + 1;
 
-                        // Opcional: Ocultar el panel de lista de productos si es necesario.
-                        PnlListaPR.Visible = false;
+                                // Actualizar el subtotal y detener el proceso
+                                ActualizarSubtotal();
+                                productoEncontrado = true;
+                                break;
+                            }
+                        }
+
+                        // Si el producto no está en la factura, añadirlo como una nueva fila
+                        if (!productoEncontrado)
+                        {
+                            DataGridViewRow newRow = new DataGridViewRow();
+                            newRow.CreateCells(DgvFacturaProducto);
+
+                            // Verifica si las columnas existen antes de asignar valores
+                            if (DgvFacturaProducto.Columns["IDProducto"] != null &&
+                                DgvFacturaProducto.Columns["Descripcion"] != null &&
+                                DgvFacturaProducto.Columns["Precio"] != null &&
+                                DgvFacturaProducto.Columns["Cantidad"] != null)
+                            {
+                                newRow.Cells[0].Value = idProducto;   // IDProducto
+                                newRow.Cells[1].Value = descripcion;  // Descripción
+                                newRow.Cells[2].Value = precio;       // Precio
+                                newRow.Cells[3].Value = 1;            // Cantidad inicial 1
+
+                                DgvFacturaProducto.Rows.Add(newRow);
+
+                                // Calcular el nuevo subtotal
+                                ActualizarSubtotal();
+                                PnlListaPR.Visible = false;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error: Las columnas del DataGridView no están correctamente definidas.", "Error");
+                            }
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                        MessageBox.Show("No se pudo obtener los datos de la fila seleccionada. Verifique que las columnas existan y tengan valores válidos.", "Error");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Haga clic en el IDProducto para seleccionar el producto.", "Aviso");
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en el IDProducto para seleccionar el producto.", "Aviso");
+            }
 
         }
 
@@ -1888,7 +1994,7 @@ namespace SistemaLabco
             try
             {
                 // Llamar al método ListadoCL y asignar el resultado al DataGridView
-                DgvLClVh.DataSource = BLCliente.ListadoCL(TxtListaCL.Text);
+                PnlCV.DataSource = BLCliente.ListadoCL(TxtListaCL.Text);
 
                 // Verificar si se han cargado los datos
                 if (DgvLClVh.Rows.Count == 0)
@@ -1914,7 +2020,7 @@ namespace SistemaLabco
             try
             {
                 // Llamar al método ListadoCL y asignar el resultado al DataGridView
-                DgvLClVh.DataSource = BLMarca.ListadoMA(TxTModeloVehiculo.Text);
+                DgvMVc.DataSource = BLMarca.ListadoMA(TxTModeloVehiculo.Text);
 
                 // Verificar si se han cargado los datos
                 if (DgvLClVh.Rows.Count == 0)
@@ -1935,10 +2041,7 @@ namespace SistemaLabco
             PNLMARC.Visible = false;
         }
 
-        private void DgvLClVh_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void DgvMVc_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1953,9 +2056,10 @@ namespace SistemaLabco
                     MessageBox.Show("Marca seleccionado: " + row.Cells["IDMarca"].Value.ToString());
 
                     // Asignar los valores de la fila a los TextBox correspondientes.
+                    selecionMa =int.Parse(row.Cells["IDmarca"].Value.ToString());
                     TxTModeloVehiculo.Text = row.Cells["IDMarca"].Value.ToString();
 
-
+                    
                     // Ocultar el panel de lista de clientes
                     DgvMVc.Visible = false;
                 }
@@ -1973,33 +2077,50 @@ namespace SistemaLabco
         private void PnlCV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.RowIndex >= 0 && DgvLClVh.Columns[e.ColumnIndex].Name == "IDCliente")
+            // Verifica si se hizo clic en una celda válida y en la columna del IDCliente
+            // Verifica si se hizo clic en una celda válida
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.ColumnIndex < PnlCV.Columns.Count)
             {
-                // Obtener la fila seleccionada.
-                DataGridViewRow row = DgvLClVh.Rows[e.RowIndex];
-
-                if (row != null)
+                // Verifica si es la columna del IDCliente
+                if (PnlCV.Columns[e.ColumnIndex].Name == "IDCliente")
                 {
-                    // Muestra los valores de la fila seleccionada.
-                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+                    // Obtener la fila seleccionada.
+                    DataGridViewRow row = PnlCV.Rows[e.RowIndex];
 
-                    // Asignar los valores de la fila a los TextBox correspondientes.
-                    TxTCliente.Text = row.Cells["IDCliente"].Value.ToString();
+                    if (row != null)
+                    {
+                        string idClienteSeleccionado = row.Cells["IDCliente"].Value.ToString();
 
+                        // Verificar si el cliente ya está seleccionado
+                        if (TxtCedulaCliente.Text == idClienteSeleccionado)
+                        {
+                            MessageBox.Show("Este cliente ya ha sido seleccionado.", "Aviso");
+                            return; // Salir para evitar agregarlo dos veces
+                        }
 
-                    // Ocultar el panel de lista de clientes
-                    DgvLClVh.Visible = false;
+                        // Asignar los valores de la fila a los TextBox correspondientes.
+                        TxTCliente.Text = row.Cells["Nombre"].Value.ToString();
+                        seleccionCl = int.Parse(row.Cells["IDCliente"].Value.ToString());
+                        // Ocultar el panel de lista de clientes
+                        PnlCliente.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                    MessageBox.Show("Haga clic en el IDCliente para seleccionar el cliente.", "Aviso");
                 }
             }
             else
             {
-                MessageBox.Show("Haga clic en el IDCliente para seleccionar el cliente.", "Aviso");
+                MessageBox.Show("El índice de la fila o columna está fuera de rango.", "Error");
             }
         }
+
+        
     }
 }
 
