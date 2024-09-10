@@ -91,15 +91,14 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ckbBuscarFechaFactura = new System.Windows.Forms.CheckBox();
+            this.DgvBuscarFactura = new System.Windows.Forms.DataGridView();
+            this.btnModificarFactura = new System.Windows.Forms.Button();
+            this.txtBuscarFactura = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.btnBuscarFactura = new System.Windows.Forms.Button();
+            this.ckbBuscarEstadoFactura = new System.Windows.Forms.CheckBox();
+            this.ckbBuscarNombreFactura = new System.Windows.Forms.CheckBox();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -240,7 +239,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBuscarFactura)).BeginInit();
             this.tabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -897,15 +896,14 @@
             // groupBox19
             // 
             this.groupBox19.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox19.Controls.Add(this.checkBox3);
-            this.groupBox19.Controls.Add(this.dataGridView1);
-            this.groupBox19.Controls.Add(this.button1);
-            this.groupBox19.Controls.Add(this.button2);
-            this.groupBox19.Controls.Add(this.textBox2);
+            this.groupBox19.Controls.Add(this.ckbBuscarFechaFactura);
+            this.groupBox19.Controls.Add(this.DgvBuscarFactura);
+            this.groupBox19.Controls.Add(this.btnModificarFactura);
+            this.groupBox19.Controls.Add(this.txtBuscarFactura);
             this.groupBox19.Controls.Add(this.label13);
-            this.groupBox19.Controls.Add(this.button3);
-            this.groupBox19.Controls.Add(this.checkBox1);
-            this.groupBox19.Controls.Add(this.checkBox2);
+            this.groupBox19.Controls.Add(this.btnBuscarFactura);
+            this.groupBox19.Controls.Add(this.ckbBuscarEstadoFactura);
+            this.groupBox19.Controls.Add(this.ckbBuscarNombreFactura);
             this.groupBox19.ForeColor = System.Drawing.Color.Green;
             this.groupBox19.Location = new System.Drawing.Point(6, 60);
             this.groupBox19.Name = "groupBox19";
@@ -914,54 +912,46 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Buscar";
             // 
-            // checkBox3
+            // ckbBuscarFechaFactura
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.ForeColor = System.Drawing.Color.Black;
-            this.checkBox3.Location = new System.Drawing.Point(158, 23);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(56, 17);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "Fecha";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ckbBuscarFechaFactura.AutoSize = true;
+            this.ckbBuscarFechaFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarFechaFactura.Location = new System.Drawing.Point(158, 23);
+            this.ckbBuscarFechaFactura.Name = "ckbBuscarFechaFactura";
+            this.ckbBuscarFechaFactura.Size = new System.Drawing.Size(56, 17);
+            this.ckbBuscarFechaFactura.TabIndex = 9;
+            this.ckbBuscarFechaFactura.Text = "Fecha";
+            this.ckbBuscarFechaFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarFechaFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarFechaFactura_CheckedChanged);
             // 
-            // dataGridView1
+            // DgvBuscarFactura
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(919, 492);
-            this.dataGridView1.TabIndex = 8;
+            this.DgvBuscarFactura.BackgroundColor = System.Drawing.Color.White;
+            this.DgvBuscarFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvBuscarFactura.GridColor = System.Drawing.Color.LightGray;
+            this.DgvBuscarFactura.Location = new System.Drawing.Point(22, 89);
+            this.DgvBuscarFactura.Name = "DgvBuscarFactura";
+            this.DgvBuscarFactura.Size = new System.Drawing.Size(919, 492);
+            this.DgvBuscarFactura.TabIndex = 8;
+            this.DgvBuscarFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBuscarFactura_CellContentClick);
             // 
-            // button1
+            // btnModificarFactura
             // 
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(360, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModificarFactura.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarFactura.Location = new System.Drawing.Point(275, 53);
+            this.btnModificarFactura.Name = "btnModificarFactura";
+            this.btnModificarFactura.Size = new System.Drawing.Size(67, 23);
+            this.btnModificarFactura.TabIndex = 6;
+            this.btnModificarFactura.Text = "Modificar";
+            this.btnModificarFactura.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // txtBuscarFactura
             // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(275, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(327, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtBuscarFactura.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscarFactura.Location = new System.Drawing.Point(327, 19);
+            this.txtBuscarFactura.Name = "txtBuscarFactura";
+            this.txtBuscarFactura.Size = new System.Drawing.Size(188, 20);
+            this.txtBuscarFactura.TabIndex = 5;
             // 
             // label13
             // 
@@ -973,37 +963,40 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Buscar";
             // 
-            // button3
+            // btnBuscarFactura
             // 
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(531, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBuscarFactura.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarFactura.Location = new System.Drawing.Point(531, 19);
+            this.btnBuscarFactura.Name = "btnBuscarFactura";
+            this.btnBuscarFactura.Size = new System.Drawing.Size(67, 23);
+            this.btnBuscarFactura.TabIndex = 3;
+            this.btnBuscarFactura.Text = "Buscar";
+            this.btnBuscarFactura.UseVisualStyleBackColor = true;
+            this.btnBuscarFactura.Click += new System.EventHandler(this.btnBuscarFactura_Click);
             // 
-            // checkBox1
+            // ckbBuscarEstadoFactura
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(75, 53);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Estado";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbBuscarEstadoFactura.AutoSize = true;
+            this.ckbBuscarEstadoFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarEstadoFactura.Location = new System.Drawing.Point(75, 53);
+            this.ckbBuscarEstadoFactura.Name = "ckbBuscarEstadoFactura";
+            this.ckbBuscarEstadoFactura.Size = new System.Drawing.Size(59, 17);
+            this.ckbBuscarEstadoFactura.TabIndex = 2;
+            this.ckbBuscarEstadoFactura.Text = "Estado";
+            this.ckbBuscarEstadoFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarEstadoFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarEstadoFactura_CheckedChanged);
             // 
-            // checkBox2
+            // ckbBuscarNombreFactura
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(75, 23);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(63, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Nombre";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ckbBuscarNombreFactura.AutoSize = true;
+            this.ckbBuscarNombreFactura.ForeColor = System.Drawing.Color.Black;
+            this.ckbBuscarNombreFactura.Location = new System.Drawing.Point(75, 23);
+            this.ckbBuscarNombreFactura.Name = "ckbBuscarNombreFactura";
+            this.ckbBuscarNombreFactura.Size = new System.Drawing.Size(63, 17);
+            this.ckbBuscarNombreFactura.TabIndex = 1;
+            this.ckbBuscarNombreFactura.Text = "Nombre";
+            this.ckbBuscarNombreFactura.UseVisualStyleBackColor = true;
+            this.ckbBuscarNombreFactura.CheckedChanged += new System.EventHandler(this.ckbBuscarNombreFactura_CheckedChanged);
             // 
             // tabClientes
             // 
@@ -2353,7 +2346,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvBuscarFactura)).EndInit();
             this.tabClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -2464,15 +2457,14 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox ckbBuscarFechaFactura;
+        private System.Windows.Forms.DataGridView DgvBuscarFactura;
+        private System.Windows.Forms.Button btnModificarFactura;
+        private System.Windows.Forms.TextBox txtBuscarFactura;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button btnBuscarFactura;
+        private System.Windows.Forms.CheckBox ckbBuscarEstadoFactura;
+        private System.Windows.Forms.CheckBox ckbBuscarNombreFactura;
         private System.Windows.Forms.TabPage tabClientes;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox2;
