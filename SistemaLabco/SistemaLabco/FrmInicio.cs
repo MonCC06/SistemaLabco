@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ET;
 using BL;
 using System.Security.Cryptography;
+using System.Drawing.Printing;
 namespace SistemaLabco
 {
     public partial class FrmInicio : Form
@@ -1424,6 +1425,36 @@ namespace SistemaLabco
         private void BtnRetornarVehiculo_Click(object sender, EventArgs e)
         {
             PnlVeh.Visible = false;
+        }
+
+
+        ////////////////BOTONES DE LA FACTURA, GUARDAR, ANULAR, IMPRIMIR////////////////////////////
+        private void BtnAnularFA_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void BtnImprimirFA_Click(object sender, EventArgs e)
+        {
+            TxtCedulaCliente.ReadOnly = true;
+            TxtNombreCliente.ReadOnly = true;
+            TxtTelefonoCliente.ReadOnly = true;
+            TxtEmailCliente.ReadOnly = true;
+            TxtEstadoFactura.ReadOnly = true;
+            TxtTrabajador.ReadOnly = true;
+            TxtPlacaVehiculoFactura.ReadOnly = true;
+            TxtMarcaVehiculoFactura.ReadOnly = true;
+            TxtAnnoVehiculoFactura.ReadOnly = true;
+            TxtDistanciaVehiculoFactura.ReadOnly = true;
+
+            TxtEstadoFactura.Text = "Cancelada";
+
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrintPage = Imprimir;
+            printDocument1.Print();
+
         }
     }
 }

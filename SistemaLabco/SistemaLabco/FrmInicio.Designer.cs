@@ -56,7 +56,7 @@
             this.btnBuscar_encargado = new System.Windows.Forms.Button();
             this.DGVEncargado = new System.Windows.Forms.DataGridView();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TxtTrabajador = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
@@ -391,7 +391,7 @@
             this.PnlVeh.Controls.Add(this.DGVVehiculos);
             this.PnlVeh.Controls.Add(this.label52);
             this.PnlVeh.Controls.Add(this.TxtListaVE);
-            this.PnlVeh.Location = new System.Drawing.Point(32, 0);
+            this.PnlVeh.Location = new System.Drawing.Point(75, 258);
             this.PnlVeh.Name = "PnlVeh";
             this.PnlVeh.Size = new System.Drawing.Size(371, 225);
             this.PnlVeh.TabIndex = 13;
@@ -540,7 +540,7 @@
             this.PnEncargado.Controls.Add(this.btnBuscar_encargado);
             this.PnEncargado.Controls.Add(this.DGVEncargado);
             this.PnEncargado.Controls.Add(this.label49);
-            this.PnEncargado.Controls.Add(this.textBox7);
+            this.PnEncargado.Controls.Add(this.TxtTrabajador);
             this.PnEncargado.Location = new System.Drawing.Point(26, 50);
             this.PnEncargado.Name = "PnEncargado";
             this.PnEncargado.Size = new System.Drawing.Size(380, 202);
@@ -595,12 +595,12 @@
             this.label49.TabIndex = 2;
             this.label49.Text = "Buscar:";
             // 
-            // textBox7
+            // TxtTrabajador
             // 
-            this.textBox7.Location = new System.Drawing.Point(49, 28);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(171, 20);
-            this.textBox7.TabIndex = 1;
+            this.TxtTrabajador.Location = new System.Drawing.Point(49, 28);
+            this.TxtTrabajador.Name = "TxtTrabajador";
+            this.TxtTrabajador.Size = new System.Drawing.Size(171, 20);
+            this.TxtTrabajador.TabIndex = 1;
             // 
             // label25
             // 
@@ -691,6 +691,7 @@
             this.BtnAnularFA.TabIndex = 25;
             this.BtnAnularFA.Text = "Anular";
             this.BtnAnularFA.UseVisualStyleBackColor = true;
+            this.BtnAnularFA.Click += new System.EventHandler(this.BtnAnularFA_Click);
             // 
             // button5
             // 
@@ -709,6 +710,7 @@
             this.BtnImprimirFA.TabIndex = 15;
             this.BtnImprimirFA.Text = "Imprimir";
             this.BtnImprimirFA.UseVisualStyleBackColor = true;
+            this.BtnImprimirFA.Click += new System.EventHandler(this.BtnImprimirFA_Click);
             // 
             // groupBox10
             // 
@@ -2885,7 +2887,7 @@
         private System.Windows.Forms.Button btnBuscar_encargado;
         private System.Windows.Forms.DataGridView DGVEncargado;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TxtTrabajador;
         private System.Windows.Forms.TextBox textEncargado;
         private System.Windows.Forms.TextBox TxtEstadoFactura;
         private System.Windows.Forms.Button BtnBuscarEncargado;
