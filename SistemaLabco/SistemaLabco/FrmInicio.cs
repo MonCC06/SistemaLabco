@@ -27,6 +27,7 @@ namespace SistemaLabco
         int IDServicio = 0;
         int IdMarca = 0;
         int IDProducto = 0;
+        int IdVehiculo = 0;
         private void FormatoCL()
         {
             if (DgvCliente.Columns.Count >= 6) // Verifica si hay al menos 6 columnas
@@ -1325,6 +1326,8 @@ namespace SistemaLabco
             PnlListaPR.Visible = false;
             PnlListaCL.Visible = false;
             PnEncargado.Visible = false;
+            PanelLsClVehi.Visible = false;
+            PNLMARC.Visible = false;
 
         }
 
@@ -1358,8 +1361,461 @@ namespace SistemaLabco
                 MessageBox.Show("Haga clic en el IDTrabajador para seleccionar el trabajador.", "Aviso");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            this.PanelLsClVehi.Location = TxTVin.Location;
+            this.PanelLsClVehi.Visible = true;
+
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PanelLsClVehi.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DgvLClVh.DataSource = BLCliente.ListadoCL(TxtListaCL.Text);
+
+                // Verificar si se han cargado los datos
+                if (DgvLClVh.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+
+
+
+
+
+
+
+        }
+
+        private void DgvLClVh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Verifica si se hizo clic en una celda válida y en la columna del IDCliente
+            if (e.RowIndex >= 0 && DgvLClVh.Columns[e.ColumnIndex].Name == "IDCliente")
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DgvLClVh.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    // Muestra los valores de la fila seleccionada.
+                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+
+                    // Asignar los valores de la fila a los TextBox correspondientes.
+                    TxTCliente.Text = row.Cells["IDCliente"].Value.ToString();
+                  
+
+                    // Ocultar el panel de lista de clientes
+                    DgvLClVh.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en el IDCliente para seleccionar el cliente.", "Aviso");
+            }
+
+
+
+
+
+
+
+
+        }
+
+        private void PanelLsClVehi_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DgvMVc.DataSource = BLMarca.ListadoMA(TxTModeloVehi.Text);
+
+                // Verificar si se han cargado los datos
+                if (DgvMVc.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+
+
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            PNLMARC.Visible = false;
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.PanelLsClVehi.Location = TxTModeloVehiculo.Location;
+            this.PNLMARC.Visible = true;
+        }
+
+        private void DgvMVc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si se hizo clic en una celda válida y en la columna del IDCliente
+            if (e.RowIndex >= 0 && DgvMVc.Columns[e.ColumnIndex].Name == "IDMarca")
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DgvMVc.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    // Muestra los valores de la fila seleccionada.
+                    MessageBox.Show("Marca seleccionado: " + row.Cells["IDMarca"].Value.ToString());
+
+                    // Asignar los valores de la fila a los TextBox correspondientes.
+                    TxTModeloVehi.Text = row.Cells["IDMarca"].Value.ToString();
+
+
+                    // Ocultar el panel de lista de clientes
+                    DgvMVc.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en el IDCliente para seleccionar el cliente.", "Aviso");
+            }
+
+
+        }
+
+
+
+
+        private void FormatoVe()
+        {
+            dataGridViewVehiculo.Columns[0].Width = 100;
+            dataGridViewVehiculo.Columns[0].HeaderText = "ID Vehiculo";
+            dataGridViewVehiculo.Columns[1].Width = 100;
+            dataGridViewVehiculo.Columns[1].HeaderText = "Vehiculo";
+
+        }
+
+
+
+
+
+
+
+        private void ActualizarVehiculo()
+        {
+            // Aquí puedes utilizar el método GuardarCliente o crear un método específico para actualización.
+            // Asumiendo que `GuardarCliente` se usa para ambos casos:
+            GuardarVehiculo();
+            this.ListadoVe("%");
+        }
+
+
+
+
+
+
+        private void ListadoVe(string cTexto)
+        {
+
+            try
+            {
+                dataGridViewVehiculo.DataSource = BLVehiculo.ListadoVE(cTexto);
+                this.FormatoVe();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+        }
+
+
+        private void SeleccionaItemVehiculo()
+        {
+            //Validasmos que el DATAGEIP tenga datos para que no nos de error
+
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDVehiculo"].Value)))
+            {
+                MessageBox.Show("No hay datos que mostrar", "Aviso del sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                this.IdVehiculo = Convert.ToInt32(dataGridViewVehiculo.CurrentRow.Cells["IDVehiculo"].Value);
+                TxTPlacaVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Placa"].Value);
+                TxTCliente.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDCliente"].Value);
+                TxTModeloVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Modelo"].Value);
+                TxTModeloVehi.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDMarca"].Value);
+                TxTAnnoVehi.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Anno"].Value);
+                TxTVin.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["VIN"].Value);
+                DistanciaTxTVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["DistanciaRecorrida"].Value);
+                
+
+
+
+
+            }
+
+        }
+
+
+
+
+        private void GuardarVehiculo()
+        {
+            // Verificar que todos los campos requeridos estén completos
+            if (TxTPlacaVehiculo.Text == String.Empty ||
+                TxTCliente.Text == String.Empty ||
+                TxTModeloVehiculo.Text == String.Empty ||
+                TxTModeloVehi.Text == String.Empty ||
+                TxTAnnoVehi.Text == String.Empty ||
+                TxTVin.Text == String.Empty ||
+                DistanciaTxTVehiculo.Text == String.Empty)
+            {
+                MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso del sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return; // Salir si falta algún dato
+            }
+
+            ETVehiculo etvehiculo = new ETVehiculo();
+
+            string Rpta = "";
+
+            // Asignaciones de campos de texto
+            etvehiculo.IDVehiculo = IdVehiculo;
+            etvehiculo.Placa = TxTPlacaVehiculo.Text.Trim();
+            etvehiculo.Modelo = TxTModeloVehiculo.Text.Trim();
+            etvehiculo.Anno = TxTAnnoVehi.Text.Trim();
+            etvehiculo.VIN = TxTVin.Text.Trim();
+            etvehiculo.IDCliente = Convert.ToInt32(TxTCliente.Text);
+            etvehiculo.IDMarca = Convert.ToInt32(TxTModeloVehi.Text);
+
+            // Convertir distancia a decimal
+            decimal distancia;
+            if (decimal.TryParse(DistanciaTxTVehiculo.Text.Trim(), out distancia))
+            {
+                // Determinar tipo de distancia según el estado del CheckBox
+                if (chkK.Checked) // CheckBox seleccionado para "Kilómetros"
+                {
+                    // Asignar solo el valor decimal sin la unidad
+                    etvehiculo.DistanciaRecorrida = distancia;
+                    etvehiculo.TipodeDistancia = true;
+                }
+                else // CheckBox no seleccionado para "Millas"
+                {
+                    // Asignar solo el valor decimal sin la unidad
+                    etvehiculo.DistanciaRecorrida = distancia;
+                    etvehiculo.TipodeDistancia = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("La distancia ingresada no es válida.", "Aviso del sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return; // Salir si la distancia no es válida
+            }
+
+            // Guardar vehículo
+            Rpta = BLVehiculo.GuardarVE(EstadoGuarda, etvehiculo);
+            if (Rpta == "OK")
+            {
+                this.ListadoMarca("%");
+                MessageBox.Show("Los datos se han registrado", "Aviso del sistema", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+                EstadoGuarda = 1; // Estado que indica que los datos fueron guardados correctamente
+
+                // Limpiar campos
+                TxTPlacaVehiculo.Text = "";
+                TxTCliente.Text = "";
+                TxTModeloVehiculo.Text = "";
+                TxTModeloVehi.Text = "";
+                TxTVin.Text = "";
+                TxTAnnoVehi.Text = "";
+                DistanciaTxTVehiculo.Text = ""; // Corrige el nombre del TextBox si es necesario
+                IdVehiculo = 0;
+            }
+            else
+            {
+                MessageBox.Show(Rpta, "Aviso del sistema", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void ModificarVehiculo()
+        {
+            EstadoGuarda = 2; // Indica que se trata de una actualización
+
+            // Verificar si hay una fila seleccionada en el DataGridView
+            if (dataGridViewVehiculo.CurrentRow != null)
+            {
+                // Obtener el IDCliente de la fila seleccionada
+                this.IdVehiculo = Convert.ToInt32(dataGridViewVehiculo.CurrentRow.Cells["IDVehiculo"].Value);
+
+                // Poblar los campos con los datos actuales del cliente
+                TxTCliente.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDCliente"].Value);
+                TxTModeloVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Modelo"].Value);
+                TxTPlacaVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Placa"].Value);
+                TxTModeloVehi.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDMarca"].Value);
+                TxTAnnoVehi.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["Anno"].Value);
+                TxTVin.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["VIN"].Value);
+                DistanciaTxTVehiculo.Text = Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["DistanciaRecorrida"].Value);
+
+                // Establecer el enfoque en el primer campo editable
+                txtNuevoNombreTrabajador.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Trabaajador para modificar.", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void buttonGuardarVehiculo_Click(object sender, EventArgs e)
+        {
+
+            if(EstadoGuarda == 2)
+        {
+                // Actualización del cliente
+                ActualizarVehiculo();
+            }
+        else if (EstadoGuarda == 1)
+            {
+                // Inserción de nuevo cliente
+                GuardarVehiculo();
+            }
+            else
+            {
+                MessageBox.Show("El estado de guardado no está definido.", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+        private void buttonBuscarVehiculo_Click(object sender, EventArgs e)
+        {
+
+            this.ListadoVe(TxTBuscarVehiculo.Text.Trim());
+        }
+
+        private void chkceduvehi_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ListadoVe(TxTBuscarVehiculo.Text.Trim());
+        }
+
+        private void chkplacavehiculo_CheckedChanged(object sender, EventArgs e)
+        {
+            this.ListadoVe(TxTBuscarVehiculo.Text.Trim());
+        }
+
+        private void buttonModificarVehiculo_Click(object sender, EventArgs e)
+        {
+            ModificarVehiculo();
+        }
+
+        private void buttonEliminarVehiculo_Click(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrEmpty(Convert.ToString(dataGridViewVehiculo.CurrentRow.Cells["IDVehiculo"].Value)))
+            {
+                MessageBox.Show("No hay datos que mostar", "Aviso del Sistema", MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult opcion;
+                //preguntar si se quiere realizar procedimiento y a opcion se le asignael valor de la respuesta
+                opcion = MessageBox.Show("¿Está seguro de eliminar el registro seleccionado?", "Aviso del Sistema", MessageBoxButtons.YesNoCancel,
+                   MessageBoxIcon.Question);
+                if (opcion == DialogResult.Yes)
+                {
+                    String Rpta = "";
+                    //convertir a int
+                    this.IdVehiculo = Convert.ToInt32(dataGridViewVehiculo.CurrentRow.Cells["IDVehiculo"].Value);
+                    Rpta = BLVehiculo.EliminaVE(this.IdVehiculo);
+
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.IDTrabajador = 0;
+                        MessageBox.Show("Registro Eliminado", "Aviso del Sistema", MessageBoxButtons.YesNoCancel,
+                         MessageBoxIcon.Exclamation);
+
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
-}
+    }
 
 
 

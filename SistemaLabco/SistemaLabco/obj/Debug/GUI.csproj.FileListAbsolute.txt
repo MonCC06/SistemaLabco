@@ -15,3 +15,20 @@ C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLab
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.Up2Date
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.exe
 C:\Users\monse\OneDrive\Documentos\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.pdb
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.exe.config
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.exe
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\SistemaLabco.pdb
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\BL.dll
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\ET.dll
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\DAL.dll
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\BL.pdb
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\ET.pdb
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\bin\Debug\DAL.pdb
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.FrmInicio.resources
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.Properties.Resources.resources
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\GUI.csproj.Up2Date
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.exe
+C:\Users\Jose David\Documents\GitHub\SistemaLabcoUV\SistemaLabco\SistemaLabco\obj\Debug\SistemaLabco.pdb

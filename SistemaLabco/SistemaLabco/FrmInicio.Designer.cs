@@ -160,6 +160,24 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.PNLMARC = new System.Windows.Forms.Panel();
+            this.label54 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.DgvMVc = new System.Windows.Forms.DataGridView();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.PanelLsClVehi = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.DgvLClVh = new System.Windows.Forms.DataGridView();
+            this.label52 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.dataGridViewVehiculo = new System.Windows.Forms.DataGridView();
             this.buttonEliminarVehiculo = new System.Windows.Forms.Button();
             this.buttonModificarVehiculo = new System.Windows.Forms.Button();
@@ -170,17 +188,17 @@
             this.chkceduvehi = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxTVin = new System.Windows.Forms.TextBox();
+            this.TxTCliente = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxTAnnoVehi = new System.Windows.Forms.TextBox();
             this.chkM = new System.Windows.Forms.CheckBox();
             this.chkK = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.DistanciaTxTVehiculo = new System.Windows.Forms.TextBox();
-            this.TxTVINVehiculo = new System.Windows.Forms.TextBox();
+            this.TxTModeloVehi = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.TxTPlacaVehiculo = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -271,6 +289,10 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.PNLMARC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMVc)).BeginInit();
+            this.PanelLsClVehi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLClVh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehiculo)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1668,6 +1690,12 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox5.Controls.Add(this.button10);
+            this.groupBox5.Controls.Add(this.label56);
+            this.groupBox5.Controls.Add(this.PNLMARC);
+            this.groupBox5.Controls.Add(this.label53);
+            this.groupBox5.Controls.Add(this.PanelLsClVehi);
+            this.groupBox5.Controls.Add(this.button4);
             this.groupBox5.Controls.Add(this.dataGridViewVehiculo);
             this.groupBox5.Controls.Add(this.buttonEliminarVehiculo);
             this.groupBox5.Controls.Add(this.buttonModificarVehiculo);
@@ -1683,6 +1711,189 @@
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Buscar";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.SeaShell;
+            this.button10.Location = new System.Drawing.Point(800, 22);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(49, 29);
+            this.button10.TabIndex = 34;
+            this.button10.Text = ": : :";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.ForeColor = System.Drawing.Color.Red;
+            this.label56.Location = new System.Drawing.Point(712, 28);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(73, 13);
+            this.label56.TabIndex = 33;
+            this.label56.Text = "Buscar Marca";
+            // 
+            // PNLMARC
+            // 
+            this.PNLMARC.BackColor = System.Drawing.Color.Gainsboro;
+            this.PNLMARC.Controls.Add(this.label54);
+            this.PNLMARC.Controls.Add(this.button8);
+            this.PNLMARC.Controls.Add(this.button9);
+            this.PNLMARC.Controls.Add(this.DgvMVc);
+            this.PNLMARC.Controls.Add(this.label55);
+            this.PNLMARC.Controls.Add(this.textBox1);
+            this.PNLMARC.Location = new System.Drawing.Point(274, 126);
+            this.PNLMARC.Name = "PNLMARC";
+            this.PNLMARC.Size = new System.Drawing.Size(371, 225);
+            this.PNLMARC.TabIndex = 32;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.ForeColor = System.Drawing.Color.Green;
+            this.label54.Location = new System.Drawing.Point(3, 5);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(77, 26);
+            this.label54.TabIndex = 5;
+            this.label54.Text = "Lista de Marca\r\n\r\n";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(268, 34);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(41, 24);
+            this.button8.TabIndex = 4;
+            this.button8.Text = ": : :";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(226, 34);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(36, 24);
+            this.button9.TabIndex = 3;
+            this.button9.Text = ": : :";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // DgvMVc
+            // 
+            this.DgvMVc.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvMVc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMVc.Location = new System.Drawing.Point(3, 68);
+            this.DgvMVc.Name = "DgvMVc";
+            this.DgvMVc.Size = new System.Drawing.Size(365, 160);
+            this.DgvMVc.TabIndex = 0;
+            this.DgvMVc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMVc_CellContentClick);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(3, 37);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(43, 13);
+            this.label55.TabIndex = 2;
+            this.label55.Text = "Buscar:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(49, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.ForeColor = System.Drawing.Color.Red;
+            this.label53.Location = new System.Drawing.Point(547, 28);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(69, 13);
+            this.label53.TabIndex = 31;
+            this.label53.Text = "Buscar Cliete";
+            // 
+            // PanelLsClVehi
+            // 
+            this.PanelLsClVehi.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelLsClVehi.Controls.Add(this.label47);
+            this.PanelLsClVehi.Controls.Add(this.button6);
+            this.PanelLsClVehi.Controls.Add(this.button7);
+            this.PanelLsClVehi.Controls.Add(this.DgvLClVh);
+            this.PanelLsClVehi.Controls.Add(this.label52);
+            this.PanelLsClVehi.Controls.Add(this.textBox6);
+            this.PanelLsClVehi.Location = new System.Drawing.Point(561, 123);
+            this.PanelLsClVehi.Name = "PanelLsClVehi";
+            this.PanelLsClVehi.Size = new System.Drawing.Size(342, 228);
+            this.PanelLsClVehi.TabIndex = 12;
+            this.PanelLsClVehi.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLsClVehi_Paint);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.Green;
+            this.label47.Location = new System.Drawing.Point(125, 9);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(100, 13);
+            this.label47.TabIndex = 5;
+            this.label47.Text = "Lista de los Clientes";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(269, 27);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(41, 24);
+            this.button6.TabIndex = 4;
+            this.button6.Text = ": : :";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(226, 27);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(36, 24);
+            this.button7.TabIndex = 3;
+            this.button7.Text = ": : :";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // DgvLClVh
+            // 
+            this.DgvLClVh.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvLClVh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLClVh.Location = new System.Drawing.Point(3, 66);
+            this.DgvLClVh.Name = "DgvLClVh";
+            this.DgvLClVh.Size = new System.Drawing.Size(365, 160);
+            this.DgvLClVh.TabIndex = 0;
+            this.DgvLClVh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLClVh_CellContentClick);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(3, 31);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(43, 13);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "Buscar:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(49, 28);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(171, 20);
+            this.textBox6.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SeaShell;
+            this.button4.Location = new System.Drawing.Point(622, 20);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(49, 29);
+            this.button4.TabIndex = 11;
+            this.button4.Text = ": : :";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridViewVehiculo
             // 
@@ -1703,6 +1914,7 @@
             this.buttonEliminarVehiculo.TabIndex = 7;
             this.buttonEliminarVehiculo.Text = "Eliminar";
             this.buttonEliminarVehiculo.UseVisualStyleBackColor = true;
+            this.buttonEliminarVehiculo.Click += new System.EventHandler(this.buttonEliminarVehiculo_Click);
             // 
             // buttonModificarVehiculo
             // 
@@ -1713,6 +1925,7 @@
             this.buttonModificarVehiculo.TabIndex = 6;
             this.buttonModificarVehiculo.Text = "Modificar";
             this.buttonModificarVehiculo.UseVisualStyleBackColor = true;
+            this.buttonModificarVehiculo.Click += new System.EventHandler(this.buttonModificarVehiculo_Click);
             // 
             // TxTBuscarVehiculo
             // 
@@ -1741,6 +1954,7 @@
             this.buttonBuscarVehiculo.TabIndex = 3;
             this.buttonBuscarVehiculo.Text = "Buscar";
             this.buttonBuscarVehiculo.UseVisualStyleBackColor = true;
+            this.buttonBuscarVehiculo.Click += new System.EventHandler(this.buttonBuscarVehiculo_Click);
             // 
             // chkplacavehiculo
             // 
@@ -1752,6 +1966,7 @@
             this.chkplacavehiculo.TabIndex = 2;
             this.chkplacavehiculo.Text = "Placa";
             this.chkplacavehiculo.UseVisualStyleBackColor = true;
+            this.chkplacavehiculo.CheckedChanged += new System.EventHandler(this.chkplacavehiculo_CheckedChanged);
             // 
             // chkceduvehi
             // 
@@ -1763,22 +1978,23 @@
             this.chkceduvehi.TabIndex = 1;
             this.chkceduvehi.Text = "Cedula Cliente";
             this.chkceduvehi.UseVisualStyleBackColor = true;
+            this.chkceduvehi.CheckedChanged += new System.EventHandler(this.chkceduvehi_CheckedChanged);
             // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.textBox4);
-            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.TxTVin);
+            this.groupBox6.Controls.Add(this.TxTCliente);
             this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Controls.Add(this.label37);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.TxTAnnoVehi);
             this.groupBox6.Controls.Add(this.chkM);
             this.groupBox6.Controls.Add(this.chkK);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.DistanciaTxTVehiculo);
-            this.groupBox6.Controls.Add(this.TxTVINVehiculo);
+            this.groupBox6.Controls.Add(this.TxTModeloVehi);
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.TxTPlacaVehiculo);
             this.groupBox6.Controls.Add(this.label19);
@@ -1805,21 +2021,21 @@
             this.label45.TabIndex = 33;
             this.label45.Text = "Marca";
             // 
-            // textBox4
+            // TxTVin
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(37, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 20);
-            this.textBox4.TabIndex = 32;
+            this.TxTVin.ForeColor = System.Drawing.Color.Black;
+            this.TxTVin.Location = new System.Drawing.Point(37, 58);
+            this.TxTVin.Name = "TxTVin";
+            this.TxTVin.Size = new System.Drawing.Size(109, 20);
+            this.TxTVin.TabIndex = 32;
             // 
-            // textBox3
+            // TxTCliente
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(42, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 20);
-            this.textBox3.TabIndex = 31;
+            this.TxTCliente.ForeColor = System.Drawing.Color.Black;
+            this.TxTCliente.Location = new System.Drawing.Point(42, 19);
+            this.TxTCliente.Name = "TxTCliente";
+            this.TxTCliente.Size = new System.Drawing.Size(104, 20);
+            this.TxTCliente.TabIndex = 31;
             // 
             // label40
             // 
@@ -1842,13 +2058,13 @@
             this.label37.TabIndex = 29;
             this.label37.Text = "Año";
             // 
-            // textBox1
+            // TxTAnnoVehi
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(621, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 28;
+            this.TxTAnnoVehi.ForeColor = System.Drawing.Color.Black;
+            this.TxTAnnoVehi.Location = new System.Drawing.Point(621, 19);
+            this.TxTAnnoVehi.Name = "TxTAnnoVehi";
+            this.TxTAnnoVehi.Size = new System.Drawing.Size(114, 20);
+            this.TxTAnnoVehi.TabIndex = 28;
             // 
             // chkM
             // 
@@ -1900,13 +2116,13 @@
             this.DistanciaTxTVehiculo.Size = new System.Drawing.Size(114, 20);
             this.DistanciaTxTVehiculo.TabIndex = 21;
             // 
-            // TxTVINVehiculo
+            // TxTModeloVehi
             // 
-            this.TxTVINVehiculo.ForeColor = System.Drawing.Color.Black;
-            this.TxTVINVehiculo.Location = new System.Drawing.Point(483, 19);
-            this.TxTVINVehiculo.Name = "TxTVINVehiculo";
-            this.TxTVINVehiculo.Size = new System.Drawing.Size(109, 20);
-            this.TxTVINVehiculo.TabIndex = 18;
+            this.TxTModeloVehi.ForeColor = System.Drawing.Color.Black;
+            this.TxTModeloVehi.Location = new System.Drawing.Point(483, 19);
+            this.TxTModeloVehi.Name = "TxTModeloVehi";
+            this.TxTModeloVehi.Size = new System.Drawing.Size(109, 20);
+            this.TxTModeloVehi.TabIndex = 18;
             // 
             // label18
             // 
@@ -1957,6 +2173,7 @@
             this.buttonGuardarVehiculo.TabIndex = 17;
             this.buttonGuardarVehiculo.Text = "Guardar";
             this.buttonGuardarVehiculo.UseVisualStyleBackColor = true;
+            this.buttonGuardarVehiculo.Click += new System.EventHandler(this.buttonGuardarVehiculo_Click);
             // 
             // label12
             // 
@@ -2564,6 +2781,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.PNLMARC.ResumeLayout(false);
+            this.PNLMARC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMVc)).EndInit();
+            this.PanelLsClVehi.ResumeLayout(false);
+            this.PanelLsClVehi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLClVh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVehiculo)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -2719,7 +2942,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox DistanciaTxTVehiculo;
-        private System.Windows.Forms.TextBox TxTVINVehiculo;
+        private System.Windows.Forms.TextBox TxTModeloVehi;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox TxTPlacaVehiculo;
         private System.Windows.Forms.Label label19;
@@ -2776,11 +2999,11 @@
         private System.Windows.Forms.TextBox TBPrecioProducto;
         private System.Windows.Forms.TextBox TBDescripcionProducto;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxTAnnoVehi;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxTVin;
+        private System.Windows.Forms.TextBox TxTCliente;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Panel PnEncargado;
@@ -2801,5 +3024,23 @@
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox TxtProductos;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel PanelLsClVehi;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView DgvLClVh;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Panel PNLMARC;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DataGridView DgvMVc;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Button button10;
     }
 }
