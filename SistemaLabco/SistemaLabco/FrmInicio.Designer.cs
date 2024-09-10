@@ -35,7 +35,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.PnEncargado = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.btnRetornar_encargado = new System.Windows.Forms.Button();
+            this.btnBuscar_encargado = new System.Windows.Forms.Button();
+            this.DGVEncargado = new System.Windows.Forms.DataGridView();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -73,6 +79,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textEncargado = new System.Windows.Forms.TextBox();
+            this.BtnBuscarEncargado = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -223,13 +231,14 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.comboBoxEncargado = new System.Windows.Forms.ComboBox();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnEncargado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVEncargado)).BeginInit();
             this.PnlListaCL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -338,7 +347,7 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox9.Controls.Add(this.button6);
+            this.groupBox9.Controls.Add(this.PnEncargado);
             this.groupBox9.Controls.Add(this.button4);
             this.groupBox9.Controls.Add(this.label47);
             this.groupBox9.Controls.Add(this.textBox6);
@@ -356,15 +365,75 @@
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             // 
-            // button6
+            // PnEncargado
             // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(632, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Añadir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.PnEncargado.BackColor = System.Drawing.Color.Gainsboro;
+            this.PnEncargado.Controls.Add(this.label48);
+            this.PnEncargado.Controls.Add(this.btnRetornar_encargado);
+            this.PnEncargado.Controls.Add(this.btnBuscar_encargado);
+            this.PnEncargado.Controls.Add(this.DGVEncargado);
+            this.PnEncargado.Controls.Add(this.label49);
+            this.PnEncargado.Controls.Add(this.textBox7);
+            this.PnEncargado.Location = new System.Drawing.Point(588, 19);
+            this.PnEncargado.Name = "PnEncargado";
+            this.PnEncargado.Size = new System.Drawing.Size(371, 225);
+            this.PnEncargado.TabIndex = 29;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.ForeColor = System.Drawing.Color.Green;
+            this.label48.Location = new System.Drawing.Point(125, 9);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(120, 13);
+            this.label48.TabIndex = 5;
+            this.label48.Text = "Lista de los Encargados";
+            // 
+            // btnRetornar_encargado
+            // 
+            this.btnRetornar_encargado.Location = new System.Drawing.Point(269, 27);
+            this.btnRetornar_encargado.Name = "btnRetornar_encargado";
+            this.btnRetornar_encargado.Size = new System.Drawing.Size(41, 24);
+            this.btnRetornar_encargado.TabIndex = 4;
+            this.btnRetornar_encargado.Text = ": : :";
+            this.btnRetornar_encargado.UseVisualStyleBackColor = true;
+            this.btnRetornar_encargado.Click += new System.EventHandler(this.btnRetornar_encargado_Click);
+            // 
+            // btnBuscar_encargado
+            // 
+            this.btnBuscar_encargado.Location = new System.Drawing.Point(226, 27);
+            this.btnBuscar_encargado.Name = "btnBuscar_encargado";
+            this.btnBuscar_encargado.Size = new System.Drawing.Size(36, 24);
+            this.btnBuscar_encargado.TabIndex = 3;
+            this.btnBuscar_encargado.Text = ": : :";
+            this.btnBuscar_encargado.UseVisualStyleBackColor = true;
+            this.btnBuscar_encargado.Click += new System.EventHandler(this.btnBuscar_encargado_Click);
+            // 
+            // DGVEncargado
+            // 
+            this.DGVEncargado.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DGVEncargado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVEncargado.Location = new System.Drawing.Point(3, 66);
+            this.DGVEncargado.Name = "DGVEncargado";
+            this.DGVEncargado.Size = new System.Drawing.Size(365, 160);
+            this.DGVEncargado.TabIndex = 0;
+            this.DGVEncargado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVEncargado_CellContentClick);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(3, 31);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(43, 13);
+            this.label49.TabIndex = 2;
+            this.label49.Text = "Buscar:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(49, 28);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(171, 20);
+            this.textBox7.TabIndex = 1;
             // 
             // button4
             // 
@@ -403,7 +472,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(150, 46);
+            this.PnlListaCL.Location = new System.Drawing.Point(137, 59);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -723,7 +792,8 @@
             // groupBox13
             // 
             this.groupBox13.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox13.Controls.Add(this.comboBoxEncargado);
+            this.groupBox13.Controls.Add(this.textEncargado);
+            this.groupBox13.Controls.Add(this.BtnBuscarEncargado);
             this.groupBox13.Controls.Add(this.dateTimePicker1);
             this.groupBox13.Controls.Add(this.label31);
             this.groupBox13.Controls.Add(this.label29);
@@ -736,6 +806,24 @@
             this.groupBox13.TabIndex = 2;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Otra Informacion";
+            // 
+            // textEncargado
+            // 
+            this.textEncargado.Location = new System.Drawing.Point(115, 92);
+            this.textEncargado.Name = "textEncargado";
+            this.textEncargado.Size = new System.Drawing.Size(200, 20);
+            this.textEncargado.TabIndex = 12;
+            // 
+            // BtnBuscarEncargado
+            // 
+            this.BtnBuscarEncargado.ForeColor = System.Drawing.Color.Black;
+            this.BtnBuscarEncargado.Location = new System.Drawing.Point(324, 90);
+            this.BtnBuscarEncargado.Name = "BtnBuscarEncargado";
+            this.BtnBuscarEncargado.Size = new System.Drawing.Size(67, 23);
+            this.BtnBuscarEncargado.TabIndex = 28;
+            this.BtnBuscarEncargado.Text = "Añadir";
+            this.BtnBuscarEncargado.UseVisualStyleBackColor = true;
+            this.BtnBuscarEncargado.Click += new System.EventHandler(this.BtnBuscarEncargado_Click);
             // 
             // dateTimePicker1
             // 
@@ -2359,15 +2447,6 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // comboBoxEncargado
-            // 
-            this.comboBoxEncargado.FormattingEnabled = true;
-            this.comboBoxEncargado.Location = new System.Drawing.Point(115, 95);
-            this.comboBoxEncargado.Name = "comboBoxEncargado";
-            this.comboBoxEncargado.Size = new System.Drawing.Size(264, 21);
-            this.comboBoxEncargado.TabIndex = 12;
-            this.comboBoxEncargado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncargado_SelectedIndexChanged);
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2376,7 +2455,6 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
-            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -2384,6 +2462,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnEncargado.ResumeLayout(false);
+            this.PnEncargado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVEncargado)).EndInit();
             this.PnlListaCL.ResumeLayout(false);
             this.PnlListaCL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).EndInit();
@@ -2643,7 +2724,14 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBoxEncargado;
+        private System.Windows.Forms.Button BtnBuscarEncargado;
+        private System.Windows.Forms.Panel PnEncargado;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button btnRetornar_encargado;
+        private System.Windows.Forms.Button btnBuscar_encargado;
+        private System.Windows.Forms.DataGridView DGVEncargado;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textEncargado;
     }
 }

@@ -1240,41 +1240,67 @@ namespace SistemaLabco
         }
 
         //TRABAJADOR//
-        private void CargarDatosComboBoxEncargado()
+
+        private void btnRetornar_encargado_Click(object sender, EventArgs e)
         {
-            // Llamar al método ListadoTR para obtener los datos desde la base de datos
-            DataTable dtEncargados = BLTrabajador.ListadoTR("");
+            PnEncargado.Visible = false;
+        }
 
-            if (dtEncargados.Rows.Count > 0)
+        private void btnBuscar_encargado_Click(object sender, EventArgs e)
+        {
+            try
             {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DGVEncargado.DataSource = BLTrabajador.ListadoTR(TxtListaCL.Text);
 
-                comboBoxEncargado.DataSource = dtEncargados;
+                // Verificar si se han cargado los datos
+                if (DGVEncargado.Rows.Count == 0)
+                {
 
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+            }
 
-                comboBoxEncargado.DisplayMember = "Nombre";
-                comboBoxEncargado.ValueMember = "IDTrabajador";
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+        }
+
+        private void DGVEncargado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si se hizo clic en una celda válida y en la columna del IDCliente
+            if (e.RowIndex >= 0 && DGVEncargado.Columns[e.ColumnIndex].Name == "IDTrabajador")
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DGVEncargado.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    // Muestra los valores de la fila seleccionada.
+                    MessageBox.Show("Trabajador seleccionado: " + row.Cells["IDTrabajador"].Value.ToString());
+
+                    // Asignar los valores de la fila a los TextBox correspondientes.
+                    textEncargado.Text = row.Cells["Nombre"].Value.ToString();
+                    
+
+                    // Ocultar el panel de lista de clientes
+                    PnEncargado.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
             }
             else
             {
-                MessageBox.Show("No hay encargados disponibles", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Haga clic en el IDTrabajador para seleccionar el trabajador.", "Aviso");
             }
         }
 
-        private void comboBoxEncargado_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnBuscarEncargado_Click(object sender, EventArgs e)
         {
-            if (comboBoxEncargado.SelectedValue != null)
-            {
-                // Obteniendo el ID del encargado seleccionado
-                int IDEncargado = Convert.ToInt32(comboBoxEncargado.SelectedValue);
-                string nombreEncargado = comboBoxEncargado.Text; // Nombre del encargado seleccionado
-
-                MessageBox.Show("ID del encargado seleccionado: " + IDEncargado + "\nNombre: " + nombreEncargado);
-            }
-        }
-
-        private void FrmInicio_Load(object sender, EventArgs e)
-        {
-            CargarDatosComboBoxEncargado();
+            this.PnEncargado.Visible = true;
         }
     }
 
