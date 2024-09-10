@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\",
+  "WorkspaceRootPath": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\monse\\onedrive\\documentos\\github\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\dylan pereira\\onedrive\\documentos\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|c:\\users\\dylan pereira\\onedrive\\documentos\\sistemalabcouv\\sistemalabco\\sistemalabco\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C5F3C2-A895-4530-9638-61E2E39CFF7E}|SistemaLabco\\GUI.csproj|solutionrelative:sistemalabco\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69EAFDA8-8993-4848-ABD8-34A9475DAE27}|BL\\BL.csproj|c:\\users\\dylan pereira\\onedrive\\documentos\\sistemalabcouv\\sistemalabco\\bl\\bltrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69EAFDA8-8993-4848-ABD8-34A9475DAE27}|BL\\BL.csproj|solutionrelative:bl\\bltrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|c:\\users\\dylan pereira\\onedrive\\documentos\\sistemalabcouv\\sistemalabco\\dal\\daltrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F65C48-CFFB-41D8-B1DA-DD973C77A789}|DAL\\DAL.csproj|solutionrelative:dal\\daltrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmInicio.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
+              "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.Designer.cs",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.Designer.cs",
+              "RelativeToolTip": "SistemaLabco\\FrmInicio.Designer.cs",
+              "ViewState": "AQIAAMwCAAAAAAAAAAASwOYCAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T00:00:48.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BLTrabajador.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\BL\\BLTrabajador.cs",
+              "RelativeDocumentMoniker": "BL\\BLTrabajador.cs",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\BL\\BLTrabajador.cs",
+              "RelativeToolTip": "BL\\BLTrabajador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T23:58:46.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DALTrabajador.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALTrabajador.cs",
+              "RelativeDocumentMoniker": "DAL\\DALTrabajador.cs",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\DAL\\DALTrabajador.cs",
+              "RelativeToolTip": "DAL\\DALTrabajador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T23:58:24.999Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
               "RelativeDocumentMoniker": "DAL\\Conexion.cs",
-              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\DAL\\Conexion.cs",
               "RelativeToolTip": "DAL\\Conexion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T02:05:15.323Z"
+              "WhenOpened": "2024-09-09T02:05:15.323Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FrmInicio.cs",
-              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
               "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
-              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
               "RelativeToolTip": "SistemaLabco\\FrmInicio.cs",
-              "ViewState": "AQIAAGMEAAAAAAAAAAAwwHAEAAAMAAAA",
+              "ViewState": "AQIAAJMEAAAAAAAAAAAQwK8EAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T01:53:39.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmInicio.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
+              "DocumentIndex": 1,
+              "Title": "FrmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs",
               "RelativeDocumentMoniker": "SistemaLabco\\FrmInicio.cs",
-              "ToolTip": "C:\\Users\\monse\\OneDrive\\Documentos\\GitHub\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs [Design]",
-              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs [Design]",
+              "ToolTip": "C:\\Users\\Dylan Pereira\\OneDrive\\Documentos\\SistemaLabcoUV\\SistemaLabco\\SistemaLabco\\FrmInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SistemaLabco\\FrmInicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T04:13:53.858Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

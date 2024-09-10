@@ -35,6 +35,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -72,8 +73,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.comboBoxEncargado = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.TxtTrabajador = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.TxtEstadoFactura = new System.Windows.Forms.TextBox();
@@ -223,7 +224,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -355,6 +355,16 @@
             this.groupBox9.Size = new System.Drawing.Size(985, 437);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(632, 25);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(67, 23);
+            this.button6.TabIndex = 28;
+            this.button6.Text = "Añadir";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -710,8 +720,8 @@
             // groupBox13
             // 
             this.groupBox13.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox13.Controls.Add(this.comboBoxEncargado);
             this.groupBox13.Controls.Add(this.dateTimePicker1);
-            this.groupBox13.Controls.Add(this.TxtTrabajador);
             this.groupBox13.Controls.Add(this.label31);
             this.groupBox13.Controls.Add(this.label29);
             this.groupBox13.Controls.Add(this.TxtEstadoFactura);
@@ -724,19 +734,20 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Otra Informacion";
             // 
+            // comboBoxEncargado
+            // 
+            this.comboBoxEncargado.FormattingEnabled = true;
+            this.comboBoxEncargado.Location = new System.Drawing.Point(115, 93);
+            this.comboBoxEncargado.Name = "comboBoxEncargado";
+            this.comboBoxEncargado.Size = new System.Drawing.Size(264, 21);
+            this.comboBoxEncargado.TabIndex = 12;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(115, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 11;
-            // 
-            // TxtTrabajador
-            // 
-            this.TxtTrabajador.Location = new System.Drawing.Point(115, 90);
-            this.TxtTrabajador.Name = "TxtTrabajador";
-            this.TxtTrabajador.Size = new System.Drawing.Size(264, 20);
-            this.TxtTrabajador.TabIndex = 10;
             // 
             // label31
             // 
@@ -2352,16 +2363,6 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // button6
-            // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(632, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Añadir";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2370,6 +2371,7 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -2482,7 +2484,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox TxtTrabajador;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox TxtEstadoFactura;
@@ -2638,5 +2639,6 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox comboBoxEncargado;
     }
 }
