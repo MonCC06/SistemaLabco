@@ -1164,7 +1164,85 @@ namespace SistemaLabco
                 }
             }
         }
+
+
+        //FACTURA//
+
+        //CLIENTE//
+
+        private void BtnRetornar2_Click(object sender, EventArgs e)
+        {
+            PnlListaCL.Visible = false;
+
+        }
+
+        private void DgvListaCL_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si se hizo clic en una celda válida y en la columna del IDCliente
+            if (e.RowIndex >= 0 && DgvListaCL.Columns[e.ColumnIndex].Name == "IDCliente")
+            {
+                // Obtener la fila seleccionada.
+                DataGridViewRow row = DgvListaCL.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    // Muestra los valores de la fila seleccionada.
+                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+
+                    // Asignar los valores de la fila a los TextBox correspondientes.
+                    TxtCedulaCliente.Text = row.Cells["Cedula"].Value.ToString();
+                    TxtNombreCliente.Text = row.Cells["Nombre"].Value.ToString();
+                    TxtTelefonoCliente.Text = row.Cells["Telefono"].Value.ToString();
+                    TxtEmailCliente.Text = row.Cells["Correo"].Value.ToString();
+
+                    // Ocultar el panel de lista de clientes
+                    PnlListaCL.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en el IDCliente para seleccionar el cliente.", "Aviso");
+            }
+
+        }
+
+        private void BtnBuscar2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DgvListaCL.DataSource = BLCliente.ListadoCL(TxtListaCL.Text);
+
+                // Verificar si se han cargado los datos
+                if (DgvListaCL.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+        }
+
+        private void BtnLupa1_Click(object sender, EventArgs e)
+        {
+            this.PnlListaCL.Location = TxtEmailCliente.Location;
+            this.PnlListaCL.Visible = true;
+
+        }
     }
+
+    //TRABAJADOR//
+
+    
 }
 
 
