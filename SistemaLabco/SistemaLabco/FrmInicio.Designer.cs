@@ -35,6 +35,14 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.BtnLupaPR = new System.Windows.Forms.Button();
+            this.PnlListaPR = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.BtnRetornarPrListado = new System.Windows.Forms.Button();
+            this.BtnBuscarPrlistado = new System.Windows.Forms.Button();
+            this.DGVProductos = new System.Windows.Forms.DataGridView();
+            this.label51 = new System.Windows.Forms.Label();
+            this.TxtProductos = new System.Windows.Forms.TextBox();
             this.PnEncargado = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.btnRetornar_encargado = new System.Windows.Forms.Button();
@@ -42,10 +50,6 @@
             this.DGVEncargado = new System.Windows.Forms.DataGridView();
             this.label49 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label47 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.PnlListaCL = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnRetornar2 = new System.Windows.Forms.Button();
@@ -238,6 +242,8 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnlListaPR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.PnEncargado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVEncargado)).BeginInit();
             this.PnlListaCL.SuspendLayout();
@@ -326,6 +332,7 @@
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox12);
+            this.tabPage3.Controls.Add(this.PnlListaCL);
             this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.groupBox14);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -348,12 +355,8 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox9.Controls.Add(this.PnEncargado);
-            this.groupBox9.Controls.Add(this.button6);
-            this.groupBox9.Controls.Add(this.button4);
-            this.groupBox9.Controls.Add(this.label47);
-            this.groupBox9.Controls.Add(this.textBox6);
-            this.groupBox9.Controls.Add(this.PnlListaCL);
+            this.groupBox9.Controls.Add(this.BtnLupaPR);
+            this.groupBox9.Controls.Add(this.PnlListaPR);
             this.groupBox9.Controls.Add(this.label25);
             this.groupBox9.Controls.Add(this.BtnAnularFA);
             this.groupBox9.Controls.Add(this.button5);
@@ -367,6 +370,86 @@
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             // 
+            // BtnLupaPR
+            // 
+            this.BtnLupaPR.Location = new System.Drawing.Point(91, 19);
+            this.BtnLupaPR.Name = "BtnLupaPR";
+            this.BtnLupaPR.Size = new System.Drawing.Size(123, 29);
+            this.BtnLupaPR.TabIndex = 11;
+            this.BtnLupaPR.Text = "Buscar Producto";
+            this.BtnLupaPR.UseVisualStyleBackColor = true;
+            this.BtnLupaPR.Click += new System.EventHandler(this.BtnLupaPR_Click);
+            // 
+            // PnlListaPR
+            // 
+            this.PnlListaPR.BackColor = System.Drawing.Color.Gainsboro;
+            this.PnlListaPR.Controls.Add(this.label50);
+            this.PnlListaPR.Controls.Add(this.BtnRetornarPrListado);
+            this.PnlListaPR.Controls.Add(this.BtnBuscarPrlistado);
+            this.PnlListaPR.Controls.Add(this.DGVProductos);
+            this.PnlListaPR.Controls.Add(this.label51);
+            this.PnlListaPR.Controls.Add(this.TxtProductos);
+            this.PnlListaPR.Location = new System.Drawing.Point(312, 55);
+            this.PnlListaPR.Name = "PnlListaPR";
+            this.PnlListaPR.Size = new System.Drawing.Size(371, 225);
+            this.PnlListaPR.TabIndex = 12;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.ForeColor = System.Drawing.Color.Green;
+            this.label50.Location = new System.Drawing.Point(125, 9);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(95, 13);
+            this.label50.TabIndex = 5;
+            this.label50.Text = "Lista de Productos\r\n";
+            // 
+            // BtnRetornarPrListado
+            // 
+            this.BtnRetornarPrListado.Location = new System.Drawing.Point(269, 27);
+            this.BtnRetornarPrListado.Name = "BtnRetornarPrListado";
+            this.BtnRetornarPrListado.Size = new System.Drawing.Size(41, 24);
+            this.BtnRetornarPrListado.TabIndex = 4;
+            this.BtnRetornarPrListado.Text = ": : :";
+            this.BtnRetornarPrListado.UseVisualStyleBackColor = true;
+            this.BtnRetornarPrListado.Click += new System.EventHandler(this.BtnRetornarPrListado_Click);
+            // 
+            // BtnBuscarPrlistado
+            // 
+            this.BtnBuscarPrlistado.Location = new System.Drawing.Point(226, 27);
+            this.BtnBuscarPrlistado.Name = "BtnBuscarPrlistado";
+            this.BtnBuscarPrlistado.Size = new System.Drawing.Size(36, 24);
+            this.BtnBuscarPrlistado.TabIndex = 3;
+            this.BtnBuscarPrlistado.Text = ": : :";
+            this.BtnBuscarPrlistado.UseVisualStyleBackColor = true;
+            this.BtnBuscarPrlistado.Click += new System.EventHandler(this.BtnBuscarPrlistado_Click);
+            // 
+            // DGVProductos
+            // 
+            this.DGVProductos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVProductos.Location = new System.Drawing.Point(3, 68);
+            this.DGVProductos.Name = "DGVProductos";
+            this.DGVProductos.Size = new System.Drawing.Size(365, 160);
+            this.DGVProductos.TabIndex = 0;
+            this.DGVProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProductos_CellContentClick);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(3, 31);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(43, 13);
+            this.label51.TabIndex = 2;
+            this.label51.Text = "Buscar:";
+            // 
+            // TxtProductos
+            // 
+            this.TxtProductos.Location = new System.Drawing.Point(49, 28);
+            this.TxtProductos.Name = "TxtProductos";
+            this.TxtProductos.Size = new System.Drawing.Size(171, 20);
+            this.TxtProductos.TabIndex = 1;
+            // 
             // PnEncargado
             // 
             this.PnEncargado.BackColor = System.Drawing.Color.Gainsboro;
@@ -376,7 +459,7 @@
             this.PnEncargado.Controls.Add(this.DGVEncargado);
             this.PnEncargado.Controls.Add(this.label49);
             this.PnEncargado.Controls.Add(this.textBox7);
-            this.PnEncargado.Location = new System.Drawing.Point(523, 80);
+            this.PnEncargado.Location = new System.Drawing.Point(458, 68);
             this.PnEncargado.Name = "PnEncargado";
             this.PnEncargado.Size = new System.Drawing.Size(371, 225);
             this.PnEncargado.TabIndex = 30;
@@ -437,44 +520,6 @@
             this.textBox7.Size = new System.Drawing.Size(171, 20);
             this.textBox7.TabIndex = 1;
             // 
-            // button6
-            // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(632, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Añadir";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(559, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label47.Location = new System.Drawing.Point(295, 30);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(91, 13);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "Buscar Productos";
-            // 
-            // textBox6
-            // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(402, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 20);
-            this.textBox6.TabIndex = 15;
-            // 
             // PnlListaCL
             // 
             this.PnlListaCL.BackColor = System.Drawing.Color.Gainsboro;
@@ -484,7 +529,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(66, 80);
+            this.PnlListaCL.Location = new System.Drawing.Point(7, 102);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(371, 225);
             this.PnlListaCL.TabIndex = 10;
@@ -696,6 +741,7 @@
             this.DgvFacturaProducto.Name = "DgvFacturaProducto";
             this.DgvFacturaProducto.Size = new System.Drawing.Size(891, 202);
             this.DgvFacturaProducto.TabIndex = 17;
+            this.DgvFacturaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturaProducto_CellContentClick);
             // 
             // groupBox12
             // 
@@ -886,6 +932,7 @@
             this.groupBox14.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox14.Controls.Add(this.BtnLupa1);
             this.groupBox14.Controls.Add(this.label11);
+            this.groupBox14.Controls.Add(this.PnEncargado);
             this.groupBox14.Controls.Add(this.TxtCedulaCliente);
             this.groupBox14.Controls.Add(this.TxtEmailCliente);
             this.groupBox14.Controls.Add(this.TxtTelefonoCliente);
@@ -2467,6 +2514,7 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -2474,6 +2522,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnlListaPR.ResumeLayout(false);
+            this.PnlListaPR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
             this.PnEncargado.ResumeLayout(false);
             this.PnEncargado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVEncargado)).EndInit();
@@ -2732,10 +2783,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel PnEncargado;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Button btnRetornar_encargado;
@@ -2746,5 +2793,13 @@
         private System.Windows.Forms.TextBox textEncargado;
         private System.Windows.Forms.TextBox TxtEstadoFactura;
         private System.Windows.Forms.Button BtnBuscarEncargado;
+        private System.Windows.Forms.Button BtnLupaPR;
+        private System.Windows.Forms.Panel PnlListaPR;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Button BtnRetornarPrListado;
+        private System.Windows.Forms.Button BtnBuscarPrlistado;
+        private System.Windows.Forms.DataGridView DGVProductos;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox TxtProductos;
     }
 }

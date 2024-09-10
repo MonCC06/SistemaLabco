@@ -976,9 +976,6 @@ namespace SistemaLabco
                 TBPrecioProducto.Text = Convert.ToString(DGVProducto.CurrentRow.Cells["Precio"].Value);
                 TBStockProducto.Text = Convert.ToString(DGVProducto.CurrentRow.Cells["Stock_Actual"].Value);
 
-
-
-
             }
 
 
@@ -1303,6 +1300,60 @@ namespace SistemaLabco
         private void BtnBuscarEncargado_Click(object sender, EventArgs e)
         {
             this.PnEncargado.Visible = true;
+        }
+
+        //DETALLE
+        private void BtnLupaPR_Click(object sender, EventArgs e)
+        {
+            this.PnlListaPR.Visible = true;
+        }
+
+        private void DGVProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.SeleccionaProducto();
+            this.PnlListaPR.Visible = false;
+
+        }
+
+        private void BtnRetornarPrListado_Click(object sender, EventArgs e)
+        {
+            this.PnlListaPR.Visible = false;
+
+        }
+
+        private void BtnBuscarPrlistado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Llamar al método ListadoCL y asignar el resultado al DataGridView
+                DGVProductos.DataSource = BLProducto.ListadoPR(TxtProductos.Text);
+
+                // Verificar si se han cargado los datos
+                if (DGVProductos.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("No se encontraron clientes.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+        }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            PnlListaPR.Visible = false;
+            PnlListaCL.Visible = false;
+            PnEncargado.Visible = false;
+
+        }
+
+        private void DgvFacturaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
