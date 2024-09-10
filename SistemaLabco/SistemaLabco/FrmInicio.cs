@@ -1281,7 +1281,14 @@ namespace SistemaLabco
             this.PnEncargado.Visible = true;
         }
 
-        //DETALLE
+        //VEHICULO//
+
+
+
+
+
+
+        //DETALLE//
         private void BtnLupaPR_Click(object sender, EventArgs e)
         {
             this.PnlListaPR.Visible = true;
@@ -1325,6 +1332,7 @@ namespace SistemaLabco
             PnlListaPR.Visible = false;
             PnlListaCL.Visible = false;
             PnEncargado.Visible = false;
+            PnlVeh.Visible = false;
 
         }
 
@@ -1357,6 +1365,65 @@ namespace SistemaLabco
             {
                 MessageBox.Show("Haga clic en el IDTrabajador para seleccionar el trabajador.", "Aviso");
             }
+        }
+
+        private void BtnLupa2_Click(object sender, EventArgs e)
+        {
+            this.PnlListaCL.Location = TxtAnnoVehiculoFactura.Location;
+            this.PnlListaCL.Visible = true;
+
+        }
+
+        private void BtnBuscarVehiculo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DGVVehiculos.DataSource = BLVehiculo.ListadoVE(TxtListaVE.Text);
+
+                if (DGVVehiculos.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se logro encontrar ningun vehiculo.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+
+        }
+
+        private void DGVVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DGVVehiculos.Columns[e.ColumnIndex].Name == "IDCliente")
+            {
+                DataGridViewRow row = DgvListaCL.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+
+                    TxtPlacaVehiculoFactura.Text = row.Cells["Placa"].Value.ToString();
+                    TxtMarcaVehiculoFactura.Text = row.Cells["Marca"].Value.ToString();
+                    TxtAnnoVehiculoFactura.Text = row.Cells["Anno"].Value.ToString();
+                    TxtDistanciaVehiculoFactura.Text = row.Cells["Distancia"].Value.ToString();
+
+                    PnlListaCL.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en la Placa del Vehiculo para seleccionar el cliente.", "Aviso");
+            }
+
+        }
+
+        private void BtnRetornarVehiculo_Click(object sender, EventArgs e)
+        {
+            PnlVeh.Visible = false;
         }
     }
 }

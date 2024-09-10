@@ -35,7 +35,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.BtnLupaPR = new System.Windows.Forms.Button();
+            this.PnlVeh = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.BtnRetornarVehiculo = new System.Windows.Forms.Button();
+            this.BtnBuscarVehiculo = new System.Windows.Forms.Button();
+            this.DGVVehiculos = new System.Windows.Forms.DataGridView();
+            this.label52 = new System.Windows.Forms.Label();
+            this.TxtListaVE = new System.Windows.Forms.TextBox();
             this.PnlListaPR = new System.Windows.Forms.Panel();
             this.label50 = new System.Windows.Forms.Label();
             this.BtnRetornarPrListado = new System.Windows.Forms.Button();
@@ -43,6 +49,7 @@
             this.DGVProductos = new System.Windows.Forms.DataGridView();
             this.label51 = new System.Windows.Forms.Label();
             this.TxtProductos = new System.Windows.Forms.TextBox();
+            this.BtnLupaPR = new System.Windows.Forms.Button();
             this.PnEncargado = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.btnRetornar_encargado = new System.Windows.Forms.Button();
@@ -74,6 +81,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.DgvFacturaProducto = new System.Windows.Forms.DataGridView();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.BtnLupa2 = new System.Windows.Forms.Button();
             this.TxtDistanciaVehiculoFactura = new System.Windows.Forms.TextBox();
             this.CkbKilometros = new System.Windows.Forms.CheckBox();
             this.TxtAnnoVehiculoFactura = new System.Windows.Forms.TextBox();
@@ -242,6 +250,8 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.PnlVeh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVVehiculos)).BeginInit();
             this.PnlListaPR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             this.PnEncargado.SuspendLayout();
@@ -354,8 +364,9 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox9.Controls.Add(this.BtnLupaPR);
+            this.groupBox9.Controls.Add(this.PnlVeh);
             this.groupBox9.Controls.Add(this.PnlListaPR);
+            this.groupBox9.Controls.Add(this.BtnLupaPR);
             this.groupBox9.Controls.Add(this.PnEncargado);
             this.groupBox9.Controls.Add(this.label25);
             this.groupBox9.Controls.Add(this.PnlListaCL);
@@ -367,19 +378,79 @@
             this.groupBox9.Controls.Add(this.DgvFacturaProducto);
             this.groupBox9.Location = new System.Drawing.Point(7, 226);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(985, 437);
+            this.groupBox9.Size = new System.Drawing.Size(1027, 437);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             // 
-            // BtnLupaPR
+            // PnlVeh
             // 
-            this.BtnLupaPR.Location = new System.Drawing.Point(91, 19);
-            this.BtnLupaPR.Name = "BtnLupaPR";
-            this.BtnLupaPR.Size = new System.Drawing.Size(123, 29);
-            this.BtnLupaPR.TabIndex = 11;
-            this.BtnLupaPR.Text = "Buscar Producto";
-            this.BtnLupaPR.UseVisualStyleBackColor = true;
-            this.BtnLupaPR.Click += new System.EventHandler(this.BtnLupaPR_Click);
+            this.PnlVeh.BackColor = System.Drawing.Color.Gainsboro;
+            this.PnlVeh.Controls.Add(this.label47);
+            this.PnlVeh.Controls.Add(this.BtnRetornarVehiculo);
+            this.PnlVeh.Controls.Add(this.BtnBuscarVehiculo);
+            this.PnlVeh.Controls.Add(this.DGVVehiculos);
+            this.PnlVeh.Controls.Add(this.label52);
+            this.PnlVeh.Controls.Add(this.TxtListaVE);
+            this.PnlVeh.Location = new System.Drawing.Point(32, 0);
+            this.PnlVeh.Name = "PnlVeh";
+            this.PnlVeh.Size = new System.Drawing.Size(371, 225);
+            this.PnlVeh.TabIndex = 13;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.Green;
+            this.label47.Location = new System.Drawing.Point(125, 9);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(93, 13);
+            this.label47.TabIndex = 5;
+            this.label47.Text = "Lista de Vehiculos\r\n";
+            // 
+            // BtnRetornarVehiculo
+            // 
+            this.BtnRetornarVehiculo.Location = new System.Drawing.Point(269, 27);
+            this.BtnRetornarVehiculo.Name = "BtnRetornarVehiculo";
+            this.BtnRetornarVehiculo.Size = new System.Drawing.Size(41, 24);
+            this.BtnRetornarVehiculo.TabIndex = 4;
+            this.BtnRetornarVehiculo.Text = ": : :";
+            this.BtnRetornarVehiculo.UseVisualStyleBackColor = true;
+            this.BtnRetornarVehiculo.Click += new System.EventHandler(this.BtnRetornarVehiculo_Click);
+            // 
+            // BtnBuscarVehiculo
+            // 
+            this.BtnBuscarVehiculo.Location = new System.Drawing.Point(226, 27);
+            this.BtnBuscarVehiculo.Name = "BtnBuscarVehiculo";
+            this.BtnBuscarVehiculo.Size = new System.Drawing.Size(36, 24);
+            this.BtnBuscarVehiculo.TabIndex = 3;
+            this.BtnBuscarVehiculo.Text = ": : :";
+            this.BtnBuscarVehiculo.UseVisualStyleBackColor = true;
+            this.BtnBuscarVehiculo.Click += new System.EventHandler(this.BtnBuscarVehiculo_Click);
+            // 
+            // DGVVehiculos
+            // 
+            this.DGVVehiculos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DGVVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVVehiculos.Location = new System.Drawing.Point(3, 68);
+            this.DGVVehiculos.Name = "DGVVehiculos";
+            this.DGVVehiculos.Size = new System.Drawing.Size(365, 160);
+            this.DGVVehiculos.TabIndex = 0;
+            this.DGVVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVVehiculos_CellContentClick);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(3, 31);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(43, 13);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "Buscar:";
+            // 
+            // TxtListaVE
+            // 
+            this.TxtListaVE.Location = new System.Drawing.Point(49, 28);
+            this.TxtListaVE.Name = "TxtListaVE";
+            this.TxtListaVE.Size = new System.Drawing.Size(171, 20);
+            this.TxtListaVE.TabIndex = 1;
             // 
             // PnlListaPR
             // 
@@ -390,7 +461,7 @@
             this.PnlListaPR.Controls.Add(this.DGVProductos);
             this.PnlListaPR.Controls.Add(this.label51);
             this.PnlListaPR.Controls.Add(this.TxtProductos);
-            this.PnlListaPR.Location = new System.Drawing.Point(312, 55);
+            this.PnlListaPR.Location = new System.Drawing.Point(277, 19);
             this.PnlListaPR.Name = "PnlListaPR";
             this.PnlListaPR.Size = new System.Drawing.Size(371, 225);
             this.PnlListaPR.TabIndex = 12;
@@ -450,6 +521,16 @@
             this.TxtProductos.Name = "TxtProductos";
             this.TxtProductos.Size = new System.Drawing.Size(171, 20);
             this.TxtProductos.TabIndex = 1;
+            // 
+            // BtnLupaPR
+            // 
+            this.BtnLupaPR.Location = new System.Drawing.Point(91, 19);
+            this.BtnLupaPR.Name = "BtnLupaPR";
+            this.BtnLupaPR.Size = new System.Drawing.Size(123, 29);
+            this.BtnLupaPR.TabIndex = 11;
+            this.BtnLupaPR.Text = "Buscar Producto";
+            this.BtnLupaPR.UseVisualStyleBackColor = true;
+            this.BtnLupaPR.Click += new System.EventHandler(this.BtnLupaPR_Click);
             // 
             // PnEncargado
             // 
@@ -540,7 +621,7 @@
             this.PnlListaCL.Controls.Add(this.DgvListaCL);
             this.PnlListaCL.Controls.Add(this.label14);
             this.PnlListaCL.Controls.Add(this.TxtListaCL);
-            this.PnlListaCL.Location = new System.Drawing.Point(685, 19);
+            this.PnlListaCL.Location = new System.Drawing.Point(625, 19);
             this.PnlListaCL.Name = "PnlListaCL";
             this.PnlListaCL.Size = new System.Drawing.Size(342, 228);
             this.PnlListaCL.TabIndex = 10;
@@ -747,6 +828,7 @@
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox12.Controls.Add(this.BtnLupa2);
             this.groupBox12.Controls.Add(this.TxtDistanciaVehiculoFactura);
             this.groupBox12.Controls.Add(this.CkbKilometros);
             this.groupBox12.Controls.Add(this.TxtAnnoVehiculoFactura);
@@ -759,24 +841,35 @@
             this.groupBox12.ForeColor = System.Drawing.Color.Green;
             this.groupBox12.Location = new System.Drawing.Point(7, 147);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(985, 72);
+            this.groupBox12.Size = new System.Drawing.Size(1027, 72);
             this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Vehiculo";
             // 
+            // BtnLupa2
+            // 
+            this.BtnLupa2.ForeColor = System.Drawing.Color.Black;
+            this.BtnLupa2.Location = new System.Drawing.Point(854, 23);
+            this.BtnLupa2.Name = "BtnLupa2";
+            this.BtnLupa2.Size = new System.Drawing.Size(131, 29);
+            this.BtnLupa2.TabIndex = 11;
+            this.BtnLupa2.Text = "Buscar Vehiculo";
+            this.BtnLupa2.UseVisualStyleBackColor = true;
+            this.BtnLupa2.Click += new System.EventHandler(this.BtnLupa2_Click);
+            // 
             // TxtDistanciaVehiculoFactura
             // 
             this.TxtDistanciaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(791, 27);
+            this.TxtDistanciaVehiculoFactura.Location = new System.Drawing.Point(710, 26);
             this.TxtDistanciaVehiculoFactura.Name = "TxtDistanciaVehiculoFactura";
-            this.TxtDistanciaVehiculoFactura.Size = new System.Drawing.Size(176, 20);
+            this.TxtDistanciaVehiculoFactura.Size = new System.Drawing.Size(120, 20);
             this.TxtDistanciaVehiculoFactura.TabIndex = 14;
             // 
             // CkbKilometros
             // 
             this.CkbKilometros.AutoSize = true;
             this.CkbKilometros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbKilometros.Location = new System.Drawing.Point(707, 29);
+            this.CkbKilometros.Location = new System.Drawing.Point(630, 27);
             this.CkbKilometros.Name = "CkbKilometros";
             this.CkbKilometros.Size = new System.Drawing.Size(74, 17);
             this.CkbKilometros.TabIndex = 12;
@@ -786,7 +879,7 @@
             // TxtAnnoVehiculoFactura
             // 
             this.TxtAnnoVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(488, 28);
+            this.TxtAnnoVehiculoFactura.Location = new System.Drawing.Point(416, 26);
             this.TxtAnnoVehiculoFactura.Name = "TxtAnnoVehiculoFactura";
             this.TxtAnnoVehiculoFactura.Size = new System.Drawing.Size(138, 20);
             this.TxtAnnoVehiculoFactura.TabIndex = 13;
@@ -795,7 +888,7 @@
             // 
             this.CkbMillas.AutoSize = true;
             this.CkbMillas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CkbMillas.Location = new System.Drawing.Point(649, 30);
+            this.CkbMillas.Location = new System.Drawing.Point(572, 28);
             this.CkbMillas.Name = "CkbMillas";
             this.CkbMillas.Size = new System.Drawing.Size(52, 17);
             this.CkbMillas.TabIndex = 13;
@@ -805,7 +898,7 @@
             // TxtMarcaVehiculoFactura
             // 
             this.TxtMarcaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(282, 27);
+            this.TxtMarcaVehiculoFactura.Location = new System.Drawing.Point(238, 27);
             this.TxtMarcaVehiculoFactura.Name = "TxtMarcaVehiculoFactura";
             this.TxtMarcaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
             this.TxtMarcaVehiculoFactura.TabIndex = 12;
@@ -813,16 +906,16 @@
             // TxtPlacaVehiculoFactura
             // 
             this.TxtPlacaVehiculoFactura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(76, 27);
+            this.TxtPlacaVehiculoFactura.Location = new System.Drawing.Point(59, 28);
             this.TxtPlacaVehiculoFactura.Name = "TxtPlacaVehiculoFactura";
-            this.TxtPlacaVehiculoFactura.Size = new System.Drawing.Size(138, 20);
+            this.TxtPlacaVehiculoFactura.Size = new System.Drawing.Size(126, 20);
             this.TxtPlacaVehiculoFactura.TabIndex = 9;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(456, 31);
+            this.label17.Location = new System.Drawing.Point(384, 31);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(26, 13);
             this.label17.TabIndex = 11;
@@ -832,7 +925,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(239, 31);
+            this.label27.Location = new System.Drawing.Point(195, 31);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 13);
             this.label27.TabIndex = 10;
@@ -842,7 +935,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(36, 30);
+            this.label28.Location = new System.Drawing.Point(19, 31);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 13);
             this.label28.TabIndex = 9;
@@ -861,7 +954,7 @@
             this.groupBox13.ForeColor = System.Drawing.Color.Green;
             this.groupBox13.Location = new System.Drawing.Point(595, 7);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(397, 133);
+            this.groupBox13.Size = new System.Drawing.Size(442, 133);
             this.groupBox13.TabIndex = 2;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Otra Informacion";
@@ -2522,6 +2615,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.PnlVeh.ResumeLayout(false);
+            this.PnlVeh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVVehiculos)).EndInit();
             this.PnlListaPR.ResumeLayout(false);
             this.PnlListaPR.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
@@ -2801,5 +2897,13 @@
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox TxtProductos;
+        private System.Windows.Forms.Panel PnlVeh;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button BtnRetornarVehiculo;
+        private System.Windows.Forms.Button BtnBuscarVehiculo;
+        private System.Windows.Forms.DataGridView DGVVehiculos;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox TxtListaVE;
+        private System.Windows.Forms.Button BtnLupa2;
     }
 }
