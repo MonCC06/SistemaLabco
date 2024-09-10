@@ -73,7 +73,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.comboBoxEncargado = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -224,6 +223,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.comboBoxEncargado = new System.Windows.Forms.ComboBox();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -736,14 +736,6 @@
             this.groupBox13.TabIndex = 2;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Otra Informacion";
-            // 
-            // comboBoxEncargado
-            // 
-            this.comboBoxEncargado.FormattingEnabled = true;
-            this.comboBoxEncargado.Location = new System.Drawing.Point(115, 90);
-            this.comboBoxEncargado.Name = "comboBoxEncargado";
-            this.comboBoxEncargado.Size = new System.Drawing.Size(264, 21);
-            this.comboBoxEncargado.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
@@ -2367,6 +2359,15 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
+            // comboBoxEncargado
+            // 
+            this.comboBoxEncargado.FormattingEnabled = true;
+            this.comboBoxEncargado.Location = new System.Drawing.Point(115, 95);
+            this.comboBoxEncargado.Name = "comboBoxEncargado";
+            this.comboBoxEncargado.Size = new System.Drawing.Size(264, 21);
+            this.comboBoxEncargado.TabIndex = 12;
+            this.comboBoxEncargado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncargado_SelectedIndexChanged);
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2375,6 +2376,7 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
