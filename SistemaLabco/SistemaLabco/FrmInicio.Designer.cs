@@ -2366,7 +2366,7 @@
             this.comboBoxEncargado.Name = "comboBoxEncargado";
             this.comboBoxEncargado.Size = new System.Drawing.Size(264, 21);
             this.comboBoxEncargado.TabIndex = 12;
-            this.comboBoxEncargado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncargado_SelectedIndexChanged);
+          
             // 
             // FrmInicio
             // 
@@ -2376,7 +2376,6 @@
             this.Controls.Add(this.TabServicicos);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
-            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.TabServicicos.ResumeLayout(false);
             this.tabFactura.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);

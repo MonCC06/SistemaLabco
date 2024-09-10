@@ -1240,42 +1240,7 @@ namespace SistemaLabco
         }
 
         //TRABAJADOR//
-        private void CargarDatosComboBoxEncargado()
-        {
-            // Llamar al método ListadoTR para obtener los datos desde la base de datos
-            DataTable dtEncargados = BLTrabajador.ListadoTR("");
-
-            if (dtEncargados.Rows.Count > 0)
-            {
-
-                comboBoxEncargado.DataSource = dtEncargados;
-
-
-                comboBoxEncargado.DisplayMember = "Nombre";
-                comboBoxEncargado.ValueMember = "IDTrabajador";
-            }
-            else
-            {
-                MessageBox.Show("No hay encargados disponibles", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void comboBoxEncargado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxEncargado.SelectedValue != null)
-            {
-                // Obteniendo el ID del encargado seleccionado
-                int IDEncargado = Convert.ToInt32(comboBoxEncargado.SelectedValue);
-                string nombreEncargado = comboBoxEncargado.Text; // Nombre del encargado seleccionado
-
-                MessageBox.Show("ID del encargado seleccionado: " + IDEncargado + "\nNombre: " + nombreEncargado);
-            }
-        }
-
-        private void FrmInicio_Load(object sender, EventArgs e)
-        {
-            CargarDatosComboBoxEncargado();
-        }
+        
     }
 
 
