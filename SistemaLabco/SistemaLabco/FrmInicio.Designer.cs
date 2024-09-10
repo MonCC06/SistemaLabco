@@ -36,6 +36,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.PnlListaVE = new System.Windows.Forms.Panel();
+            this.DgvListaVE = new System.Windows.Forms.DataGridView();
+            this.BtnRetornar3 = new System.Windows.Forms.Button();
+            this.BtnBuscar3 = new System.Windows.Forms.Button();
+            this.TxtListaVE = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -227,11 +232,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.TBPrecioProducto = new System.Windows.Forms.TextBox();
             this.TBDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.TxtListaVE = new System.Windows.Forms.TextBox();
-            this.BtnBuscar3 = new System.Windows.Forms.Button();
-            this.BtnRetornar3 = new System.Windows.Forms.Button();
-            this.DgvListaVE = new System.Windows.Forms.DataGridView();
             this.TabServicicos.SuspendLayout();
             this.tabFactura.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -239,6 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.PnlListaVE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).BeginInit();
             this.PnlListaCL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -281,7 +282,6 @@
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProducto)).BeginInit();
             this.groupBox18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).BeginInit();
             this.SuspendLayout();
             // 
             // TabServicicos
@@ -379,6 +379,52 @@
             this.PnlListaVE.Name = "PnlListaVE";
             this.PnlListaVE.Size = new System.Drawing.Size(334, 224);
             this.PnlListaVE.TabIndex = 16;
+            // 
+            // DgvListaVE
+            // 
+            this.DgvListaVE.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DgvListaVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListaVE.Location = new System.Drawing.Point(7, 65);
+            this.DgvListaVE.Name = "DgvListaVE";
+            this.DgvListaVE.Size = new System.Drawing.Size(324, 150);
+            this.DgvListaVE.TabIndex = 5;
+            this.DgvListaVE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListaVE_CellContentClick);
+            // 
+            // BtnRetornar3
+            // 
+            this.BtnRetornar3.Location = new System.Drawing.Point(279, 26);
+            this.BtnRetornar3.Name = "BtnRetornar3";
+            this.BtnRetornar3.Size = new System.Drawing.Size(36, 24);
+            this.BtnRetornar3.TabIndex = 4;
+            this.BtnRetornar3.Text = ": : :";
+            this.BtnRetornar3.UseVisualStyleBackColor = true;
+            this.BtnRetornar3.Click += new System.EventHandler(this.BtnRetornar3_Click);
+            // 
+            // BtnBuscar3
+            // 
+            this.BtnBuscar3.Location = new System.Drawing.Point(234, 26);
+            this.BtnBuscar3.Name = "BtnBuscar3";
+            this.BtnBuscar3.Size = new System.Drawing.Size(41, 24);
+            this.BtnBuscar3.TabIndex = 3;
+            this.BtnBuscar3.Text = ": : :";
+            this.BtnBuscar3.UseVisualStyleBackColor = true;
+            this.BtnBuscar3.Click += new System.EventHandler(this.BtnBuscar3_Click);
+            // 
+            // TxtListaVE
+            // 
+            this.TxtListaVE.Location = new System.Drawing.Point(54, 29);
+            this.TxtListaVE.Name = "TxtListaVE";
+            this.TxtListaVE.Size = new System.Drawing.Size(173, 20);
+            this.TxtListaVE.TabIndex = 2;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(4, 30);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(43, 13);
+            this.label49.TabIndex = 1;
+            this.label49.Text = "Buscar:";
             // 
             // label48
             // 
@@ -2406,50 +2452,6 @@
             this.TBDescripcionProducto.Size = new System.Drawing.Size(188, 20);
             this.TBDescripcionProducto.TabIndex = 9;
             // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(4, 30);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(43, 13);
-            this.label49.TabIndex = 1;
-            this.label49.Text = "Buscar:";
-            // 
-            // TxtListaVE
-            // 
-            this.TxtListaVE.Location = new System.Drawing.Point(54, 29);
-            this.TxtListaVE.Name = "TxtListaVE";
-            this.TxtListaVE.Size = new System.Drawing.Size(173, 20);
-            this.TxtListaVE.TabIndex = 2;
-            // 
-            // BtnBuscar3
-            // 
-            this.BtnBuscar3.Location = new System.Drawing.Point(234, 26);
-            this.BtnBuscar3.Name = "BtnBuscar3";
-            this.BtnBuscar3.Size = new System.Drawing.Size(41, 24);
-            this.BtnBuscar3.TabIndex = 3;
-            this.BtnBuscar3.Text = ": : :";
-            this.BtnBuscar3.UseVisualStyleBackColor = true;
-            this.BtnBuscar3.Click += new System.EventHandler(this.BtnBuscar3_Click);
-            // 
-            // BtnRetornar3
-            // 
-            this.BtnRetornar3.Location = new System.Drawing.Point(279, 26);
-            this.BtnRetornar3.Name = "BtnRetornar3";
-            this.BtnRetornar3.Size = new System.Drawing.Size(36, 24);
-            this.BtnRetornar3.TabIndex = 4;
-            this.BtnRetornar3.Text = ": : :";
-            this.BtnRetornar3.UseVisualStyleBackColor = true;
-            // 
-            // DgvListaVE
-            // 
-            this.DgvListaVE.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.DgvListaVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListaVE.Location = new System.Drawing.Point(7, 65);
-            this.DgvListaVE.Name = "DgvListaVE";
-            this.DgvListaVE.Size = new System.Drawing.Size(324, 150);
-            this.DgvListaVE.TabIndex = 5;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2468,6 +2470,7 @@
             this.groupBox9.PerformLayout();
             this.PnlListaVE.ResumeLayout(false);
             this.PnlListaVE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).EndInit();
             this.PnlListaCL.ResumeLayout(false);
             this.PnlListaCL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaCL)).EndInit();
@@ -2528,7 +2531,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVProducto)).EndInit();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvListaVE)).EndInit();
             this.ResumeLayout(false);
 
         }

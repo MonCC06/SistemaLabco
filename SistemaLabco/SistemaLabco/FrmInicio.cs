@@ -1179,7 +1179,52 @@ namespace SistemaLabco
 
         private void BtnBuscar3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DgvListaVE.DataSource = BLVehiculo.ListadoVE(TxtListaVE.Text);
 
+                if (DgvListaVE.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se logro encontrar ningun vehiculo.");
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message);
+            }
+        }
+
+        private void DgvListaVE_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DgvListaVE.Columns[e.ColumnIndex].Name == "IDCliente")
+            {
+                DataGridViewRow row = DgvListaCL.Rows[e.RowIndex];
+
+                if (row != null)
+                {
+                    MessageBox.Show("Cliente seleccionado: " + row.Cells["IDCliente"].Value.ToString());
+
+                    TxtPlacaVehiculoFactura.Text = row.Cells["Placa"].Value.ToString();
+                    TxtMarcaVehiculoFactura.Text = row.Cells["Marca"].Value.ToString();
+                    TxtAnnoVehiculoFactura.Text = row.Cells["Anno"].Value.ToString();
+                    TxtDistanciaVehiculoFactura.Text = row.Cells["Distancia"].Value.ToString();
+
+                    PnlListaCL.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener la fila seleccionada.", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Haga clic en la Placa del Vehiculo para seleccionar el cliente.", "Aviso");
+            }
+        }
+
+        private void BtnRetornar3_Click(object sender, EventArgs e)
+        {
+            PnlListaVE.Visible = false;
         }
     }
 }
