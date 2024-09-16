@@ -49,7 +49,7 @@ namespace SistemaLabco
         int IdVehiculo = 0;
         int seleccionCl = 0;
         int selecionMa = 0;
-        bool seleccion = true;
+        int seleccion = 1;
         private void FormatoCL()
         {
             if (DgvCliente.Columns.Count >= 6) // Verifica si hay al menos 6 columnas
@@ -1012,12 +1012,12 @@ namespace SistemaLabco
             }
             if(chkK.Checked)
             {
-                bool seleccion = true;
+                seleccion = 1;
 
             }
             else
             {
-                bool seleccion = false;
+                seleccion = 0;
             }
 
             ETVehiculo etvehiculo = new ETVehiculo();

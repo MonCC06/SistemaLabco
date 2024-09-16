@@ -56,9 +56,9 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
                 comando.Parameters.Add("@IDServicio", SqlDbType.Int).Value = se.IDServicio;
-                comando.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = se.Descripcion;
-                comando.Parameters.Add("@Monto", SqlDbType.VarChar).Value = se.Monto;
-                comando.Parameters.Add("@Estado", SqlDbType.Bit).Value = se.Estado;
+                comando.Parameters.Add("@Descripcion_ser", SqlDbType.VarChar).Value = se.Descripcion;
+                comando.Parameters.Add("@Monto_ser", SqlDbType.Decimal).Value = se.Monto;
+                
 
 
                 SqlCon.Open();

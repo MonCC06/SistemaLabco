@@ -15,7 +15,7 @@ namespace ET
         private string _Anno;
         private string _VIN;
         private string _Placa;
-        private bool _TipodeDistancia;
+        private int  _TipodeDistancia;
         private decimal _DistanciaRecorrida;
         private bool _Estado;
 
@@ -26,7 +26,7 @@ namespace ET
         public string Anno { get => _Anno; set => _Anno = value; }
         public string VIN { get => _VIN; set => _VIN = value; }
         public string Placa { get => _Placa; set => _Placa = value; }
-        public bool TipodeDistancia { get => _TipodeDistancia; set => _TipodeDistancia = value; }
+        public int TipodeDistancia { get => _TipodeDistancia; set => _TipodeDistancia = value; }
         public decimal DistanciaRecorrida { get => _DistanciaRecorrida; set => _DistanciaRecorrida = value; }
         public bool Estado { get => _Estado; set => _Estado = value; }
     }
